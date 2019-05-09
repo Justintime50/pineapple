@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="assets/pics/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <style>
+        code {
+            background-color:#eee;
+        }
+    </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="65"><!-- must be 1 more than the offset for the smooth scroller -->
+<body>
 
 <div class="container text-left">
       <h1>Pineapple Documentation</h1>
@@ -45,7 +49,7 @@
     <hr>
 
     <h3>Coming Soon Theme</h3>
-    <ul class="text-left">
+    <ul>
         <li>This theme is a great placeholder for your site while you develop it.</li>
     </ul>
 
@@ -143,7 +147,7 @@
     <ul>
         <li><b>Smooth Scroller:</b> Add <code>data-offset="pixels"</code> element to your <code>&lt;body&gt;</code> tag. Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page and highlight the nav link if possible. Additionally you can add the <code>.pa-scroll</code> class to any item with an anchor to have it scroll to that spot on the page.</li>
         <li><b>Countdown Timer:</b> Built into Pineapple is the ability to create a customized countdown timer. Simply add this javascript to the end of your page and call it with the unique ID. <code>&lt;script&gt;pineapple.countdown.init("2018-12-15","timer","Timer has expired");&lt;/script&gt;</code>. The first section is the time for the countdown (year, month, day), the next section is the timer id which can be called wherever on your page. The last section is the message to be displayed once your time has expired.</li>
-        <li><b>Page Loader:</b> Define a variable for the amount of time the page loader will show. Default value is 1500 (1.5 seconds). This looks like this: <code>WOODWARD, ADD THE SYNTAX TO CUSTOMIZE THE TIME FOR THE PAGE LOADER</code></li>
+        <li><b>Page Loader:</b> Define a variable for the amount of time the page loader will show. Default value is 1500 (1.5 seconds). This looks like this: <!-- TODO: ADD SYNTAX --></li>
     </ul>
 
 </div>
