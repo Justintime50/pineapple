@@ -2,9 +2,9 @@
 
 ![Pineapple Logo](/pineapple.png)
 
-Pineapple is a web development library including frequently used CSS and Javascript functions. Built over Bootstrap, Pineapple allows websites to be easily and quickly deployed.
+Pineapple is a web development library including frequently used CSS and Javascript functions. Built over Bootstrap, Pineapple allows websites to be easily and quickly built.
  
-There were some limitations at the time of this libraries creation in regards to Bootstrap that I wanted to build on its success and add a few tweaks and additions not found there.
+Pineapple was started as a way to fill in the gaps that Bootstrap did not fill. Since Bootstrap 4 and other frameworks have been updated, many of the original issues Pineapple fixed have found their way into these other frameworks and therefore, the Pineapple equivelent has been removed. What remains are functions or classes I often continue to use in my projects today in some form or another.
 
 <br>
 
@@ -59,11 +59,12 @@ We've created some awesome themes to use as templates when creating your site. E
 - **Cards:** The `.pa-card` class applies a card border/pop-up to the contents of the container.
 - **Slanted Section:** Wrap a `.pa-slanted-content` div in a `.pa-slanted-container` div to create a slanted break in the page.
 - **Animate Bottom:** The `.pa-animate-bottom` class will give any object a sliding in effect from the bottom of the screen. This is a simple way to add some visual effects to your page. Best if used on the `<body>` tag.
-- **Slideanim Effect:** The `.pa-slideanim` class will give any object a sliding in effect once the screen has scrolled down over its location. This is a simple way to add some visual effects to your page.
 - **Full Width/Height Youtube Embeding:** If you need a Youtube video to scale to the size of it's container completely, wrap its `<iframe>` with the `.pa-videoWrapper` class.
 - **Bootstrap 3.0 "Well" Class:** We loved the BS 3.0 "well" class so much we brought it back in Pineapple. Simply use the `.pa-well` class on a container to create the opposite of a Pineapple card.
 
 ### Loader
+
+- **Slideanim Effect:** The `.pa-slideanim` class will give any object a sliding in effect once the screen has scrolled down over its location. This is a simple way to add some visual effects to your page.
 
 - **Loader:** The `.pa-loader` and `.pa-loaderDiv` are used to create a loading spiral image upon opening your page. This is great if you have external content that needs to load and you want something graphical to display while this happens. You can do this by using the following just after your `<body>` tag: `<div id="pa-loader"></div>` and `<div id="pa-loaderDiv">`. (Place the end `</div>` tag at the bottom of your page content you want hidden while the loading spinner is on screen.
 
@@ -110,7 +111,7 @@ Add your image reference in a custom class as follows. The number in the parenth
 # Contributors
 Feel free to use this code on any of your projects!
 
-Code licensed under Creative Commons by 3.0. - creativecommons.org/licenses/by/3.0/
+Code licensed under [Creative Commons by 3.0](creativecommons.org/licenses/by/3.0/).
 
 - [Justin Hammond](https://github.com/Justintime50) (Project Manager, CSS)
 - [Jeffrey Woodward](https://github.com/Jefnull) (Javascript)
