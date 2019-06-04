@@ -112,6 +112,6 @@ Feel free to use this code on any of your projects!
 
 Code licensed under Creative Commons by 3.0. - creativecommons.org/licenses/by/3.0/
 
-- Justin Hammond (Project Manager, CSS)
-- Jeffrey Woodward (Javascript)
+- [Justin Hammond](https://github.com/Justintime50) (Project Manager, CSS)
+- [Jeffrey Woodward](https://github.com/Jefnull) (Javascript)
 - Weston Barnes (CSS)

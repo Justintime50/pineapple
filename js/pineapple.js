@@ -9,12 +9,15 @@
  *
  *
  * PINEAPPLE OBJECT
- * loglevel:
+ * loglevel
+ * navFadeValue
  * ajax
  * pageLoader
  * showPage
  * countdown
- * navFadeValue
+ * Smooth Scroller
+ * Slideanim
+ * Nav Fade
  */
 
 var pineapple = {
@@ -32,7 +35,9 @@ var pineapple = {
     navFadeValue: 500,
 
 
-    /* AJAX JAVASCRIPT */
+    /* AJAX JAVASCRIPT
+        Syntax: 
+     */
     ajax: function (page, selector, data){
         selector = selector || "#pa-ajax-content";
         data     = data || null;
@@ -61,9 +66,10 @@ var pineapple = {
     },
 
 
-    /* COUNTDOWN TIMER */
-    // Source: https://www.w3schools.com/howto/howto_js_countdown.asp
-    // Syntax: <script>pineapple.countdown.init("2018-12-15","timer","Timer has expired");</script>
+    /* COUNTDOWN TIMER 
+        Source: https://www.w3schools.com/howto/howto_js_countdown.asp
+        Syntax: <script>pineapple.countdown.init("2018-12-15","timer","Timer has expired");</script>
+    */
     countdown: {
         init: function (timestamp, elmId, msg) {
 
