@@ -1,13 +1,11 @@
-/*
- *
- * PINEAPPLE v1.3 - pineapple.ncr4.com
+/**
+ * PINEAPPLE LIBRARY
  * Created on the 4.0 Bootstrap framework - getbootstrap.com
- * (c) 2017-2018, NCR4 Design - ncr4.com
+ * Author: Justin Hammond
  * Code licensed under Creative Commons by 3.0. - creativecommons.org/licenses/by/3.0
  *
  * DO NOT REMOVE THIS HEADER, PERMISSION FOR PUBLIC USE GRANTED
  * CREDIT MUST BE GIVEN FOR ALL PROJECTS
- *
  */
 /*--------------------------------------------------------------------
  * SASS VARIABLES
@@ -24,42 +22,50 @@ body {
   line-height: 1.8;
   color: #818181;
   overflow-x: none;
-  position: relative; }
+  position: relative;
+}
 
 h2 {
   text-transform: uppercase;
   margin-bottom: 30px;
   text-align: center;
-  color: #007dda; }
+  color: #007dda;
+}
 
 h4 {
   line-height: 1.375em;
   font-weight: 400;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+}
 
 .container-fluid {
-  padding: 60px 50px; }
+  padding: 60px 50px;
+}
 
 .pa-banner-text {
-  /* this class initially referenced in Pineapple.css (pa-lib.com) */
-  color: #fff; }
+  color: #fff;
+}
 
 footer {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 label {
   font-size: 1.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 code {
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 .logo {
   display: inline-block;
   height: 40px;
   width: 40px;
   margin-top: -7px;
-  padding-left: 0px; }
+  padding-left: 0px;
+}
 
 /******************/
 /***** NAVBAR *****/
@@ -68,65 +74,80 @@ code {
   opacity: 0.9;
   z-index: 9999;
   line-height: 1.4;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+}
 
 .navbar .navbar-brand {
   color: #fff;
   display: inline-block;
   font-size: 1.5rem;
-  padding: 3px 0px 1px 0px; }
+  padding: 3px 0px 1px 0px;
+}
 
 .nav-item {
-  padding: 0px 6px; }
+  padding: 0px 6px;
+}
 
 .nav-link {
-  color: #fff; }
+  color: #fff;
+}
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #fff; }
+  color: #fff;
+}
 
-/* overrides BS 4.0 dark nav collapse button */
 .navbar-toggler {
-  border-color: transparent; }
+  border-color: transparent;
+}
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
 .navbar-toggler:focus {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
-/**/
 @media screen and (max-width: 768px) {
   .col-sm-4 {
     text-align: center;
-    margin: 25px 0; }
-
+    margin: 25px 0;
+  }
   .btn-lg {
     width: 100%;
-    margin-bottom: 35px; } }
+    margin-bottom: 35px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .logo {
-    font-size: 150px; } }
+    font-size: 150px;
+  }
+}
+
 /*******************/
 /***** BUTTONS *****/
 .btn-banner {
   color: #fff;
   border-color: #fff;
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 .btn-banner:hover {
   background-color: #007dda;
   color: #fff;
-  border-color: #007dda; }
+  border-color: #007dda;
+}
 
 .btn-other {
   color: #007dda;
   border-color: #007dda;
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 .btn-other:hover {
   background-color: #007dda;
   color: #fff;
-  border-color: #007dda; }
-
+  border-color: #007dda;
+}
 /*# sourceMappingURL=waterfall.theme.css.map */

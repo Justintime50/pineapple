@@ -1,21 +1,20 @@
 /**
- * PINEAPPLE v1.3
+ * PINEAPPLE LIBRARY
  * Created on the 4.0 Bootstrap framework - getbootstrap.com
- * (c) 2017, Justin Hammond
- * Code licensed under Creative Commons by 3.0. - creativecommons.org/licenses/by/3.0/
+ * Author: Justin Hammond
+ * Code licensed under Creative Commons by 3.0. - creativecommons.org/licenses/by/3.0
  *
  * DO NOT REMOVE THIS HEADER, PERMISSION FOR PUBLIC USE GRANTED
+ * CREDIT MUST BE GIVEN FOR ALL PROJECTS
  *
- * ****************
  *
  * PINEAPPLE OBJECT
  * loglevel:
- * navFadeValue
- * testMessage:
- * playgroundMessage
+ * ajax
  * pageLoader
  * showPage
  * countdown
+ * navFadeValue
  */
 
 var pineapple = {
@@ -29,29 +28,11 @@ var pineapple = {
      * 4 = 3 + info (Default for Dev)
      **/
 
-    loglevel:     4,
+    loglevel:     1,
     navFadeValue: 500,
 
-    testMessage: function () {
-      alert('I came from an external script!');
-      return pineapple;
-    },
 
-    playgroundMessage: function () {
-      alert('This playground is meant to test the Pineapple library and is not intended to be functional.');
-      pineapple.log.test();
-      return pineapple;
-    },
-
-    pageLoader: function (interval) {
-        interval = interval || 1500; // 1500 makes the parameter optional
-        pineapple.padeLoaderInput = setTimeout(pineapple.showPage, interval);
-        return pineapple;
-    },
-
-    /* AJAX JAVASCRIPT
-        original content - Jeffrey Woodward
-    */
+    /* AJAX JAVASCRIPT */
     ajax: function (page, selector, data){
         selector = selector || "#pa-ajax-content";
         data     = data || null;
@@ -61,17 +42,17 @@ var pineapple = {
         });
         return pineapple;
     },
-    /*
 
-    function init(){
-    $.post( "page.php", function( data ) {
-        $( "#content" ).html( data );
-    });
-    }
 
     /* PAGE LOADER
-        https:/www.w3schools.com/howto/howto_css_loader.asp
+        Source: https:/www.w3schools.com/howto/howto_css_loader.asp
     */
+
+   pageLoader: function (interval) {
+    interval = interval || 1500; // 1500 makes the parameter optional
+    pineapple.padeLoaderInput = setTimeout(pineapple.showPage, interval);
+    return pineapple;
+    },
 
     showPage: function () {
         $("#pa-loader").css('display',"none");
@@ -79,12 +60,12 @@ var pineapple = {
         return pineapple;
     },
 
+
+    /* COUNTDOWN TIMER */
+    // Source: https://www.w3schools.com/howto/howto_js_countdown.asp
+    // Syntax: <script>pineapple.countdown.init("2018-12-15","timer","Timer has expired");</script>
     countdown: {
         init: function (timestamp, elmId, msg) {
-            ///////////////////////////
-            ///// COUNTDOWN TIMER /////
-            // https://www.w3schools.com/howto/howto_js_countdown.asp
-            // Syntax: <script>pineapple.countdown.init("2018-12-15","timer","Timer has expired");</script>
 
             // Set the date we're counting down to
             pineapple.countdown.date = new Date(timestamp).getTime();
@@ -155,26 +136,16 @@ var pineapple = {
     }
 };
 
+
 var pa = pineapple;
 var PA = pineapple;
 
-/*
-    Reverse Compatibility remove in a few versions
-*/
-function pageLoader(input){
-  pineapple.pageLoader(input);
-  console.warn('pageLoader() has been moved to pineapple.pageLoader(), pageLoader will be removed in next version');
-}
-
-function showPage(){
-  pineapple.showPage();
-  console.warn('showPage() has been moved to pineapple.showPage(), showPage will be removed in next version');
-}
-
-$(document).ready(function(){
     /* SMOOTH SCROLLER
-           https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+        Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
     */
+   
+$(document).ready(function(){
+
     pineapple.scrollOffset = $('body').data('offset')-1;
     if(pineapple.scrollOffset === undefined || isNaN(pineapple.scrollOffset)) {
         pineapple.log.warn('data-offset must be defined in order to use smooth scroller');
@@ -218,9 +189,11 @@ $(document).ready(function(){
             } // End if
         });
     }
+
+
     /*
     SLIDEANIM EFFECT
-        https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+        Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
     */
     $(window).scroll(function() {
     $(".pa-slideanim").each(function(){
@@ -233,10 +206,10 @@ $(document).ready(function(){
     });
   });
 
+
     /*
     NAV FADE EFFECT ON SCROLL
-        https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
-        https://www.youtube.com/watch?v=6VZNH1gorws
+        Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
     */
 
     $(window).scroll(function() {

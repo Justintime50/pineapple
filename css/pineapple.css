@@ -1,85 +1,76 @@
 /**
- * PINEAPPLE v1.3
+ * PINEAPPLE LIBRARY
  * Created on the 4.0 Bootstrap framework - getbootstrap.com
- * (c) 2017, Justin Hammond
+ * Author: Justin Hammond
  * Code licensed under Creative Commons by 3.0. - creativecommons.org/licenses/by/3.0
  *
  * DO NOT REMOVE THIS HEADER, PERMISSION FOR PUBLIC USE GRANTED
  * CREDIT MUST BE GIVEN FOR ALL PROJECTS
  */
-/****************************/
-/***** ORIGINAL CONTENT *****/
-body {
-  font-size: 62.5%;
-  /* makes rems relative to 10px */
-  /* May want to visit getting rid of, could destroy fonts on certain projects already using pineapple */ }
-
 .pa-bg-gray {
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+}
 
 /******************/
 /***** BANNER *****/
-/* original content - Author: Justin Hammond */
 body,
 html {
-  /* body and html must have a height of 100% for the banner and fullscreen carousel to scale properly */
-  height: 100%; }
+  height: 100%;
+}
 
 .pa-banner {
   /*****************************/
   /* Responsive Full Image Fix */
-  /* https://www.w3schools.com/howto/howto_css_full_page.asp */
   height: 100%;
   background-position: center;
-  -webkit-background-size: cover;
-  /* For WebKit */
-  -moz-background-size: cover;
-  /* Mozilla */
-  -o-background-size: cover;
-  /* Opera */
   background-size: cover;
-  /* Generic */
-  background-attachment: fixed; }
+  background-attachment: fixed;
+}
 
-/* For width 1024 and smaller: */
 @media only screen and (max-width: 1024px) {
   .pa-banner {
     background-attachment: initial;
-    /* MUST KEEP TO AVOID IPHONE BANNER SCALING GLITCH - DO NOT REMOVE */ } }
+  }
+}
+
 .pa-banner-text {
-  /* horizontal align */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   padding: 3rem;
-  /* vertical align */
   top: 50%;
-  transform: translateY(-50%);
-  /* font elements */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   position: relative;
-  /* keep for font color fix */
   z-index: 10;
-  color: #fff; }
+  color: #fff;
+}
 
 .pa-banner-heading {
   font-size: 8vmin;
   position: relative;
-  /* keep for font color fix overlaid on banner. */
   z-index: 10;
-  color: #fff; }
+  color: #fff;
+}
 
 .pa-banner-sub-heading {
   font-size: 3vmin;
   position: relative;
-  /* keep for font color fix */
   z-index: 10;
-  color: #fff; }
+  color: #fff;
+}
 
 .pa-banner-darken:after {
   /********************/
   /* Darken Image Fix */
-  /* http://stackoverflow.com/questions/36389481/how-to-darken-the-background-image-in-css */
   content: "";
   z-index: 0;
   display: block;
@@ -88,105 +79,102 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.5);
+}
 
 .pa-banner-logo {
-  /* For scaling and positioning a logo over the banner. */
   width: 20vw;
   height: auto;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
-/* For width 1024 and smaller: */
 @media only screen and (max-width: 1024px) {
   .pa-banner-logo {
-    width: 30vw; } }
-/* For width 768 and smaller: */
+    width: 30vw;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .pa-banner-logo {
-    width: 25vh; } }
+    width: 25vh;
+  }
+}
+
 /****************/
 /***** ICON *****/
-/* original content - Author: Justin Hammond */
 .pa-icon {
   border: gray solid 1px;
   border-radius: 0.5em;
   padding: 25px;
   margin: 10px;
   text-align: center;
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**********************/
 /***** FONT SIZES *****/
-/* original content - Author: Justin Hammond */
 @media only screen and (max-width: 768px) {
   .pa-font-xs {
-    /*font-size: 18px;*/
-    font-size: 14px; }
-
+    font-size: 14px;
+  }
   .pa-font-sm {
-    /*font-size: 24px;*/
-    font-size: 20px; }
-
+    font-size: 20px;
+  }
   .pa-font-md {
-    /*font-size: 32px;*/
-    font-size: 28px; }
-
+    font-size: 28px;
+  }
   .pa-font-lg {
-    /*font-size: 48px;*/
-    font-size: 42px; }
-
+    font-size: 42px;
+  }
   .pa-font-xl {
-    /*font-size: 66px;*/
-    font-size: 56px; } }
+    font-size: 56px;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .pa-font-xs {
-    /*font-size: 2.2vw;*/
-    font-size: 1.6vw; }
-
+    font-size: 1.6vw;
+  }
   .pa-font-sm {
-    /*font-size: 3.1vw;*/
-    font-size: 2.3vw; }
-
+    font-size: 2.3vw;
+  }
   .pa-font-md {
-    /*font-size: 4vw;*/
-    font-size: 3.2vw; }
-
+    font-size: 3.2vw;
+  }
   .pa-font-lg {
-    /*font-size: 6.1vw;*/
-    font-size: 5.2vw; }
-
+    font-size: 5.2vw;
+  }
   .pa-font-xl {
-    /*font-size: 8.5vw;*/
-    font-size: 6vw; } }
+    font-size: 6vw;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .pa-font-xs {
-    /*font-size: 28px;*/
-    font-size: 14px; }
-
+    font-size: 14px;
+  }
   .pa-font-sm {
-    /*font-size: 38px;*/
-    font-size: 18px; }
-
+    font-size: 18px;
+  }
   .pa-font-md {
-    /*font-size: 48px;*/
-    font-size: 26px; }
-
+    font-size: 26px;
+  }
   .pa-font-lg {
-    /*font-size: 74px;*/
-    font-size: 40px; }
-
+    font-size: 40px;
+  }
   .pa-font-xl {
-    /*font-size: 102px;*/
-    font-size: 58px; } }
-/****************************/
-/***** EXTERNAL CONTENT *****/
+    font-size: 58px;
+  }
+}
+
 /************************/
 /***** CARD POP-OUT *****/
-/* https://www.w3schools.com/howto/howto_css_cards.asp */
 .pa-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 1em;
   margin: 1em;
@@ -194,276 +182,195 @@ html {
   text-align: center;
   max-width: 100%;
   background-color: #fff;
-  border-radius: 0.35em; }
+  border-radius: 0.35em;
+}
 
 .pa-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
 /***************************/
 /***** SLANTED SECTION *****/
 .pa-slanted-container {
-  transform: skew(0deg, -2deg);
-  margin-bottom: -2vw; }
+  -webkit-transform: skew(0deg, -2deg);
+          transform: skew(0deg, -2deg);
+  margin-bottom: -2vw;
+}
 
 .pa-slanted-content {
-  transform: skew(0deg, 2deg); }
+  -webkit-transform: skew(0deg, 2deg);
+          transform: skew(0deg, 2deg);
+}
 
 /************************/
 /***** LOADER IMAGE *****/
-/* https://www.w3schools.com/howto/howto_css_loader.asp */
 #pa-loader {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 1;
   width: 150px;
   height: 150px;
-  /* Loader image height - DO NOT REMOVE */
   margin: -75px 0 0 -75px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #007dda;
   -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 1.5s linear infinite; }
+  animation: spin 1.5s linear infinite;
+}
 
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+  }
   100% {
-    -webkit-transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 @keyframes spin {
   0% {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
   100% {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 #pa-loaderDiv {
   height: 100%;
-  /* Fixes banner glitch - DO NOT REMOVE */
   display: none;
-  text-align: center; }
+  text-align: center;
+}
 
 /**************************/
 /***** BOTTOM ANIMATE *****/
-/* https://www.w3schools.com/howto/howto_css_loader.asp */
 .pa-animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
-  animation-duration: 1s; }
+  animation-duration: 1s;
+}
 
 @-webkit-keyframes animatebottom {
   from {
     bottom: -100px;
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
     bottom: 0;
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
+
 @keyframes animatebottom {
   from {
     bottom: -100px;
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
     bottom: 0;
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
+
 /*****************************/
 /***** SLIDEANIM OBJECTS *****/
-/* https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp */
 .pa-slideanim {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 .slide {
-  /* The name of the animation */
   animation-name: slide;
   -webkit-animation-name: slide;
-  /* The duration of the animation */
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
-  /* Make the element visible */
-  visibility: visible; }
+  visibility: visible;
+}
 
 /* Go from 0% to 100% opacity (see-through) and specify the percentage
    from when to slide in the element along the Y-axis */
 @keyframes slide {
   0% {
     opacity: 0;
-    transform: translateY(70%); }
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
   100% {
     opacity: 1;
-    transform: translateY(0%); } }
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 @-webkit-keyframes slide {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(70%); }
+    -webkit-transform: translateY(70%);
+  }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0%); } }
-/************************/
-/***** SOCIAL ICONS *****/
-/* https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
-.pa-social .fa {
-  /* balance must be kept between paddings, font-size, and width to maintain
-     proper center positioning. Scale relative to other elements. */
-  padding: 6px 4px;
-  /*font-size: 6px;*/
-  width: 35px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%; }
+    -webkit-transform: translateY(0%);
+  }
+}
 
-.fa:hover {
-  opacity: 0.7;
-  color: white; }
-
-/* Social Media */
-.fa-facebook {
-  background: #3B5998;
-  color: white; }
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white; }
-
-.fa-google {
-  background: #dd4b39;
-  color: white; }
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white; }
-
-.fa-youtube {
-  background: #bb0000;
-  color: white; }
-
-.fa-instagram {
-  background: #125688;
-  color: white; }
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white; }
-
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
-
-.fa-skype {
-  background: #00aff0;
-  color: white; }
-
-/***************************/
-/***** LIVE THUMBNAILS *****/
-/* https://medium.com/@jamesfuthey/simulating-the-creation-of-website-thumbnail-screenshots-using-iframes-7145269891db */
-.pa-live-thumbnail iframe {
-  width: 1280px;
-  height: 768px;
-  opacity: 0;
-  transition: all 300ms ease-in-out; }
-
-.pa-live-thumbnail {
-  position: relative;
-  -ms-zoom: 0.2;
-  -moz-transform: scale(0.2);
-  -moz-transform-origin: 0 0;
-  -o-transform: scale(0.2);
-  -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.2);
-  -webkit-transform-origin: 0 0; }
-
-.pa-live-thumbnail-container {
-  width: calc(1280px * 0.2);
-  height: calc(768px * 0.2);
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  border: solid 1px black; }
-
-.pa-live-thumbnail-container a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 1440px;
-  height: 900px;
-  z-index: 10; }
-
-.pa-live-thumbnail-container:before {
-  position: absolute;
-  display: block;
-  margin-left: auto;
-  content: "Loading thumbnail..."; }
-
-/*
- * THIS IS THE HTML FOR LIVE THUMBNAILS
- * THIS ALL NEEDS TO BE OPTIMIZED
- * KNOWN ISSUE: CROSS ORIGIN ISSUES, HTTPS DOESN'T DISPLAY ON HTTP, ALL ELEMENTS MUST BE HTTPS
-
---
-<div class="pa-live-thumbnail-container">
-  <div class="pa-live-thumbnail">
-    <iframe src="https://primebusinessdevelopment.com" onload="this.style.opacity = 1"></iframe>
-    <a href="https://primebusinessdevelopment.com"></a>
-  </div>
-</div>
---
-*/
 /*************************/
 /**** NAV FADE EFFECT ****/
-/* https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color */
-/* https://www.youtube.com/watch?v=6VZNH1gorws */
 .navbar {
-  background-color: initial; }
+  background-color: initial;
+}
 
 .pa-nav-fade {
   color: #fff;
-  transition: background-color 0.5s ease 0s; }
+  -webkit-transition: background-color 0.5s ease 0s;
+  transition: background-color 0.5s ease 0s;
+}
 
 .pa-nav-fade.opaque {
-  /*background-color: rgba(255,255,255,0);*/
   color: #89150a;
   background-color: #fff;
+  -webkit-transition: background-color 0.5s ease 0s;
   transition: background-color 0.5s ease 0s;
-  opacity: 0.9; }
+  opacity: 0.9;
+}
 
 .pa-nav-fade a {
-  color: #fff; }
+  color: #fff;
+}
 
 .pa-nav-fade .dropdown-menu a {
-  color: #000; }
+  color: #000;
+}
 
 .pa-nav-fade a.opaque {
-  color: #89150a; }
+  color: #89150a;
+}
 
-/*********************************/
-/***** BOOTSTRAP DATE PICKER *****/
-/* https://bootstrap-datepicker.readthedocs.io/en/latest/index.html */
-/* No content here, must include externally */
-/***********************/
-/***** FIXES/HACKS *****/
 /****************************************/
 /***** YOUTUBE FULLSCREEN VIDEO FIX *****/
-/* https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
 .pa-videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
-  /* 16:9 */
   padding-top: 25px;
-  height: 0; }
+  height: 0;
+}
 
 .pa-videoWrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 /******************************/
 /***** BOOTSTRAP 3.0 WELL *****/
-/* http://getbootstrap.com */
 .pa-well {
   min-height: 20px;
   padding: 19px;
@@ -472,15 +379,14 @@ html {
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
 
 /***********************************/
 /* FULL IMAGE BS 4 CAROUSEL IMAGES */
-/* https://mdbootstrap.com/full-page-carousel/ */
-/* Needed for carousel to work properly, has been declared above already.
- * If you alter the html and body tag of your project or Pineapple, you
- * MUST include this code below to get full screen carousel images.
- *
+/* For the carousel to work properly, you must declare the commented code below
+/* in your CSS, we have taken the liberty of doing this for you already:
+/*
 html,
 body {
     height: 100%;
@@ -489,27 +395,32 @@ body {
 .pa-carousel-full,
 .pa-carousel-item-full,
 .pa-active {
-  height: 100%; }
+  height: 100%;
+}
 
 .pa-carousel-item-full {
-  background-position: center; }
+  background-position: center;
+}
 
 .pa-carousel-inner-full {
-  height: 100%; }
+  height: 100%;
+}
 
 .pa-carousel-item-full:nth-child(1) {
   background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .pa-carousel-item-full:nth-child(2) {
   background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(4).jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .pa-carousel-item-full:nth-child(3) {
   background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(3).jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
-
+  background-size: cover;
+}
 /*# sourceMappingURL=pineapple.css.map */

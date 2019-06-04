@@ -2,31 +2,24 @@
 <html lang="en">
 <head>
 
-  <title>Pineapple Playground</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/pics/favicon.ico">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/pineapple.css">
-  <link rel="stylesheet" href="../themes/waterfall-theme/waterfall.theme.css">
-  <script src="https://use.fontawesome.com/12e4399d79.js"></script>
-  <style>
-
-
-.pa-banner {
-  background-image: url("banner.jpg");
-}
-
-
-  </style>
+<title>Pineapple Playground</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/pineapple.css">
+<link rel="stylesheet" href="../themes/waterfall-theme/waterfall.theme.css">
+<script src="https://use.fontawesome.com/12e4399d79.js"></script>
+<style>
+  .pa-banner {
+    background-image: url("banner.jpg");
+  }
+</style>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="62" onload="pineapple.pageLoader()">
 
-
 <div id="pa-loader"></div>
 <div id="pa-loaderDiv">
-
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-md fixed-top pa-nav-fade">
@@ -37,7 +30,6 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="http://pa-lib.com">BACK TO SITE</a></li>
         <li class="nav-item"><a class="nav-link" href="#examples">EXAMPLES</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
         <li class="nav-item"><a class="nav-link" href="#footer">FOOTER</a></li>
@@ -59,7 +51,6 @@
 </div>
 
 
-
 <!-- Container (EXAMPLES Section) -->
 <div id="examples"></div>
 <div class="container-fluid text-center pa-slideanim">
@@ -68,62 +59,40 @@
     <p>Timer</p>
     <div id="timer"></div>
 
-
     <br><hr><br>
 
 
-    <a href="#ajax" onclick = "pineapple.ajax('ajax-message.html')"><button class="btn btn-default btn-lg">AJAX</button></a>
+<div class="text-center" id="pa-ajax-content">
+    <!--     ajax: function (page, selector, data){ -->
 
-<p class="text-center" id="pa-ajax-content"></p>
-
+  <a href="#ajax" onclick="pineapple.ajax(1, 'ajax-message.html', 1)" class="btn btn-primary btn-lg">AJAX</a>
+</div>
 
 <br><hr>
-
 
 <div class="pa-icon">Icon</div>
 
+  <br><hr><br>
 
-    <br><hr><br>
-
-<div class="container-fluid pa-bg-gray">
-  <p>Gray BG</p>
-<div class="pa-card">Card<br>Info here...</div>
+  <div class="container-fluid pa-bg-gray">
+    <p>Gray BG</p>
+  <div class="pa-card">Card<br>Info here...</div>
 </div>
 
-    <br><hr><br>
-
+  <br><hr><br>
 
 <div class="pa-well">Well</div>
 
+  <br><hr>
 
-    <br><hr>
+  <h1>Font Sizes</h1>
+  <br>
 
-<h1>Font Sizes</h1>
-<br>
-
-<p class="pa-font-xs">Extra Small</p>
-<p class="pa-font-sm">Small</p>
-<p class="pa-font-md">Medium</p>
-<p class="pa-font-lg">Large</p>
-<p class="pa-font-xl">Extra Large</p>
-
-<br><hr><br>
-          <h1>Social Icons</h1>
-          <div class="pa-social">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-google"></a>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-pinterest"></a>
-            <a href="#" class="fa fa-snapchat-ghost"></a>
-            <a href="#" class="fa fa-skype"></a>
-          </div>
-<br><hr>
-
-
-
+  <p class="pa-font-xs">Extra Small</p>
+  <p class="pa-font-sm">Small</p>
+  <p class="pa-font-md">Medium</p>
+  <p class="pa-font-lg">Large</p>
+  <p class="pa-font-xl">Extra Large</p>
 </div>
 
 
@@ -144,8 +113,6 @@
     </div>
   </div>
 </div>
-
-
 
 <br><hr>
 
@@ -184,22 +151,6 @@
 <br><br><br>
 
 
-
-<div class="text-center">
-<h3>Live Thumbnail</h3><br>
-
-<div class="pa-live-thumbnail-container">
-  <div class="pa-live-thumbnail">
-    <iframe src="https://ncr4.com" onload="this.style.opacity = 1"></iframe>
-    <a href="https://pa-lib.com"></a>
-  </div>
-</div>
-
-<br><br>
-</div>
-
-
-
 <!-- Container (ABOUT Section) -->
 <div id="about"></div>
 <div class="container-fluid text-center pa-bg-gray">
@@ -235,27 +186,22 @@
 </div>
 
 
-
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top" class="pa-scroll">
     <span class="fa fa-chevron-up fa-lg"></span>
   </a>
   <br><br>
-  <p>Built on <a href="https://getbootstrap.com">Bootstrap</a> with <a href="http://pa-lib.com">Pineapple<img src="http://pa-lib.com/assets/pics/favicon.ico" width="16" height="16" alt="Pineapple" style="display:inline-block;background-color: black;border-radius: .25rem;margin-left: 8px;margin-bottom:4px;"></a></p>
+  <p>Built on <a href="https://getbootstrap.com">Bootstrap</a> with <a href="https://github.com/Justintime50/Pineapple"></a>Pineapple</a></p>
 </footer>
-
-
 
 </div><!-- loader -->
 
-
-
 <!-- SCRIPTS -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="../js/pineapple.js"></script>
-<script>pineapple.countdown.init("2018-12-15","timer","Timer has expired");</script>
+<script>pineapple.countdown.init("2023-12-15","timer","Timer has expired");</script>
 <script>pineapple.navFadeValue = 600;</script>
 
 </body>
