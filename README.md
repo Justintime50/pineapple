@@ -3,11 +3,9 @@
   <img src="pineapple.png" alt="Pineapple logo" width="100" height="100" />
 </p>
 
-<h2 align="center">Pineapple - CSS & JS Library</h3>
+<h2 align="center">Pineapple - CSS & JS Library</h2>
 
 <p align="center">Pineapple is a web development library including frequently used CSS and Javascript functions. Built over Bootstrap, Pineapple allows websites to be easily and quickly built.</p>
-
-#
  
 ## Background
 Pineapple was started as a way to fill in the gaps that Bootstrap did not fill. Since Bootstrap 4 and other frameworks have been updated, many of the original issues Pineapple fixed have found their way into these other frameworks and therefore, the Pineapple equivelent has been removed. What remains are functions or classes I often continue to use in my projects today in some form or another.
