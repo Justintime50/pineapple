@@ -55,7 +55,7 @@ var pineapple = {
 
    pageLoader: function (interval) {
     interval = interval || 1500; // 1500 makes the parameter optional
-    pineapple.padeLoaderInput = setTimeout(pineapple.showPage, interval);
+    pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
     return pineapple;
     },
 
