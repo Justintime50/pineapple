@@ -3,10 +3,12 @@
   <img src="pineapple.png" alt="Pineapple logo" width="100" height="100" />
 </p>
 
-<h2 align="center">Pineapple - CSS & JS Library</h2>
+<h3 align="center">Pineapple - CSS & JS Library</h3>
 
 <p align="center">Pineapple is a web development library including frequently used CSS and Javascript functions. Built over Bootstrap, Pineapple allows websites to be easily and quickly built.</p>
- 
+
+<br />
+
 ## Background
 Pineapple was started as a way to fill in the gaps that Bootstrap did not fill. Since Bootstrap 4 and other frameworks have been updated, many of the original issues Pineapple fixed have found their way into these other frameworks and therefore, the Pineapple equivelent has been removed. What remains are functions or classes I often continue to use in my projects today in some form or another.
 
@@ -93,7 +95,7 @@ Add your image reference in a custom `css` class as follows. The number in the p
 - **Page Loader:** Define a variable for the amount of time the page loader will show. Default value is 1500 (1.5 seconds). Usage: <!-- TODO: ADD SYNTAX -->
 - **AJAX:** Use Ajax to dynamically change the content of a webpage. Usage: <!-- TODO: ADD SYNTAX -->
 
-<br>
+<br />
 
 # Contributors
 Feel free to use this code on any of your projects!
