@@ -24,7 +24,6 @@ This project's CSS is intended to be compiled with SASS.
   - /pineapple.js
 ```
 
-
 # Installation
 Pineapple must be downloaded and placed in your project directory. Make sure to update the path to the pineapple library based on where you place it in your project. Something like this:
 ```
@@ -32,19 +31,14 @@ Pineapple must be downloaded and placed in your project directory. Make sure to 
 <script src="pineapple/js/pineapple.css"></script>
 ```
 
-## Themes
-We've created some themes to use as templates when creating your site. Each theme runs on Pineapple and Bootstrap 4. Use our themes to quickly build a site, customizable as needed.
+## Templates
+We've created some templates to use when creating your site. Each template runs on Pineapple and Bootstrap 4. Use our templates to quickly build a site, customizable as needed.
 
-- Pineapple themes require Bootstrap 4.0 or newer.
+- Pineapple templates require Bootstrap 4.0 or newer.
 
-### Waterfall Theme
+### Waterfall Template
 - Simple website, single page.
-- "Waterfall" effect created by the page sliding into the users view.
-
-### SASS/CSS
-- Our themes use SASS to quickly manipulate CSS. Please visit http://sass-lang.com for more info on using SASS.
-
-<br />
+- "Waterfall" effect created by the page sliding into the users view via JS animations.
 
 # Usage
 
@@ -105,8 +99,6 @@ Add your image reference in a custom `css` class as follows. The number in the p
 - **Countdown Timer:** Built into Pineapple is the ability to create a customized countdown timer. Simply add this javascript to the end of your page and call it with the unique ID. `<script>pineapple.countdown.init("2018-12-15","timer","Timer has expired");</script>`. The first section is the time for the countdown (year, month, day), the next section is the timer id which can be called wherever on your page. The last section is the message to be displayed once your time has expired.
 - **Page Loader:** Define a variable for the amount of time the page loader will show. Default value is 1500 (1.5 seconds). Usage: <!-- TODO: ADD SYNTAX -->
 - **AJAX:** Use Ajax to dynamically change the content of a webpage. Usage: <!-- TODO: ADD SYNTAX -->
-
-<br />
 
 # Contributors
 Feel free to use this code on any of your projects!

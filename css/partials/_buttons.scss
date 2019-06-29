@@ -1,0 +1,34 @@
+$color-primary: #007dda;
+$color-secondary: red;
+$color-text: #818181;
+$color-white: #fff;
+
+/*******************/
+/***** BUTTONS *****/
+.pa-btn-banner {
+    color: $color-white;
+    border-color: $color-white;
+    background-color: transparent;
+}
+.pa-btn-banner:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+}
+.pa-btn-other {
+    color: $color-primary;
+    border-color: $color-primary;
+    background-color: transparent;
+}
+.pa-btn-other:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+}
+
+@media screen and (max-width: 768px) {
+    .pa-btn {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
