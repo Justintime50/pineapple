@@ -1,0 +1,58 @@
+
+.pa-bg-gray {
+  background-color: #f6f6f6;
+}
+
+/******************/
+/***** BANNER *****/
+body,
+html {
+  // body and html must have a height of 100% for the banner and fullscreen carousel to scale properly
+  height: 100%;
+}
+
+
+
+/****************/
+/***** ICON *****/
+.pa-icon {
+  border: gray solid 1px;
+  border-radius: 0.5em;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+
+
+
+/************************/
+/***** CARD POP-OUT *****/
+// Source: https://www.w3schools.com/howto/howto_css_cards.asp
+.pa-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 1em;
+  margin: 1em;
+  display: block;
+  text-align: center;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 0.35em;
+}
+.pa-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/***************************/
+/***** SLANTED SECTION *****/
+.pa-slanted-container {
+  transform: skew(0deg, -2deg);
+  margin-bottom: -2vw;
+}
+.pa-slanted-content {
+  transform: skew(0deg, 2deg);
+}

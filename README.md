@@ -7,12 +7,23 @@
 
 <p align="center">Pineapple is a web development library including frequently used CSS and Javascript functions. Built over Bootstrap, Pineapple allows websites to be easily and quickly built.</p>
 
-<br />
-
 ## Background
 Pineapple was started as a way to fill in the gaps that Bootstrap did not fill. Since Bootstrap 4 and other frameworks have been updated, many of the original issues Pineapple fixed have found their way into these other frameworks and therefore, the Pineapple equivelent has been removed. What remains are functions or classes I often continue to use in my projects today in some form or another.
 
-<br>
+## Scope
+This project's CSS is intended to be compiled with SASS.
+```
+- /css
+  - /_animations.scss
+  - /_banner.scss
+  - /_fonts.scss
+  - /_grid.scss
+  - /_hacks.scss
+  - /pineapple.css
+- /js
+  - /pineapple.js
+```
+
 
 # Installation
 Pineapple must be downloaded and placed in your project directory. Make sure to update the path to the pineapple library based on where you place it in your project. Something like this:
