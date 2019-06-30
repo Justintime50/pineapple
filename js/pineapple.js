@@ -207,7 +207,7 @@ $(document).ready(function(){
       var h = window.innerHeight;
       var winTop = $(window).scrollTop();
       if (pos < winTop + h - 40) {
-        $(this).addClass("slide");
+        $(this).addClass("pa-slide");
       }
     });
   });

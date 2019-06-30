@@ -1,0 +1,5 @@
+# Javascript Docs
+- **Smooth Scroller:** Add `data-offset="pixels"` element to your `<body>` tag. Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page and highlight the nav link if possible. Additionally you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page.
+- **Countdown Timer:** Built into Pineapple is the ability to create a customized countdown timer. Simply add this javascript to the end of your page and call it with the unique ID. `<script>pineapple.countdown.init("2018-12-15","timer","Timer has expired");</script>`. The first section is the time for the countdown (year, month, day), the next section is the timer id which can be called wherever on your page. The last section is the message to be displayed once your time has expired.
+- **Page Loader:** Define a variable for the amount of time the page loader will show. Default value is 1500 (1.5 seconds). Usage: <!-- TODO: ADD SYNTAX -->
+- **AJAX:** Use Ajax to dynamically change the content of a webpage. Usage: <!-- TODO: ADD SYNTAX -->

@@ -1,34 +1,46 @@
-$color-primary: #007dda;
-$color-secondary: red;
-$color-text: #818181;
-$color-white: #fff;
+//
+// Base Styles
+//
 
-/*******************/
-/***** BUTTONS *****/
-.pa-btn-banner {
-    color: $color-white;
-    border-color: $color-white;
-    background-color: transparent;
-}
-.pa-btn-banner:hover {
-    background-color: $color-primary;
-    color: $color-white;
-    border-color: $color-primary;
-}
-.pa-btn-other {
-    color: $color-primary;
-    border-color: $color-primary;
-    background-color: transparent;
-}
-.pa-btn-other:hover {
-    background-color: $color-primary;
-    color: $color-white;
-    border-color: $color-primary;
-}
 
+//
+// Buttons
+//
+
+.pa-btn {
+    margin: 20px;
+    padding: 10px 30px;
+    background-color: #eee;
+    border: solid 1px gray;
+    color: #fff;
+}
 @media screen and (max-width: 768px) {
     .pa-btn {
       width: 100%;
       margin-bottom: 35px;
     }
-  }
+}
+
+.pa-btn-banner {
+    color: $color-white;
+    border-color: $color-white;
+    background-color: transparent;
+}
+
+.pa-btn-banner:hover {
+    background-color: $color-blue;
+    color: $color-white;
+    border-color: $color-blue;
+}
+
+.pa-btn-blue {
+    color: $color-blue;
+    border-color: $color-blue;
+    background-color: transparent;
+}
+
+.pa-btn-blue:hover {
+    background-color: $color-blue;
+    color: $color-white;
+    border-color: $color-blue;
+}

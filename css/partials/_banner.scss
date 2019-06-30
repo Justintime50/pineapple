@@ -1,52 +1,65 @@
+//
+// Base Styles
+//
+
+
+// 
+// Responsive Full Image Banner
+// Source: https://www.w3schools.com/howto/howto_css_full_page.asp
+//
+
 .pa-banner {
-  /*****************************/
-  /* Responsive Full Image Fix */
-  // Source: https://www.w3schools.com/howto/howto_css_full_page.asp
-  height: 100%;
-  background-position: center;
-  -webkit-background-size: cover; // For WebKit
-  -moz-background-size: cover;    // Mozilla
-  -o-background-size: cover;      // Opera
-  background-size: cover;         // Generic
-  background-attachment: fixed;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
 }
-// For width 1024 and smaller:
 @media only screen and (max-width: 1024px) {
-  .pa-banner {
-    background-attachment: initial; // MUST KEEP TO AVOID IPHONE BANNER SCALING GLITCH - DO NOT REMOVE
-  }
+    .pa-banner {
+        background-attachment: initial; // MUST KEEP TO AVOID IPHONE BANNER SCALING GLITCH - DO NOT REMOVE
+    }
 }
+
 .pa-banner-text {
-  // horizontal align
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 3rem;
-  // vertical align
-  top: 50%;
-  transform: translateY(-50%);
-  // font elements
-  position: relative; // keep for font color fix
-  z-index: 10;
-  color: #fff;
+    // horizontal align
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem;
+    // vertical align
+    top: 50%;
+    transform: translateY(-50%);
+    // font elements
+    position: relative; // keep for font color fix
+    z-index: 10;
+    color: #fff;
 }
+
 .pa-banner-heading {
-  font-size: 8vmin;
-  position: relative; // keep for font color fix overlaid on banner.
-  z-index: 10;
-  color: #fff;
+    font-size: 8vmin;
+    position: relative; // keep for font color fix overlaid on banner.
+    z-index: 10;
+    color: #fff;
 }
+
 .pa-banner-sub-heading {
-  font-size: 3vmin;
-  position: relative; // keep for font color fix
-  z-index: 10;
-  color: #fff;
+    font-size: 3vmin;
+    position: relative; // keep for font color fix
+    z-index: 10;
+    color: #fff;
 }
+
+
+//
+// Darken Image Fix
+// Source: http://stackoverflow.com/questions/36389481/how-to-darken-the-background-image-in-css
+//
+
 .pa-banner-darken:after {
-  /********************/
-  /* Darken Image Fix */
-  // Source: http://stackoverflow.com/questions/36389481/how-to-darken-the-background-image-in-css
   content: "";
   z-index: 0;
   display: block;
@@ -57,21 +70,19 @@
   right: 0;
   background: rgba(0, 0, 0, 0.5);
 }
+
 .pa-banner-logo {
-  // For scaling and positioning a logo over the banner.
   width: 20vw;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-// For width 1024 and smaller:
 @media only screen and (max-width: 1024px) {
   .pa-banner-logo {
     width: 30vw;
   }
 }
-// For width 768 and smaller:
 @media only screen and (max-width: 768px) {
   .pa-banner-logo {
     width: 25vh;

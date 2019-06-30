@@ -1,53 +1,60 @@
-/**********************/
-/***** FONT SIZES *****/
+//
+// Base Style
+//
+
+
+//
+// Fonts
+//
+
 @media only screen and (max-width: 768px) {
-  .pa-font-xs{
-    font-size: 14px;
-  }
-  .pa-font-sm{
-    font-size: 20px;
-  }
-  .pa-font-md{
-    font-size:28px;
-  }
-  .pa-font-lg{
-    font-size: 42px;
-  }
-  .pa-font-xl{
-    font-size: 56px;
-  }
+    .pa-font-xs{
+        font-size: 14px;
+    }
+    .pa-font-sm{
+        font-size: 20px;
+    }
+    .pa-font-md{
+        font-size:28px;
+    }
+    .pa-font-lg{
+        font-size: 42px;
+    }
+    .pa-font-xl{
+        font-size: 56px;
+    }
 }
-@media only screen and (min-width: 769px){
-  .pa-font-xs{
-    font-size: 1.6vw;
-  }
-  .pa-font-sm{
-    font-size: 2.3vw;
-  }
-  .pa-font-md{
-    font-size: 3.2vw;
-  }
-  .pa-font-lg{
-    font-size: 5.2vw;
-  }
-  .pa-font-xl{
-    font-size: 6vw;
-  }
+@media only screen and (min-width: 769px) {
+    .pa-font-xs{
+        font-size: 1.6vw;
+    }
+    .pa-font-sm{
+        font-size: 2.3vw;
+    }
+    .pa-font-md{
+        font-size: 3.2vw;
+    }
+    .pa-font-lg{
+        font-size: 5.2vw;
+    }
+    .pa-font-xl{
+        font-size: 6vw;
+    }
 }
 @media only screen and (min-width: 992px) {
-  .pa-font-xs{
-    font-size: 14px;
-  }
-  .pa-font-sm{
-    font-size: 18px;
-  }
-  .pa-font-md{
-    font-size: 26px;
-  }
-  .pa-font-lg{
-    font-size: 40px;
-  }
-  .pa-font-xl{
-    font-size: 58px;
-  }
+    .pa-font-xs{
+        font-size: 14px;
+    }
+    .pa-font-sm{
+        font-size: 18px;
+    }
+    .pa-font-md{
+        font-size: 26px;
+    }
+    .pa-font-lg{
+        font-size: 40px;
+    }
+    .pa-font-xl{
+        font-size: 58px;
+    }
 }
