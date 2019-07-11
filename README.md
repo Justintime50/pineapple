@@ -36,15 +36,6 @@ Pineapple includes both SASS/CSS and JS files. Clone this repo and place the fil
 <script src="pineapple/js/pineapple.css"></script>
 ```
 
-## Templates
-We've created some templates to use when creating your site. Each template runs on Pineapple and Bootstrap 4. Use our templates to quickly build a site, customizable as needed.
-
-- Pineapple templates require Bootstrap 4.0 or newer.
-
-### Waterfall Template
-- Simple website, single page.
-- "Waterfall" effect created by the page sliding into the users view via JS animations.
-
 # Documentation
 See the accompanying [Docs](/docs) for more information.
 
