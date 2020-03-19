@@ -1,12 +1,5 @@
 /**
  * PINEAPPLE LIBRARY
- * Created on the 4.0 Bootstrap framework - getbootstrap.com
- * Author: Justin Hammond
- * Code licensed under Creative Commons by 3.0. - creativecommons.org/licenses/by/3.0
- *
- * DO NOT REMOVE THIS HEADER, PERMISSION FOR PUBLIC USE GRANTED
- * CREDIT MUST BE GIVEN FOR ALL PROJECTS
- *
  *
  * PINEAPPLE OBJECT
  * loglevel
@@ -37,8 +30,8 @@ var pineapple = {
 
     /* AJAX JAVASCRIPT
         Syntax: 
-     */
-    ajax: function (page, selector, data){
+    */
+    ajax: function (page, selector, data) {
         selector = selector || "#pa-ajax-content";
         data     = data || null;
         pineapple.log.info(selector);
@@ -51,12 +44,13 @@ var pineapple = {
 
     /* PAGE LOADER
         Source: https:/www.w3schools.com/howto/howto_css_loader.asp
+        Syntax: <script>pineapple.pageLoader(1500);</script>
     */
 
-   pageLoader: function (interval) {
-    interval = interval || 1500; // 1500 makes the parameter optional
-    pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
-    return pineapple;
+    pageLoader: function (interval) {
+        interval = interval || 1500;
+        pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
+        return pineapple;
     },
 
     showPage: function () {
@@ -109,23 +103,23 @@ var pineapple = {
         }
     },
     log:{
-        info:  function(val){
+        info:  function(val) {
             if(pineapple.loglevel === 4){
                 console.info(val);
             }
         },
-        log:  function(val){
+        log:  function(val) {
             if(pineapple.loglevel >= 3){
                 console.log(val);
             }
         },
-        warn: function(val){
+        warn: function(val) {
             if(pineapple.loglevel >= 2){
                 console.warn(val);
                 console.trace();
             }
         },
-        error:function(val){
+        error:function(val) {
             if(pineapple.loglevel  >= 1){
                 console.error(val);
                 console.trace();
@@ -202,15 +196,15 @@ $(document).ready(function(){
         Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
     */
     $(window).scroll(function() {
-    $(".pa-slideanim").each(function(){
-      var pos = $(this).offset().top;
-      var h = window.innerHeight;
-      var winTop = $(window).scrollTop();
-      if (pos < winTop + h - 40) {
-        $(this).addClass("pa-slide");
-      }
+        $(".pa-slideanim").each(function(){
+            var pos = $(this).offset().top;
+            var h = window.innerHeight;
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + h - 40) {
+                $(this).addClass("pa-slide");
+            }
+        });
     });
-  });
 
 
     /*

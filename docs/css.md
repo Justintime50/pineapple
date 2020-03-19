@@ -1,4 +1,4 @@
-# CSS Docs
+# Pineapple Library CSS Docs
 
 ### Banners
 - **Banner:** Pineapple's premier feature! Include the `.pa-banner` class on a container to create a fully scalable landing page image and appropriate text-scaling. (see below)
@@ -25,11 +25,14 @@
 
 ## CSS/Javascript</h4>
 - **Fading Navbar:** Add `.pa-nav-fade` to the nav tag to have the navbar fade in after scrolling past a full screen banner image. You can define your own value for when it should fade by adding a simple script to your page. Ex: 
-```
+
+```html
 <script>pineapple.navFadeValue = 1000;</script>
 ```
+
   - You'll also need to configure colors for your faded and non-faded navbar so it's asthetically pleasing. An example of classes you'd want to adjust:
-```
+
+```css
 .pa-nav-fade {
     color: #000;
 }
@@ -46,17 +49,21 @@
     color: red;
 }
 ```
+
 - **Full Screen BS Carousel:** 
 
 You'll need to define the following somewhere in your css for this to work:
-```
+
+```css
 html,
 body {
     height: 100%;
 }
 ```
+
 An example of how to impliment the fullscreen carousel:
-```
+
+```html
 <div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false"> 
   <div class="carousel-inner" role="listbox"> 
     <div class="carousel-item active"> 
@@ -73,6 +80,7 @@ An example of how to impliment the fullscreen carousel:
 ```
 
 Add your image reference in a custom `css` class as follows. The number in the parentheses represents the slide number in order of appearance. Add as many as you desire :
-```
+
+```css
 .carousel-item:nth-child(1) { background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");}
 ```
