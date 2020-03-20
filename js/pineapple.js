@@ -29,17 +29,17 @@ var pineapple = {
 
 
     /* AJAX JAVASCRIPT
-        Syntax: 
+        DEPRECATED ON THIS LIBRARY
     */
-    ajax: function (page, selector, data) {
-        selector = selector || "#pa-ajax-content";
-        data     = data || null;
-        pineapple.log.info(selector);
-        $.post(page, data, function(data){
-            $(selector).html(data);
-        });
-        return pineapple;
-    },
+    // ajax: function (selector, data) {
+    //     selector = selector || "#pa-ajax-content";
+    //     data     = data || null;
+    //     pineapple.log.info(selector);
+    //     $.post(data, function(data){
+    //         $(selector).html(data);
+    //     });
+    //     return pineapple;
+    // },
 
 
     /* PAGE LOADER
