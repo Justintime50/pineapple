@@ -19,6 +19,8 @@ Pineapple was created as a way to fill in the gaps that Bootstrap did not fill y
 
 Pineapple includes both SCSS and Javascript files. The SCSS will need to be compiled into CSS as raw CSS is not included in this repo. Choose between implementing the `styles`, `utilities`, or the entire `Pineapple library`, all three options are included in the roo of the `css` folder.
 
+## Usage
+
 Once the CSS has been compiled, include the CSS and Javascript into your project:
 
 ```html
