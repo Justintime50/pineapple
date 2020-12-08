@@ -4,6 +4,9 @@
 
 <h3>Pineapple - CSS & JS Library</h3>
 
+[![Build Status](https://travis-ci.com/Justintime50/pineapple.svg?branch=master)](https://travis-ci.com/Justintime50/pineapple)
+[![Licence](https://img.shields.io/github/license/justintime50/pineapple)](LICENSE)
+
 <p>Pineapple is a web development library including frequently used CSS and Javascript functions. Built over Bootstrap, Pineapple allows websites to be easily and quickly built.</p>
 
 </div>
