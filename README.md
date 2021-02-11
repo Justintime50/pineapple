@@ -1,6 +1,6 @@
 # Pineapple 🍍
 
-Pineapple is a CSS, HTML, and Javascript web development library including. Built on top of Bootstrap, Pineapple allows websites to be easily and quickly built.
+Pineapple is a CSS, HTML, and Javascript web development library. Built on top of Bootstrap, Pineapple allows websites to be easily and quickly built.
 
 [![Licence](https://img.shields.io/github/license/justintime50/pineapple)](LICENSE)
 
