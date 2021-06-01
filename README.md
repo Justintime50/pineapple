@@ -24,3 +24,13 @@ Once the CSS has been compiled, include the CSS and Javascript in your project:
 ## Documentation
 
 See the accompanying [CSS Docs](/docs/css.md) or [Javascript Docs](/docs/js.md) for more information.
+
+## Development
+
+```bash
+# Lint CSS
+npm run lint
+
+# Compile CSS from SCSS
+npm run compile
+```
