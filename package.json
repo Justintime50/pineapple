@@ -1,39 +1,43 @@
 {
-  "dependencies": {
-    "node-sass": "^6.0.0"
-  },
-  "devDependencies": {
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0"
-  },
-  "scripts": {
-    "lint": "npx stylelint \"**/*.scss\"",
-    "compile": "./compile.sh"
-  },
-  "name": "pineapple",
-  "description": "Pineapple is a CSS, HTML, and Javascript web development library. Built on top of Bootstrap, Pineapple allows websites to be easily and quickly built.",
-  "version": "1.0.0",
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/justintime50/pineapple.git"
-  },
-  "keywords": [
-    "pineapple",
-    "bootstrap",
-    "css",
-    "js",
-    "html",
-    "framework",
-    "template",
-    "library"
-  ],
-  "author": "Justintime50",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/justintime50/pineapple/issues"
-  },
-  "homepage": "https://github.com/justintime50/pineapple#readme"
+    "devDependencies": {
+        "eslint": "^7.27.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.1.0",
+        "node-sass": "^6.0.0",
+        "stylelint": "^13.13.1",
+        "stylelint-config-standard": "^22.0.0"
+    },
+    "scripts": {
+        "lint-css": "npx stylelint \"**/*.scss\"",
+        "lint-js": "eslint \"**/*.js\"",
+        "compile": "./compile.sh"
+    },
+    "name": "pineapple",
+    "description": "CSS and Javascript web development library built on top of Bootstrap.",
+    "version": "2.0.0",
+    "directories": {
+        "doc": "docs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/justintime50/pineapple.git"
+    },
+    "keywords": [
+        "pineapple",
+        "bootstrap",
+        "css",
+        "js",
+        "html",
+        "framework",
+        "template",
+        "library"
+    ],
+    "author": "Justintime50",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/justintime50/pineapple/issues"
+    },
+    "homepage": "https://github.com/justintime50/pineapple#readme"
 }

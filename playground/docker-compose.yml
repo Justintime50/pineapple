@@ -1,8 +1,0 @@
-services:
-  pineapple-playground:
-    # TODO: Use a simple HTML image
-    image: justintime50/nginx-php:8.0
-    ports:
-      - 8010:80
-    volumes:
-      - ./src:/var/www/html

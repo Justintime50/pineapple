@@ -1,12 +1,6 @@
-//
-// Waterfall Theme Stylesheet
-//
-
-// TODO: Move colors to variables
-
 html,
 body {
-  height: 100%; // must be present for .pa-banner to work fullscreen
+  height: 100%;
 }
 
 body {
@@ -110,7 +104,6 @@ code {
     text-align: center;
     margin: 25px 0;
   }
-
   .btn-lg {
     width: 100%;
     margin-bottom: 35px;
@@ -122,3 +115,5 @@ code {
     font-size: 150px;
   }
 }
+
+/*# sourceMappingURL=waterfall.css.map */
