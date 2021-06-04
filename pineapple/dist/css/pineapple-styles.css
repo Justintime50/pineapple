@@ -78,7 +78,7 @@
 }
 
 .pa-icon {
-  border: gray solid 1px;
+  border: #818181 solid 1px;
   border-radius: 0.5em;
   padding: 25px;
   margin: 10px;
@@ -114,9 +114,9 @@
 .pa-btn {
   margin: 20px;
   padding: 10px 30px;
-  background-color: #eee;
-  border: solid 1px gray;
-  color: #fff;
+  background-color: #f6f6f6;
+  border: solid 1px #818181;
+  color: #818181;
 }
 
 @media screen and (max-width: 768px) {

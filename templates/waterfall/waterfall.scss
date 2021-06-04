@@ -2,7 +2,11 @@
 // Waterfall Theme Stylesheet
 //
 
-// TODO: Move colors to variables
+$color-text: #818181;
+$color-blue: #007dda;
+$color-baby-blue: #1fc8db;
+$color-light-blue: #2cb5e8;
+$color-white: #fff;
 
 html,
 body {
@@ -12,7 +16,7 @@ body {
 body {
   font: 1.4rem Helvetica, sans-serif;
   line-height: 1.8;
-  color: #818181;
+  color: $color-text;
   overflow-x: none;
   position: relative;
 }
@@ -21,7 +25,7 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 30px;
   text-align: center;
-  color: #007dda;
+  color: $color-blue;
 }
 
 h4 {
@@ -35,13 +39,13 @@ h4 {
 }
 
 .pa-banner {
-  background-image: linear-gradient(141deg, #2cb5e8, #1fc8db, #007dda);
-  background-image: -webkit-linear-gradient(141deg, #2cb5e8, #1fc8db, #007dda);
-  background-image: -o-linear-gradient(141deg, #2cb5e8, #1fc8db, #007dda);
+  background-image: linear-gradient(141deg, $color-light-blue, $color-baby-blue, $color-blue);
+  background-image: -webkit-linear-gradient(141deg, $color-light-blue, $color-baby-blue, $color-blue);
+  background-image: -o-linear-gradient(141deg, $color-light-blue, $color-baby-blue, $color-blue);
 }
 
 .pa-banner-text {
-  color: #fff;
+  color: $color-white;
 }
 
 footer {
@@ -66,7 +70,7 @@ code {
 }
 
 .navbar {
-  background-color: #007dda;
+  background-color: $color-blue;
   opacity: 0.9;
   z-index: 9999;
   line-height: 1.4;
@@ -74,7 +78,7 @@ code {
 }
 
 .navbar .navbar-brand {
-  color: #fff;
+  color: $color-white;
   display: inline-block;
   font-size: 1.5rem;
   padding: 3px 0 1px 0;
@@ -85,12 +89,12 @@ code {
 }
 
 .nav-link {
-  color: #fff;
+  color: $color-white;
 }
 
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
-  color: #fff;
+  color: $color-white;
 }
 
 .navbar-toggler {
@@ -103,6 +107,20 @@ code {
 
 .navbar-toggler:focus {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-heading {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding-top: 8px;
+}
+
+.navbar-logo {
+  display: inline-block;
+  margin-top: -10px;
+  margin-left: 5px;
+  height: 36px;
+  width: 36px;
 }
 
 @media screen and (max-width: 768px) {

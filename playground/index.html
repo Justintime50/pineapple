@@ -10,23 +10,42 @@
     <link rel="stylesheet" href="../templates/waterfall/assets/css/waterfall.css">
     <link rel="stylesheet" href="../pineapple/dist/css/pineapple.css">
     <style>
-        .pa-banner {
-            background-image: url("assets/pics/banner.jpg");
+        body {
+            position: relative;
         }
 
-        /* TODO: Navbar color changer looks like it's broken */
+        .navbar {
+            background-color: transparent;
+        }
+
+        .pa-banner {
+            background-image: url("../templates/coming-soon/assets/pics/banner.jpg");
+        }
+
+        .pa-btn-banner {
+            width: 50%;
+        }
+
+        .normal-carousel {
+            width: 50%;
+            height: 500px;
+        }
+
+        .pa-slanted-container {
+            background-color: green;
+            color: #fff;
+        }
     </style>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="62" onload="pineapple.pageLoader()">
 
     <div id="pa-loader"></div>
-    <div id="pa-loaderDiv">
+    <div id="pa-loader-div">
 
         <nav class="navbar navbar-expand-md fixed-top pa-nav-fade">
             <a class="navbar-brand" href="#myPage">
-                <!-- TODO: Remove all inline styles in this file -->
-                <h1 style="display: inline-block;font-size: 1.5rem;padding-top: 8px;">Pineapple Playground</h1>
+                <h1 class="navbar-heading">Pineapple Playground</h1>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +65,8 @@
             <div class="pa-banner-text">
                 <h3>This playground is meant to test the Pineapple library and is not intended to be completely
                     functional.</h3>
-                <img src="assets/pics/icon.png" class="pa-banner-logo" alt="Banner Icon">
-                <a href="#examples"><button class="btn pa-btn-banner" style="width:50%;">Examples</button></a>
+                <img src="../templates/coming-soon/assets/pics/banner.jpg" class="pa-banner-logo" alt="Banner Icon">
+                <a href="#examples"><button class="btn pa-btn-banner">Examples</button></a>
             </div>
         </div>
 
@@ -99,7 +118,7 @@
         <hr>
 
         <h3 class="text-center">Normal Size Carousel</h3>
-        <div style="width:50%;height:500px;">
+        <div class="normal-carousel">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
@@ -119,10 +138,10 @@
         </div>
 
         <div class="pa-slideanim">
-            <div class="container-fluid pa-slanted-container" style="background-color: green">
+            <div class="container-fluid pa-slanted-container">
                 <div class="pa-slanted-content">
                     <br>
-                    <p style="color:white;text-align: center;">Slanted Section</p>
+                    <p>Slanted Section</p>
                     <br>
                 </div>
             </div>
@@ -169,7 +188,7 @@
                     href="https://github.com/Justintime50/Pineapple">Pineapple</a></p>
         </footer>
 
-    </div><!-- loader -->
+    </div><!-- pa-loader -->
 
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -182,10 +201,14 @@
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/12e4399d79.js"></script>
     <script src="../pineapple/dist/js/pineapple.js"></script>
-    <script>pineapple.countdown.init("2030-12-31", "timer", "Timer has expired");</script>
-    <script>pineapple.navFadeValue = 600;</script>
-    <script>pineapple.pageLoader(1500);</script>
-
+    <script>
+        // Sets the date that the timer counts down to
+        pineapple.countdown.init("2030-12-31", "timer", "Timer has expired");
+        // Sets the pixels at which point the navbar switches to "faded"
+        pineapple.navFadeValue = 1000;
+        // Sets the timeout until the page loads
+        pineapple.pageLoader(1500);
+    </script>
 </body>
 
 </html>

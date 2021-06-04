@@ -5,9 +5,9 @@
 .pa-btn {
   margin: 20px;
   padding: 10px 30px;
-  background-color: #eee;
-  border: solid 1px gray;
-  color: #fff;
+  background-color: $color-off-white;
+  border: solid 1px $color-text;
+  color: $color-text;
 }
 
 @media screen and (max-width: 768px) {

@@ -36,21 +36,21 @@
   // font elements
   position: relative; // keep for font color fix
   z-index: 10;
-  color: #fff;
+  color: $color-white;
 }
 
 .pa-banner-heading {
   font-size: 8vmin;
   position: relative; // keep for font color fix overlaid on banner.
   z-index: 10;
-  color: #fff;
+  color: $color-white;
 }
 
 .pa-banner-sub-heading {
   font-size: 3vmin;
   position: relative; // keep for font color fix
   z-index: 10;
-  color: #fff;
+  color: $color-white;
 }
 
 //
@@ -67,7 +67,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: $color-black-opaque-50;
 }
 
 .pa-banner-logo {

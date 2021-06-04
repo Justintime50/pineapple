@@ -15,7 +15,7 @@
 
 const pineapple = {
   // Constants
-  loglevel: 1,
+  // loglevel: 1,
   navFadeValue: 500,
 
   /**
@@ -27,41 +27,42 @@ const pineapple = {
    * 4 = 3 + Info (Default for Dev)
    **/
 
-  log: {
-    info: function (value) {
-      if (pineapple.loglevel === 4) {
-        console.info(value)
-      }
-    },
-    log: function (value) {
-      if (pineapple.loglevel >= 3) {
-        console.log(value)
-      }
-    },
-    warn: function (value) {
-      if (pineapple.loglevel >= 2) {
-        console.warn(value)
-        console.trace()
-      }
-    },
-    error: function (value) {
-      if (pineapple.loglevel >= 1) {
-        console.error(value)
-        console.trace()
-      }
-    },
-    test: function () {
-      console.log('Log level is set to ' + pineapple.loglevel)
-      pineapple.log.info('info')
-      pineapple.log.log('log')
-      pineapple.log.warn('warning')
-      pineapple.log.error('error')
-      return 'Done with log test'
-    }
-  },
+  // log: {
+  //   info: function (value) {
+  //     if (pineapple.loglevel === 4) {
+  //       console.info(value)
+  //     }
+  //   },
+  //   log: function (value) {
+  //     if (pineapple.loglevel >= 3) {
+  //       console.log(value)
+  //     }
+  //   },
+  //   warn: function (value) {
+  //     if (pineapple.loglevel >= 2) {
+  //       console.warn(value)
+  //       console.trace()
+  //     }
+  //   },
+  //   error: function (value) {
+  //     if (pineapple.loglevel >= 1) {
+  //       console.error(value)
+  //       console.trace()
+  //     }
+  //   },
+  //   test: function () {
+  //     console.log('Log level is set to ' + pineapple.loglevel)
+  //     pineapple.log.info('info')
+  //     pineapple.log.log('log')
+  //     pineapple.log.warn('warning')
+  //     pineapple.log.error('error')
+  //     return 'Done with log test'
+  //   }
+  // },
 
   /* AJAX JAVASCRIPT
       DEPRECATED ON THIS LIBRARY
+      TODO: Fix this functionality and reintroduce it
   */
   // ajax: function (selector, data) {
   //     selector = selector || '#pa-ajax-content';
@@ -85,7 +86,7 @@ const pineapple = {
 
   showPage: function () {
     $('#pa-loader').css('display', 'none')
-    $('#pa-loaderDiv').css('display', 'block')
+    $('#pa-loader-div').css('display', 'block')
     return pineapple
   },
 
@@ -134,11 +135,10 @@ $(document).ready(function () {
   /* SMOOTH SCROLLER
     Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
   */
-  // pineapple.scrollOffset = $('body').data('offset') - 1 // TODO: Remove
-  pineapple.scrollOffset = $('.navbar').height()
   if (pineapple.scrollOffset === undefined || isNaN(pineapple.scrollOffset)) {
-    pineapple.log.warn('data-offset must be defined in order to use smooth scroller')
+    pineapple.scrollOffset = $('.navbar').height()
   } else {
+    pineapple.scrollOffset = $('body').data('offset') - 1
     // Add smooth scrolling to all links in the body
     $('a').on('click', function (event) {
       // Make sure this.hash has a value before overriding default behavior
@@ -153,28 +153,26 @@ $(document).ready(function () {
           $(this).find('button').length > 0
         ) && !$(this).hasClass('pa-noscroll')
       ) {
-        // Prevent default anchor click behavior
+        // Prevent default anchor click behavior (jump to top of screen)
         event.preventDefault()
 
         // Store hash
         const hash = this.hash
-        pineapple.log.info(hash)
+        // pineapple.log.info(hash)
 
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-        try {
-          $('html, body').animate({
-            // TODO: This scrolls just passed where we want and needs to be fixed
-            // It will initially scroll to the right location then snap to where the offset is
-            scrollTop: $(hash).offset().top - pineapple.scrollOffset
-          }, 900, function () {
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top - pineapple.scrollOffset
+        }, 900, function () {
+          // Don't jump to the anchor point after scrolling to the offset
+          if (history.pushState) {
+            history.pushState(null, null, hash)
+          } else {
             // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash
-          })
-        } catch (e) {
-          pineapple.log.warn('data-offset error:')
-          pineapple.log.warn({ error: e })
-        }
+          }
+        })
       }
     })
   }
@@ -201,15 +199,9 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > pineapple.navFadeValue) {
       $('.pa-nav-fade').addClass('opaque')
-    } else {
-      $('.pa-nav-fade').removeClass('opaque')
-    }
-  })
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > pineapple.navFadeValue) {
       $('.pa-nav-fade a').addClass('opaque')
     } else {
+      $('.pa-nav-fade').removeClass('opaque')
       $('.pa-nav-fade a').removeClass('opaque')
     }
   })

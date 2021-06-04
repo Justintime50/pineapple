@@ -62,10 +62,6 @@
   }
 }
 
-.navbar {
-  background-color: initial;
-}
-
 .pa-nav-fade {
   transition: background-color 0.5s ease 0s;
 }
@@ -96,7 +92,7 @@
   width: 150px;
   height: 150px;
   margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
+  border: 16px solid #f6f6f6;
   border-radius: 50%;
   border-top: 16px solid #007dda;
   -webkit-animation: spin 1.5s linear infinite;
@@ -121,7 +117,7 @@
   }
 }
 
-#pa-loaderDiv {
+#pa-loader-div {
   height: 100%;
   display: none;
   text-align: center;

@@ -87,10 +87,6 @@
 // Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
 //
 
-.navbar {
-  background-color: initial;
-}
-
 .pa-nav-fade {
   transition: background-color 0.5s ease 0s;
 }
@@ -101,15 +97,15 @@
 }
 
 .pa-nav-fade a {
-  color: #fff;
+  color: $color-white;
 }
 
 .pa-nav-fade .dropdown-menu a {
-  color: #000;
+  color: $color-black;
 }
 
 .pa-nav-fade a.opaque {
-  color: #000;
+  color: $color-black;
 }
 
 //
@@ -126,9 +122,9 @@
   width: 150px;
   height: 150px; // Loader image height - DO NOT REMOVE
   margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
+  border: 16px solid $color-off-white;
   border-radius: 50%;
-  border-top: 16px solid #007dda;
+  border-top: 16px solid $color-blue;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
@@ -143,7 +139,7 @@
   100% { transform: rotate(360deg); }
 }
 
-#pa-loaderDiv {
+#pa-loader-div {
   height: 100%; // Fixes banner glitch - DO NOT REMOVE
   display: none;
   text-align: center;

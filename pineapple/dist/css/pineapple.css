@@ -76,9 +76,9 @@
 .pa-btn {
   margin: 20px;
   padding: 10px 30px;
-  background-color: #eee;
-  border: solid 1px gray;
-  color: #fff;
+  background-color: #f6f6f6;
+  border: solid 1px #818181;
+  color: #818181;
 }
 
 @media screen and (max-width: 768px) {
@@ -176,10 +176,6 @@
   }
 }
 
-.navbar {
-  background-color: initial;
-}
-
 .pa-nav-fade {
   transition: background-color 0.5s ease 0s;
 }
@@ -210,7 +206,7 @@
   width: 150px;
   height: 150px;
   margin: -75px 0 0 -75px;
-  border: 16px solid #f3f3f3;
+  border: 16px solid #f6f6f6;
   border-radius: 50%;
   border-top: 16px solid #007dda;
   -webkit-animation: spin 1.5s linear infinite;
@@ -235,7 +231,7 @@
   }
 }
 
-#pa-loaderDiv {
+#pa-loader-div {
   height: 100%;
   display: none;
   text-align: center;
@@ -356,7 +352,7 @@ body {
 }
 
 .pa-icon {
-  border: gray solid 1px;
+  border: #818181 solid 1px;
   border-radius: 0.5em;
   padding: 25px;
   margin: 10px;
