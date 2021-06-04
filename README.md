@@ -29,8 +29,8 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pineapple-library@2.0.1/pineapple/dist/css/pineapple.min.css">
-<script src="https://cdn.jsdelivr.net/npm/pineapple-library@2.0.1/pineapple/dist/js/pineapple.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pineapple-library@2.0.2/pineapple/dist/css/pineapple.min.css">
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@2.0.2/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
 ### NPM

@@ -58,7 +58,7 @@
 
 // Go from 0% to 100% opacity (see-through) and specify the percentage
 // from when to slide in the element along the Y-axis
-@keyframes slide {
+@keyframes pa-slide {
   0% {
     opacity: 0;
     transform: translateY(70%);
@@ -70,7 +70,7 @@
   }
 }
 
-@-webkit-keyframes slide {
+@-webkit-keyframes pa-slide {
   0% {
     opacity: 0;
     -webkit-transform: translateY(70%);
