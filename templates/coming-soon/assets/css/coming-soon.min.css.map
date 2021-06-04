@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "coming-soon.min.css",
+	"sources": [
+		"../../coming-soon.scss"
+	],
+	"names": [],
+	"mappings": "AAIA,AAAA,IAAI,CACJ,IAAI,AAAC,CACH,MAAM,CAAE,IAAI,CACb,AAED,AAAA,MAAM,AAAC,CACL,SAAS,CAAE,IAAI,CACf,OAAO,CAAE,IAAI,CACd,AAED,AAAA,UAAU,AAAC,CACT,gBAAgB,CAAE,yBAAyB,CAC5C"
+}

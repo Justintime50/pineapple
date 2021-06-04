@@ -1,0 +1,54 @@
+//
+// Elements
+//
+
+.pa-bg-gray {
+  background-color: $color-off-white;
+}
+
+//
+// Icon
+//
+
+.pa-icon {
+  border: $color-text solid 1px;
+  border-radius: 0.5em;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+//
+// Card
+// Source: https://www.w3schools.com/howto/howto_css_cards.asp
+//
+
+.pa-card {
+  box-shadow: 0 4px 8px 0 $color-black-opaque-20;
+  transition: 0.3s;
+  padding: 1em;
+  margin: 1em;
+  display: block;
+  text-align: center;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 0.35em;
+}
+
+.pa-card:hover {
+  box-shadow: 0 8px 16px 0 $color-black-opaque-20;
+}
+
+//
+// Slanted Section
+//
+
+.pa-slanted-container {
+  transform: skew(0deg, -2deg);
+  margin-bottom: -2vw;
+}
+
+.pa-slanted-content {
+  transform: skew(0deg, 2deg);
+}
