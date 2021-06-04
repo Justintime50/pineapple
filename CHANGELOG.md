@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.0.2 (2021-06-03)
+
+* Corrects typo in `.pa-slideanim` logic to fix the sliding animation
+
 ## v2.0.1 (2021-06-03)
 
 * Fixed an unintentional bug where `Smooth Scroller` didn't work due to a bad fallback value
