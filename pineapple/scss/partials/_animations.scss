@@ -1,0 +1,146 @@
+//
+// Animations
+//
+
+//
+// Animate Bottom
+// Source: https://www.w3schools.com/howto/howto_css_loader.asp
+//
+
+.pa-animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+//
+// Slideanim
+// Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+//
+
+.pa-slideanim {
+  visibility: hidden;
+}
+
+.pa-slide {
+  animation-name: pa-slide;
+  -webkit-animation-name: pa-slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+// Go from 0% to 100% opacity (see-through) and specify the percentage
+// from when to slide in the element along the Y-axis
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+//
+// Navbar Fade
+// Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
+//
+
+.pa-nav-fade {
+  transition: background-color 0.5s ease 0s;
+}
+
+.pa-nav-fade.opaque {
+  transition: background-color 0.5s ease 0s;
+  opacity: 0.9;
+}
+
+.pa-nav-fade a {
+  color: $color-white;
+}
+
+.pa-nav-fade .dropdown-menu a {
+  color: $color-black;
+}
+
+.pa-nav-fade a.opaque {
+  color: $color-black;
+}
+
+//
+// Page Loader
+// Source: https://www.w3schools.com/howto/howto_css_loader.asp
+//
+
+#pa-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 150px;
+  height: 150px; // Loader image height - DO NOT REMOVE
+  margin: -75px 0 0 -75px;
+  border: 16px solid $color-off-white;
+  border-radius: 50%;
+  border-top: 16px solid $color-blue;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#pa-loader-div {
+  height: 100%; // Fixes banner glitch - DO NOT REMOVE
+  display: none;
+  text-align: center;
+}
