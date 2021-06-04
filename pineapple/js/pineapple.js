@@ -135,47 +135,43 @@ $(document).ready(function () {
   /* SMOOTH SCROLLER
     Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
   */
-  if (pineapple.scrollOffset === undefined || isNaN(pineapple.scrollOffset)) {
-    pineapple.scrollOffset = $('.navbar').height()
-  } else {
-    pineapple.scrollOffset = $('body').data('offset') - 1
-    // Add smooth scrolling to all links in the body
-    $('a').on('click', function (event) {
-      // Make sure this.hash has a value before overriding default behavior
-      if (
-        this.hash !== '' &&
-        this.pathname === location.pathname &&
-        (
-          $(this).hasClass('pa-scroll') ||
-          $(this).hasClass('nav-link') ||
-          $(this).hasClass('btn') ||
-          $(this).is('button') ||
-          $(this).find('button').length > 0
-        ) && !$(this).hasClass('pa-noscroll')
-      ) {
-        // Prevent default anchor click behavior (jump to top of screen)
-        event.preventDefault()
+  pineapple.scrollOffset = $('body').data('offset') - 1 || $('.navbar').height()
+  // Add smooth scrolling to all links in the body
+  $('a').on('click', function (event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (
+      this.hash !== '' &&
+      this.pathname === location.pathname &&
+      (
+        $(this).hasClass('pa-scroll') ||
+        $(this).hasClass('nav-link') ||
+        $(this).hasClass('btn') ||
+        $(this).is('button') ||
+        $(this).find('button').length > 0
+      ) && !$(this).hasClass('pa-noscroll')
+    ) {
+      // Prevent default anchor click behavior (jump to top of screen)
+      event.preventDefault()
 
-        // Store hash
-        const hash = this.hash
-        // pineapple.log.info(hash)
+      // Store hash
+      const hash = this.hash
+      // pineapple.log.info(hash)
 
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top - pineapple.scrollOffset
-        }, 900, function () {
-          // Don't jump to the anchor point after scrolling to the offset
-          if (history.pushState) {
-            history.pushState(null, null, hash)
-          } else {
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash
-          }
-        })
-      }
-    })
-  }
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - pineapple.scrollOffset
+      }, 900, function () {
+        // Don't jump to the anchor point after scrolling to the offset
+        if (history.pushState) {
+          history.pushState(null, null, hash)
+        } else {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash
+        }
+      })
+    }
+  })
 
   /*
   SLIDEANIM EFFECT
