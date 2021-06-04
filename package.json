@@ -17,7 +17,7 @@
     },
     "name": "pineapple-library",
     "description": "CSS and Javascript web development library built on top of Bootstrap.",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "directories": {
         "doc": "docs"
     },

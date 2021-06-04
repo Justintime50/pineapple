@@ -24,7 +24,29 @@ Pineapple came about as a way to help me quickly build brochure style websites s
 
 ## Install
 
-Pineapple has been compiled into CSS from SCSS and JS. You will find either the beautified or minified equivelant of each along with source maps. Either import Pineapple from NPM, use a CDN, or manually download the assets into your own project.
+Pineapple has been compiled into CSS from SCSS and JS. You will find either the beautified or minified equivelant of each along with source maps.
+
+### CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pineapple-library@2.0.1/pineapple/dist/css/pineapple.min.css">
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@2.0.1/pineapple/dist/js/pineapple.min.js"></script>
+```
+
+### NPM
+
+```bash
+npm install pineapple-library
+```
+
+### Manual Download
+
+1. Clone the repo
+1. Manually import the Pineapple assets to your project
+
+```bash
+git clone https://github.com/justintime50/pineapple.git
+```
 
 The Pineapple CSS has been compiled into three separate bundles: 
 * `pineapple` includes everything
@@ -32,15 +54,6 @@ The Pineapple CSS has been compiled into three separate bundles:
 * `pineapple-utilities` includes the `grid` and `animations` CSS which accompanies the JS
 
 **NOTE:** Pineapple Javascript functions require jQuery. With the release of Bootstrap 5 (which does not include or require jQuery), you will either need to remain on Bootstrap 4 or import jQuery separately. Pineapple is not compatible with the `slim` version of jQuery.
-
-## Usage
-
-Simply include the Pineapple CSS and JS assets in your project to get started.
-
-```html
-<link rel="stylesheet" href="path/to/pineapple.css">
-<script src="path/to/pineapple.js"></script>
-```
 
 ## Documentation
 
@@ -58,3 +71,11 @@ npm run lint-js
 # Compile CSS from SCSS and JS assets
 npm run compile
 ```
+
+## Releasing
+
+1. Bump version in `package.json`
+1. Compile assets `npm run compile`
+1. Bump version in `CHANGELOG.md`
+1. Bump version in install instruction links in `README.md`
+1. Cut a new Git tag

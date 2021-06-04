@@ -32,26 +32,22 @@ const pineapple = {
 };
 
 $(document).ready(function() {
-    if (pineapple.scrollOffset === undefined || isNaN(pineapple.scrollOffset)) {
-        pineapple.scrollOffset = $(".navbar").height();
-    } else {
-        pineapple.scrollOffset = $("body").data("offset") - 1;
-        $("a").on("click", function(event) {
-            if (this.hash !== "" && this.pathname === location.pathname && ($(this).hasClass("pa-scroll") || $(this).hasClass("nav-link") || $(this).hasClass("btn") || $(this).is("button") || $(this).find("button").length > 0) && !$(this).hasClass("pa-noscroll")) {
-                event.preventDefault();
-                const hash = this.hash;
-                $("html, body").animate({
-                    scrollTop: $(hash).offset().top - pineapple.scrollOffset
-                }, 900, function() {
-                    if (history.pushState) {
-                        history.pushState(null, null, hash);
-                    } else {
-                        window.location.hash = hash;
-                    }
-                });
-            }
-        });
-    }
+    pineapple.scrollOffset = $("body").data("offset") - 1 || $(".navbar").height();
+    $("a").on("click", function(event) {
+        if (this.hash !== "" && this.pathname === location.pathname && ($(this).hasClass("pa-scroll") || $(this).hasClass("nav-link") || $(this).hasClass("btn") || $(this).is("button") || $(this).find("button").length > 0) && !$(this).hasClass("pa-noscroll")) {
+            event.preventDefault();
+            const hash = this.hash;
+            $("html, body").animate({
+                scrollTop: $(hash).offset().top - pineapple.scrollOffset
+            }, 900, function() {
+                if (history.pushState) {
+                    history.pushState(null, null, hash);
+                } else {
+                    window.location.hash = hash;
+                }
+            });
+        }
+    });
     $(window).scroll(function() {
         $(".pa-slideanim").each(function() {
             const pos = $(this).offset().top;

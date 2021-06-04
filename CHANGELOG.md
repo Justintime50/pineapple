@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v2.0.1 (2021-06-03)
+
+* Fixed an unintentional bug where `Smooth Scroller` didn't work due to a bad fallback value
+* Added installation and releasing instructions to the README
+
 ## v2.0.0 (2021-06-03)
 
 * Pineapple CSS is now completely `SCSS` and gets compiled upon release to a beautified and minified version along with source maps
