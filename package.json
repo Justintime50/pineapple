@@ -15,7 +15,7 @@
         "lint-js": "eslint pineapple/js/pineapple.js",
         "compile": "./compile.sh"
     },
-    "name": "pineapple",
+    "name": "pineapple-library",
     "description": "CSS and Javascript web development library built on top of Bootstrap.",
     "version": "2.0.0",
     "directories": {
