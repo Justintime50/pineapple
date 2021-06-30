@@ -1,12 +1,14 @@
 <div align="center">
 
-# Pineapple 🍍
+# Pineapple
 
 CSS and Javascript web development library built on top of Bootstrap.
 
 [![Build Status](https://github.com/Justintime50/pineapple/workflows/build/badge.svg)](https://github.com/Justintime50/pineapple/actions)
 [![NPM](https://img.shields.io/npm/v/pineapple-library)](https://www.npmjs.com/package/pineapple-library)
 [![Licence](https://img.shields.io/github/license/justintime50/pineapple)](LICENSE)
+
+<img src="assets/showcase.png" alt="Showcase">
 
 </div>
 
@@ -57,7 +59,7 @@ The Pineapple CSS has been compiled into three separate bundles:
 
 ## Documentation
 
-See the accompanying [Documentation](/docs/documentation.md) for more information.
+See the accompanying [Documentation](/docs/README.md) for more information.
 
 ## Development
 
@@ -79,3 +81,7 @@ npm run compile
 1. Bump version in `CHANGELOG.md`
 1. Bump version in install instruction links in `README.md`
 1. Cut a new Git tag
+
+## Attribution
+
+* Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
