@@ -19,7 +19,7 @@
 
 @media only screen and (max-width: 1024px) {
   .pa-banner {
-    background-attachment: initial; // MUST KEEP TO AVOID IPHONE BANNER SCALING GLITCH - DO NOT REMOVE
+    background-attachment: initial; // Must keep to avoid iPhone banner scaling glitch - DO NOT REMOVE
   }
 }
 
@@ -67,7 +67,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background: $color-black-opaque-50;
+  background: $color-black-opaque-35;
 }
 
 .pa-banner-logo {

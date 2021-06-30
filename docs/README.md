@@ -87,15 +87,15 @@ body {
 An example of how to impliment the fullscreen carousel:
 
 ```html
-<div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false"> 
-  <div class="carousel-inner" role="listbox"> 
-    <div class="carousel-item active"> 
+<div id="bannerCarousel" class="carousel slide pa-carousel-full" data-ride="carousel" data-interval="3000" data-pause="false"> 
+  <div class="carousel-inner pa-carousel-inner-full" role="listbox"> 
+    <div class="carousel-item active pa-carousel-item-full pa-active-full"> 
       <h1 class="pa-banner-text">IMAGE 1</h1> 
     </div> 
-    <div class="carousel-item"> 
+    <div class="carousel-item pa-carousel-item-full"> 
       <h1 class="pa-banner-text">IMAGE 2</h1> 
     </div> 
-    <div class="carousel-item"> 
+    <div class="carousel-item pa-carousel-item-full"> 
       <h1 class="pa-banner-text">IMAGE 3</h1> 
     </div>
   </div>
@@ -105,10 +105,15 @@ An example of how to impliment the fullscreen carousel:
 Add your image reference in a custom `css` class as follows. The number in the parentheses represents the slide number in order of appearance. Add as many as you desire:
 
 ```css
-.carousel-item:nth-child(1) { background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");}
-.carousel-item:nth-child(2) { background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(55).jpg");}
-.carousel-item:nth-child(3) { background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(56).jpg");}
-...
+.carousel-item:nth-child(1) { 
+    background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");
+}
+.carousel-item:nth-child(2) { 
+    background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(55).jpg");
+}
+.carousel-item:nth-child(3) { 
+    background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(56).jpg");
+}
 ```
 
 # Pineapple Javascript Docs
