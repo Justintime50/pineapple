@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.0.3 (2021-06-30)
+
+* Reduces background black opacity from 50% to 35% for the `pa-banner-darken` class so that images can show through better (easier viewing of darker images)
+* Updates documentation surroudning `Fullscreen Carousels` as there were missing classes in the example (closes #7)
+* Bumps dev dependencies
+
 ## v2.0.2 (2021-06-03)
 
 * Corrects typo in `.pa-slideanim` logic to fix the sliding animation
