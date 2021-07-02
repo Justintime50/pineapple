@@ -48,6 +48,9 @@
   visibility: hidden;
 }
 
+// .pa-slide is used internally for .pa-slideanim and is not intended
+// to be used externally via this library
+// TODO: Is there a better way to make this class "private"?
 .pa-slide {
   animation-name: pa-slide;
   -webkit-animation-name: pa-slide;

@@ -1,0 +1,16 @@
+//
+// Backgrounds
+//
+
+.pa-bg-gray {
+  background-color: $color-off-white;
+}
+
+.pa-slanted-container {
+  transform: skew(0deg, -2deg);
+  margin-bottom: -2vw;
+}
+
+.pa-slanted-content {
+  transform: skew(0deg, 2deg);
+}

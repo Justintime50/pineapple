@@ -2,12 +2,13 @@
 // Pineapple
 //
 
-// Loaded in optimized order
+// load variables before everything else
 @import "partials/variables";
-@import "partials/grid";
+
+@import "partials/animations";
+@import "partials/backgrounds";
 @import "partials/banner";
 @import "partials/buttons";
-@import "partials/animations";
+@import "partials/components";
 @import "partials/fonts";
 @import "partials/hacks";
-@import "partials/elements";

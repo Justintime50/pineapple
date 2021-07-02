@@ -2,10 +2,12 @@
 // Pineapple Styles
 //
 
-// Loaded in optimized order
+// load variables before everything else
 @import "partials/variables";
+
 @import "partials/banner";
-@import "partials/elements";
+@import "partials/backgrounds";
 @import "partials/buttons";
+@import "partials/components";
 @import "partials/fonts";
 @import "partials/hacks";

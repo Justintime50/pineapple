@@ -1,23 +1,6 @@
 //
-// Elements
+// Components
 //
-
-.pa-bg-gray {
-  background-color: $color-off-white;
-}
-
-//
-// Icon
-//
-
-.pa-icon {
-  border: $color-text solid 1px;
-  border-radius: 0.5em;
-  padding: 25px;
-  margin: 10px;
-  text-align: center;
-  display: inline-block;
-}
 
 //
 // Card
@@ -41,14 +24,14 @@
 }
 
 //
-// Slanted Section
+// Icon
 //
 
-.pa-slanted-container {
-  transform: skew(0deg, -2deg);
-  margin-bottom: -2vw;
-}
-
-.pa-slanted-content {
-  transform: skew(0deg, 2deg);
+.pa-icon {
+  border: $color-text solid 1px;
+  border-radius: 0.5em;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
 }

@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v2.1.0 (2021-07-02)
+
+* Complete overhaul of documentation
+  * Items are now grouped by category
+  * Better use of markdown
+  * Additional code examples
+  * Clarified information
+* Removes not-implemented `grid` scss
+* Recompiled SCSS after moving classes around to match the new categories they fall into (matches docs), cleaned up comments and other small internal naming changes (`elements` are now called `components`, their usage remains the same)
+
 ## v2.0.3 (2021-06-30)
 
 * Reduces background black opacity from 50% to 35% for the `pa-banner-darken` class so that images can show through better (easier viewing of darker images)
