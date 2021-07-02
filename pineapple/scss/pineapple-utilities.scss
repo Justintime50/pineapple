@@ -2,7 +2,7 @@
 // Pineapple Utilities
 //
 
-// Loaded in optimized order
+// load variables before everything else
 @import "partials/variables";
-@import "partials/grid";
+
 @import "partials/animations";

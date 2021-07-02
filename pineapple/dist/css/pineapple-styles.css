@@ -77,31 +77,6 @@
   background-color: #f6f6f6;
 }
 
-.pa-icon {
-  border: #818181 solid 1px;
-  border-radius: 0.5em;
-  padding: 25px;
-  margin: 10px;
-  text-align: center;
-  display: inline-block;
-}
-
-.pa-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  padding: 1em;
-  margin: 1em;
-  display: block;
-  text-align: center;
-  max-width: 100%;
-  background-color: #fff;
-  border-radius: 0.35em;
-}
-
-.pa-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
 .pa-slanted-container {
   transform: skew(0deg, -2deg);
   margin-bottom: -2vw;
@@ -148,6 +123,31 @@
   background-color: #007dda;
   color: #fff;
   border-color: #007dda;
+}
+
+.pa-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 1em;
+  margin: 1em;
+  display: block;
+  text-align: center;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 0.35em;
+}
+
+.pa-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pa-icon {
+  border: #818181 solid 1px;
+  border-radius: 0.5em;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 768px) {
