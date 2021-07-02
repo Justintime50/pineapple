@@ -68,8 +68,6 @@ The `.pa-nav-fade` allows the navbar to fade in after scrolling past a certain p
 
 ### Page Loader
 
-#### Loader
-
 The `.pa-loader` and `.pa-loader-div` are used to create a loading spiral image upon opening your page. This is great if you have external content that needs to load and you want something visual to display while this happens. You can do this by using the following just after your `<body>` tag: `<div id="pa-loader"></div>` and `<div id="pa-loader-div">`. (Place the end `</div>` tag at the bottom of your page content you want hidden while the loading spinner is on screen.
 
 ```html
