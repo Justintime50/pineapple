@@ -43,6 +43,8 @@ npm install pineapple-library
 
 **Webpack**
 
+**NOTE:** Requires Pineapple v2.2+
+
 Once installed via NPM, include something similar to the following in your webpack environment and compile your project:
 
 ```javascript
@@ -85,10 +87,11 @@ npm run compile
 ## Releasing
 
 1. Bump version in `package.json`
-1. Compile assets `npm run compile`
 1. Bump version in `CHANGELOG.md`
+1. Bump version in `scss` and `js` header comments
 1. Bump version in install instruction links in `README.md`
-1. Cut a new Git tag
+1. Compile assets with `npm run compile`
+1. Cut a new Git tag which will automatically release to NPM
 
 ## Attribution
 

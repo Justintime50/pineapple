@@ -9,33 +9,7 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../templates/waterfall/assets/css/waterfall.css">
     <link rel="stylesheet" href="../pineapple/dist/css/pineapple.css">
-    <style>
-        body {
-            position: relative;
-        }
-
-        .navbar {
-            background-color: transparent;
-        }
-
-        .pa-banner {
-            background-image: url("../templates/coming-soon/assets/pics/banner.jpg");
-        }
-
-        .pa-btn-banner {
-            width: 50%;
-        }
-
-        .normal-carousel {
-            width: 50%;
-            height: 500px;
-        }
-
-        .pa-slanted-container {
-            background-color: green;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="62" onload="pineapple.pageLoader()">
@@ -190,7 +164,6 @@
 
     </div><!-- pa-loader -->
 
-    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -203,7 +176,11 @@
     <script src="../pineapple/dist/js/pineapple.js"></script>
     <script>
         // Sets the date that the timer counts down to
-        pineapple.countdown.init("2030-12-31", "timer", "Timer has expired");
+        pineapple.countdown.init(
+            "2030-12-31",       // date to countdown to
+            "timer",            // timer ID
+            "Timer has expired" // message once timer expires
+        );
         // Sets the pixels at which point the navbar switches to "faded"
         pineapple.navFadeValue = 1000;
         // Sets the timeout until the page loads
