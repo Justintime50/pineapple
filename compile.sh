@@ -36,12 +36,12 @@ compile_minified_css() {
 }
 
 compile_readable_js() {
-    ./node_modules/.bin/uglifyjs pineapple/js/pineapple.js --beautify --no-annotations --source-map --verbose --comments 'https://github.com/justintime50/pineapple' --output pineapple/dist/js/pineapple.js
+    ./node_modules/.bin/uglifyjs pineapple/js/pineapple.js --beautify --no-annotations --source-map --verbose --comments '/https://github.com/justintime50/pineapple/' --output pineapple/dist/js/pineapple.js
     echo "Readable JS step complete!"
 }
 
 compile_minified_js() {
-    ./node_modules/.bin/uglifyjs pineapple/js/pineapple.js --source-map --verbose --comments 'https://github.com/justintime50/pineapple' --output pineapple/dist/js/pineapple.min.js
+    ./node_modules/.bin/uglifyjs pineapple/js/pineapple.js --source-map --verbose --comments '/https://github.com/justintime50/pineapple/' --output pineapple/dist/js/pineapple.min.js
     echo "Compressed JS step complete!"
 }
 

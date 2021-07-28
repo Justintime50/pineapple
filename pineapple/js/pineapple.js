@@ -2,7 +2,9 @@
  * Pineapple v2.2.0 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
- *
+ */
+
+/*
  * ** Pineapple Object **
  * loglevel
  * navFadeValue
