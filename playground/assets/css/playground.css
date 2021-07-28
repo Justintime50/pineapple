@@ -1,0 +1,32 @@
+/*!
+ * Pineapple "Playground" (https://github.com/justintime50/pineapple)
+ * CSS and Javascript web development library
+ * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
+ */
+body {
+  position: relative;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.pa-banner {
+  background-image: url("../templates/coming-soon/assets/pics/banner.jpg");
+}
+
+.pa-btn-banner {
+  width: 50%;
+}
+
+.normal-carousel {
+  width: 50%;
+  height: 500px;
+}
+
+.pa-slanted-container {
+  background-color: green;
+  color: #fff;
+}
+
+/*# sourceMappingURL=playground.css.map */
