@@ -20,6 +20,9 @@ compile_readable_css() {
     # Templates
     ./node_modules/.bin/node-sass templates/coming-soon/coming-soon.scss templates/coming-soon/assets/css/coming-soon.css --output-style expanded --source-map true
     ./node_modules/.bin/node-sass templates/waterfall/waterfall.scss templates/waterfall/assets/css/waterfall.css --output-style expanded --source-map true
+
+    # Playground (dev only)
+    ./node_modules/.bin/node-sass playground/playground.scss playground/assets/css/playground.css --output-style expanded --source-map true
     echo "Readable CSS step complete!"
 }
 
