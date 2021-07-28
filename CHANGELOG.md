@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.2.0 (TODO)
+
+* Exports the pineapple module so that this library can be used with webpack
+
 ## v2.1.0 (2021-07-02)
 
 * Complete overhaul of documentation

@@ -12,7 +12,7 @@ CSS and Javascript web development library built on top of Bootstrap.
 
 </div>
 
-Pineapple came about as a way to help me quickly build brochure style websites some years ago. I found I was copying and pasting a lot of custom CSS around my projects to extend Bootstrap's library and decided to build my own. Over the years as Bootstrap evolved, certain Pineapple functions were removed in favor of the better battle-tested Bootstrap equivalent. Pineapple still serves as a nice addition to any Bootstrap project.
+Pineapple came about as a way to help me quickly build "brochure-style" websites some years ago. I found I was copying and pasting a lot of custom CSS around my projects to extend Bootstrap's library and decided to build my own. Over the years as Bootstrap evolved, certain Pineapple functions were removed in favor of the better battle-tested Bootstrap equivalent. Pineapple still serves as a nice addition to any Bootstrap project.
 
 **Notable Features:**
 
@@ -31,14 +31,22 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pineapple-library@2.1.0/pineapple/dist/css/pineapple.min.css">
-<script src="https://cdn.jsdelivr.net/npm/pineapple-library@2.1.0/pineapple/dist/js/pineapple.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pineapple-library@2.2.0/pineapple/dist/css/pineapple.min.css">
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@2.2.0/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
 ### NPM
 
 ```bash
 npm install pineapple-library
+```
+
+**Webpack**
+
+Once installed via NPM, include something similar to the following in your webpack environment and compile your project:
+
+```javascript
+window.pineapple = require('pineapple-library/pineapple/dist/js/pineapple');
 ```
 
 ### Manual Download

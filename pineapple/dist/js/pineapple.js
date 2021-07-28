@@ -68,3 +68,5 @@ $(document).ready(function() {
         }
     });
 });
+
+module.exports = pineapple;
