@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v2.2.0 (TODO)
+## v2.2.0 (2021-07-28)
 
 * Exports the pineapple module so that this library can be used with webpack
 * Adds a persistent header comment to CSS and JS files that displays the library name, version, and link (closes #9)
