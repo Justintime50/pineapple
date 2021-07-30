@@ -1,5 +1,5 @@
 /*!
- * Pineapple Styles v2.2.0 (https://github.com/justintime50/pineapple)
+ * Pineapple Styles v2.2.1 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -46,15 +46,13 @@
   color: #fff;
 }
 
-.pa-banner-darken::after {
+.pa-banner-darken::before {
   content: "";
   z-index: 0;
   display: block;
   position: absolute;
   height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   background: rgba(0, 0, 0, 0.35);
 }
 

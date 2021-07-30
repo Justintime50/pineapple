@@ -58,15 +58,13 @@
 // Source: http://stackoverflow.com/questions/36389481/how-to-darken-the-background-image-in-css
 //
 
-.pa-banner-darken::after {
+.pa-banner-darken::before {
   content: "";
   z-index: 0;
   display: block;
   position: absolute;
   height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   background: $color-black-opaque-35;
 }
 
