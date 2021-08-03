@@ -23,6 +23,7 @@ const pineapple = {
   navFadeValue: 500,
 
   /**
+   * TODO: rework logging and re-include in the library in a future release
    *   -  Log Levels  -
    * 0 = none, (set to 0 for release)
    * 1 = Errors only,
@@ -65,18 +66,19 @@ const pineapple = {
   // },
 
   /* AJAX JAVASCRIPT
-      DEPRECATED ON THIS LIBRARY
-      TODO: Fix this functionality and reintroduce it
+      Syntax: <script>pineapple.ajax('#my-ajax-id', 'ajax.html')</script>
   */
-  // ajax: function (selector, data) {
-  //     selector = selector || '#pa-ajax-content';
-  //     data     = data || null;
-  //     pineapple.log.info(selector);
-  //     $.post(data, function(data){
-  //         $(selector).html(data);
-  //     });
-  //     return pineapple;
-  // },
+  ajax: function (selector, data) {
+    selector = selector || '#pa-ajax-content'
+    data = data || null
+    // pineapple.log.info(selector)
+
+    $.post(data, function (data) {
+      $(selector).html(data)
+    })
+
+    return pineapple
+  },
 
   /* PAGE LOADER
       Source: https:/www.w3schools.com/howto/howto_css_loader.asp
@@ -85,12 +87,14 @@ const pineapple = {
   pageLoader: function (interval) {
     interval = interval || 1500
     pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval)
+
     return pineapple
   },
 
   showPage: function () {
     $('#pa-loader').css('display', 'none')
     $('#pa-loader-div').css('display', 'block')
+
     return pineapple
   },
 
@@ -130,6 +134,7 @@ const pineapple = {
           document.getElementById(elementId).innerHTML = message
         }
       }, 1000)
+
       return pineapple.countdown
     }
   }

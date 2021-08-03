@@ -5,6 +5,15 @@
  */
 const pineapple = {
     navFadeValue: 500,
+    ajax: function(selector, data) {
+        selector = selector || "#pa-ajax-content";
+        data = data || null;
+        $.post(data, function(data) {
+            data.preventDefault();
+            $(selector).html(data);
+        });
+        return pineapple;
+    },
     pageLoader: function(interval) {
         interval = interval || 1500;
         pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
