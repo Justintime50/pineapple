@@ -1,7 +1,7 @@
 {
   "name": "pineapple-library",
   "description": "CSS and Javascript web development library built on top of Bootstrap.",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "devDependencies": {
     "eslint": "^7.27.0",
     "eslint-config-standard": "^16.0.3",

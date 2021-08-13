@@ -1,0 +1,21 @@
+services:
+  pineapple-playground:
+    build: .
+    restart: always
+    container_name: pineapple-playground
+    networks:
+      - traefik
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      - traefik.port=80
+      - traefik.frontend.rule=Host:pineapple-playground.localhost
+    volumes:
+      - ./playground/src:/var/www/html/public
+      - ./pineapple/dist:/var/www/html/public/pineapple
+      - ./templates:/var/www/html/public/templates
+
+networks:
+  traefik:
+    external:
+      name: traefik

@@ -1,12 +1,19 @@
 /*
- * Pineapple v2.2.1 (https://github.com/justintime50/pineapple)
+ * Pineapple v2.3.0 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
 const pineapple = {
     navFadeValue: 500,
-    pageLoader: function(interval) {
-        interval = interval || 1500;
+    ajax: function(content, onclickSelector = "#pa-ajax-toggle", contentSelector = "#pa-ajax-content") {
+        $(onclickSelector).on("click", function(event) {
+            $.get(content, function(content) {
+                $(contentSelector).html(content);
+            });
+        });
+        return pineapple;
+    },
+    pageLoader: function(interval = 1500) {
         pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
         return pineapple;
     },

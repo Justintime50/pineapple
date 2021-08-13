@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="../templates/waterfall/assets/css/waterfall.css">
-    <link rel="stylesheet" href="../pineapple/dist/css/pineapple.css">
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="stylesheet" href="templates/waterfall/assets/css/waterfall.css">
+    <link rel="stylesheet" href="pineapple/css/pineapple.css">
+    <link rel="stylesheet" href="assets/css/playground.css">
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" onload="pineapple.pageLoader()">
@@ -39,7 +39,7 @@
             <div class="pa-banner-text">
                 <h3>This playground is meant to test the Pineapple library and is not intended to be completely
                     functional.</h3>
-                <img src="../templates/coming-soon/assets/pics/banner.jpg" class="pa-banner-logo" alt="Banner Icon">
+                <img src="templates/coming-soon/assets/pics/banner.jpg" class="pa-banner-logo" alt="Banner Icon">
                 <a href="#examples"><button class="btn pa-btn-banner">Examples</button></a>
             </div>
         </div>
@@ -54,6 +54,12 @@
             <hr>
 
             <div class="pa-icon">Icon</div>
+
+            <hr>
+
+            <div id="pa-ajax-content">
+                <button class="btn pa-btn-blue" id="pa-ajax-toggle">Press to make an Ajax call</button>
+            </div>
 
             <hr>
 
@@ -173,18 +179,27 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/12e4399d79.js"></script>
-    <script src="../pineapple/dist/js/pineapple.js"></script>
+    <script src="pineapple/js/pineapple.js"></script>
     <script>
         // Sets the date that the timer counts down to
         pineapple.countdown.init(
             "2030-12-31",       // date to countdown to
             "timer",            // timer ID
             "Timer has expired" // message once timer expires
-        );
+        )
+
         // Sets the pixels at which point the navbar switches to "faded"
-        pineapple.navFadeValue = 1000;
+        pineapple.navFadeValue = 1000
+
         // Sets the timeout until the page loads
-        pineapple.pageLoader(1500);
+        pineapple.pageLoader(1500)
+
+        // Ajax call
+        pineapple.ajax(
+            'ajax.html',        // the path to the HTML file containing the content
+            '#pa-ajax-toggle',  // the selector (toggle) for the onclick ajax call
+            '#pa-ajax-content'  // the selector where the content will be replaced
+        )
     </script>
 </body>
 

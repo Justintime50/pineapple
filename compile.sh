@@ -22,7 +22,7 @@ compile_readable_css() {
     ./node_modules/.bin/node-sass templates/waterfall/waterfall.scss templates/waterfall/assets/css/waterfall.css --output-style expanded --source-map true
 
     # Playground (dev only)
-    ./node_modules/.bin/node-sass playground/playground.scss playground/assets/css/playground.css --output-style expanded --source-map true
+    ./node_modules/.bin/node-sass playground/src/playground.scss playground/src/assets/css/playground.css --output-style expanded --source-map true
     echo "Readable CSS step complete!"
 }
 
