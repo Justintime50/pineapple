@@ -57,8 +57,9 @@
 
             <hr>
 
-            <button class="btn pa-btn-blue">Ajax!</button>
-            <div class="pa-ajax-content"></div>
+            <div id="pa-ajax-content">
+                <button class="btn pa-btn-blue" id="pa-ajax-toggle">Press to make an Ajax call</button>
+            </div>
 
             <hr>
 
@@ -194,7 +195,11 @@
         pineapple.pageLoader(1500)
 
         // Ajax call
-        pineapple.ajax('#pa-ajax-content', 'http://pineapple-playground.localhost/ajax.html')
+        pineapple.ajax(
+            '#pa-ajax-toggle',  // the selector (toggle) for the onclick ajax call
+            '#pa-ajax-content', // the selector where the content will be replaced
+            'ajax.html'         // the path to the HTML file containing the content
+        )
     </script>
 </body>
 

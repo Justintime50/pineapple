@@ -1,5 +1,5 @@
 /*
- * Pineapple v2.2.1 (https://github.com/justintime50/pineapple)
+ * Pineapple v2.3.0 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -65,24 +65,30 @@ const pineapple = {
   //   }
   // },
 
-  /* AJAX JAVASCRIPT
-      Syntax: <script>pineapple.ajax('#my-ajax-id', 'ajax.html')</script>
+  /* Ajax Onclick
+    Replace a container's contents with another HTML file with an onclick event
+    Syntax: <script>pineapple.ajax('#ajax-onclick-id', '#ajax-content-id', 'ajax.html')</script>
   */
-  ajax: function (selector, data) {
-    selector = selector || '#pa-ajax-content'
-    data = data || null
-    // pineapple.log.info(selector)
+  ajax: function (onclickSelector, contentSelector, content) {
+    onclickSelector = onclickSelector || '#pa-ajax-toggle'
+    contentSelector = contentSelector || '#pa-ajax-content'
+    content = content || null
 
-    $.post(data, function (data) {
-      $(selector).html(data)
+    // pineapple.log.info(onclickSelector)
+    // pineapple.log.info(contentSelector)
+
+    $(onclickSelector).on('click', function (event) {
+      $.get(content, function (content) {
+        $(contentSelector).html(content)
+      })
     })
 
     return pineapple
   },
 
-  /* PAGE LOADER
-      Source: https:/www.w3schools.com/howto/howto_css_loader.asp
-      Syntax: <script>pineapple.pageLoader(1500);</script>
+  /* Page Loader
+    Source: https:/www.w3schools.com/howto/howto_css_loader.asp
+    Syntax: <script>pineapple.pageLoader(1500);</script>
   */
   pageLoader: function (interval) {
     interval = interval || 1500
@@ -98,9 +104,9 @@ const pineapple = {
     return pineapple
   },
 
-  /* COUNTDOWN TIMER
-      Source: https://www.w3schools.com/howto/howto_js_countdown.asp
-      Syntax: <script>pineapple.countdown.init('2018-12-15', 'timer', 'Timer has expired');</script>
+  /* Countdown Timer
+    Source: https://www.w3schools.com/howto/howto_js_countdown.asp
+    Syntax: <script>pineapple.countdown.init('2018-12-15', 'timer', 'Timer has expired');</script>
   */
   countdown: {
     init: function (timestamp, elementId, message) {
@@ -141,7 +147,7 @@ const pineapple = {
 }
 
 $(document).ready(function () {
-  /* SMOOTH SCROLLER
+  /* Smooth Scroller
     Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
   */
   pineapple.scrollOffset = $('body').data('offset') - 1 || $('.navbar').height()
@@ -182,9 +188,8 @@ $(document).ready(function () {
     }
   })
 
-  /*
-  SLIDEANIM EFFECT
-      Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+  /* Slideanim
+    Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
   */
   $(window).scroll(function () {
     $('.pa-slideanim').each(function () {
@@ -197,9 +202,8 @@ $(document).ready(function () {
     })
   })
 
-  /*
-  NAV FADE EFFECT ON SCROLL
-      Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
+  /* Nav Fade on Scroll
+    Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
   */
   $(window).scroll(function () {
     if ($(this).scrollTop() > pineapple.navFadeValue) {

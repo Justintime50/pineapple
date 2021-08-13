@@ -1,8 +1,8 @@
 # CHANGELOG
 
-## NEXT RELEASE
+## v2.3.0 (2021-08-12)
 
-* Re-introduced the Ajax functionality to the library which allows your to make Ajax requests (eg: dynamically replacing content on a page)
+* Re-introduced the Ajax functionality to the library which allows you to make Ajax requests (eg: dynamically replacing content on a page without reloading it)
 * Reworked the playground to use a Dockerfile
 
 ## v2.2.1 (2021-07-29)
