@@ -5,10 +5,7 @@
  */
 const pineapple = {
     navFadeValue: 500,
-    ajax: function(onclickSelector, contentSelector, content) {
-        onclickSelector = onclickSelector || "#pa-ajax-toggle";
-        contentSelector = contentSelector || "#pa-ajax-content";
-        content = content || null;
+    ajax: function(content, onclickSelector = "#pa-ajax-toggle", contentSelector = "#pa-ajax-content") {
         $(onclickSelector).on("click", function(event) {
             $.get(content, function(content) {
                 $(contentSelector).html(content);
@@ -16,8 +13,7 @@ const pineapple = {
         });
         return pineapple;
     },
-    pageLoader: function(interval) {
-        interval = interval || 1500;
+    pageLoader: function(interval = 1500) {
         pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
         return pineapple;
     },

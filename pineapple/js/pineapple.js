@@ -67,13 +67,9 @@ const pineapple = {
 
   /* Ajax Onclick
     Replace a container's contents with another HTML file with an onclick event
-    Syntax: <script>pineapple.ajax('#ajax-onclick-id', '#ajax-content-id', 'ajax.html')</script>
+    Syntax: <script>pineapple.ajax('ajax.html', '#ajax-onclick-id', '#ajax-content-id')</script>
   */
-  ajax: function (onclickSelector, contentSelector, content) {
-    onclickSelector = onclickSelector || '#pa-ajax-toggle'
-    contentSelector = contentSelector || '#pa-ajax-content'
-    content = content || null
-
+  ajax: function (content, onclickSelector = '#pa-ajax-toggle', contentSelector = '#pa-ajax-content') {
     // pineapple.log.info(onclickSelector)
     // pineapple.log.info(contentSelector)
 
@@ -90,8 +86,7 @@ const pineapple = {
     Source: https:/www.w3schools.com/howto/howto_css_loader.asp
     Syntax: <script>pineapple.pageLoader(1500);</script>
   */
-  pageLoader: function (interval) {
-    interval = interval || 1500
+  pageLoader: function (interval = 1500) {
     pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval)
 
     return pineapple
