@@ -14,6 +14,24 @@ CSS and Javascript web development library built on top of Bootstrap.
 
 ## Animations
 
+### Ajax
+
+Ajax allows you to replace the contents of a container with the contents of another HTML file without reloading the page. This can be accomplished by specifying the toggle selector, the content selector, and the path to the file containing the new content.
+
+```html
+<div id="pa-ajax-content">
+    <button class="btn pa-btn-blue" id="pa-ajax-toggle">Press to make an Ajax call</button>
+</div>
+
+<script>
+    pineapple.ajax(
+        'ajax.html'         // the path to the HTML file containing the content
+        '#pa-ajax-toggle',  // the selector (toggle) for the onclick ajax call (default shown)
+        '#pa-ajax-content', // the selector where the content will be replaced (default shown)
+    )
+</script>
+```
+
 ### Animate Bottom
 
 The `.pa-animate-bottom` class will give any object a sliding in effect from the bottom of the screen _upon page load_. This is a simple way to add some visual effects to your page. Best if used on the `<body>` tag.
@@ -76,7 +94,7 @@ The `.pa-loader` and `.pa-loader-div` are used to create a loading spiral image 
     <div id="pa-loader-div">
         <!-- page content goes here -->
     </div>
-    <!-- the number of milliseconds to pause on the page loader -->
+    <!-- the number of milliseconds to pause on the page loader, default is 1500 -->
     <script>pineapple.pageLoader(1500);</script>
 </body>
 ```

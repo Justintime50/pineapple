@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v2.3.0 (2021-08-12)
+
+* Re-introduced the Ajax functionality to the library which allows you to make Ajax requests (eg: dynamically replacing content on a page without reloading it)
+* Reworked the playground to use a Dockerfile
+
 ## v2.2.1 (2021-07-29)
 
 * Fixed a bug where `pa-banner-darken` was pinned to the top of the page regardless of where the actual `pa-banner` and content were. This now also allows for multiple uses of `pa-banner-darken` on the same page

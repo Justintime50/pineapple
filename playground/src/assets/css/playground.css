@@ -3,7 +3,6 @@
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
-
 body {
   position: relative;
 }
@@ -13,7 +12,7 @@ body {
 }
 
 .pa-banner {
-  background-image: url("../templates/coming-soon/assets/pics/banner.jpg");
+  background-image: url("../../templates/coming-soon/assets/pics/banner.jpg");
 }
 
 .pa-btn-banner {
@@ -29,3 +28,5 @@ body {
   background-color: green;
   color: #fff;
 }
+
+/*# sourceMappingURL=playground.css.map */
