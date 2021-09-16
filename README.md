@@ -8,7 +8,7 @@ CSS and Javascript web development library built on top of Bootstrap.
 [![NPM](https://img.shields.io/npm/v/pineapple-library)](https://www.npmjs.com/package/pineapple-library)
 [![Licence](https://img.shields.io/github/license/justintime50/pineapple)](LICENSE)
 
-<img src="assets/showcase.png" alt="Showcase">
+<img src="https://raw.githubusercontent.com/justintime50/assets/main/src/pineapple/showcase.png" alt="Showcase">
 
 </div>
 
@@ -92,7 +92,3 @@ npm run compile
 1. Bump version in install instruction links in `README.md`
 1. Compile assets with `npm run compile`
 1. Cut a new Git tag which will automatically release to NPM
-
-## Attribution
-
-* Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
