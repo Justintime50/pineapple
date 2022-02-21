@@ -21,7 +21,6 @@
     opacity: 1;
   }
 }
-
 @keyframes animatebottom {
   from {
     bottom: -100px;
@@ -32,7 +31,6 @@
     opacity: 1;
   }
 }
-
 .pa-slideanim {
   visibility: hidden;
 }
@@ -55,7 +53,6 @@
     transform: translateY(0%);
   }
 }
-
 @-webkit-keyframes pa-slide {
   0% {
     opacity: 0;
@@ -66,7 +63,6 @@
     -webkit-transform: translateY(0%);
   }
 }
-
 .pa-nav-fade {
   transition: background-color 0.5s ease 0s;
 }
@@ -112,7 +108,6 @@
     -webkit-transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -121,7 +116,6 @@
     transform: rotate(360deg);
   }
 }
-
 #pa-loader-div {
   height: 100%;
   display: none;

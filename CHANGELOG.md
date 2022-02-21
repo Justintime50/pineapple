@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## NEXT RELEASE
+
+* Swaps the deprecated `node-sass` for the `sass` dev dependency, recompiles the entire library
+
 ## v2.3.0 (2021-08-12)
 
 * Re-introduced the Ajax functionality to the library which allows you to make Ajax requests (eg: dynamically replacing content on a page without reloading it)

@@ -21,7 +21,6 @@
     opacity: 1;
   }
 }
-
 @keyframes animatebottom {
   from {
     bottom: -100px;
@@ -32,7 +31,6 @@
     opacity: 1;
   }
 }
-
 .pa-slideanim {
   visibility: hidden;
 }
@@ -55,7 +53,6 @@
     transform: translateY(0%);
   }
 }
-
 @-webkit-keyframes pa-slide {
   0% {
     opacity: 0;
@@ -66,7 +63,6 @@
     -webkit-transform: translateY(0%);
   }
 }
-
 .pa-nav-fade {
   transition: background-color 0.5s ease 0s;
 }
@@ -112,7 +108,6 @@
     -webkit-transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -121,7 +116,6 @@
     transform: rotate(360deg);
   }
 }
-
 #pa-loader-div {
   height: 100%;
   display: none;
@@ -156,7 +150,6 @@
     background-attachment: initial;
   }
 }
-
 .pa-banner-text {
   display: flex;
   justify-content: center;
@@ -207,13 +200,11 @@
     width: 30vw;
   }
 }
-
 @media only screen and (max-width: 768px) {
   .pa-banner-logo {
     width: 25vh;
   }
 }
-
 .pa-btn {
   margin: 20px;
   padding: 10px 30px;
@@ -228,7 +219,6 @@
     margin-bottom: 35px;
   }
 }
-
 .pa-btn-banner {
   color: #fff;
   border-color: #fff;
@@ -282,56 +272,65 @@
   .pa-font-xs {
     font-size: 14px;
   }
+
   .pa-font-sm {
     font-size: 20px;
   }
+
   .pa-font-md {
     font-size: 28px;
   }
+
   .pa-font-lg {
     font-size: 42px;
   }
+
   .pa-font-xl {
     font-size: 56px;
   }
 }
-
 @media only screen and (min-width: 769px) {
   .pa-font-xs {
     font-size: 1.6vw;
   }
+
   .pa-font-sm {
     font-size: 2.3vw;
   }
+
   .pa-font-md {
     font-size: 3.2vw;
   }
+
   .pa-font-lg {
     font-size: 5.2vw;
   }
+
   .pa-font-xl {
     font-size: 6vw;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .pa-font-xs {
     font-size: 14px;
   }
+
   .pa-font-sm {
     font-size: 18px;
   }
+
   .pa-font-md {
     font-size: 26px;
   }
+
   .pa-font-lg {
     font-size: 40px;
   }
+
   .pa-font-xl {
     font-size: 58px;
   }
 }
-
 .pa-video-container {
   position: relative;
   padding-bottom: 56.25%;
