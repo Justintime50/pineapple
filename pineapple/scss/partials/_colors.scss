@@ -1,0 +1,33 @@
+//
+// Colors
+// Inspired by the GitHub Dark mode colors
+// Color values will have a "percentage darker" number appended to the end as the colors get darker from their original value
+//
+
+// Internal Colors
+$color-blue: #007dda;
+$color-red: red;
+$color-text: #818181;
+$color-black: #000;
+$color-black-opaque-20: rgba(0, 0, 0, 0.2);
+$color-black-opaque-35: rgba(0, 0, 0, 0.35);
+$color-black-opaque-50: rgba(0, 0, 0, 0.5);
+$color-white: #fff;
+$color-off-white: #f6f6f6;
+
+//
+// External Colors
+// These colors could be imported in your project's scss file to quickly colorize your app
+//
+
+// Green
+$pa-color-green: #aef1b7;
+$pa-color-green-10: #84db90;
+$pa-color-green-20: #5EC472;
+$pa-color-green-30: #4CAB5F;
+$pa-color-green-40: #3A954F;
+$pa-color-green-50: #287D3E;
+$pa-color-green-60: #226A34;
+$pa-color-green-70: #1C582C;
+$pa-color-green-80: #144723;
+$pa-color-green-90: #0A3419;

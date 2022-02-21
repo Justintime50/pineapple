@@ -5,7 +5,9 @@
  */
 
 // load variables before everything else
-@import "partials/variables";
+@import "partials/colors";
+
+// load everything else
 @import "partials/banner";
 @import "partials/backgrounds";
 @import "partials/buttons";
