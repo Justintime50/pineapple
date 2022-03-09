@@ -4,41 +4,37 @@
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
 
-/*
- * ** Pineapple Object **
- * ajax
- * pageLoader
- * showPage
- * countdown
- * Smooth Scroller
- * Slideanim
- * Nav Fade
- */
-
 const pineapple = {
-  defaultPageLoaderInterval: 1500,
-  defaultNavFadeValue: 500,
+  navFadeThreshold: 500, // Number of pixels the navbar must be scrolled before fading
+  slideanimThreshold: 40, // Number of pixels a `slideanim` element must scroll before it slides into view
 
-  /* Ajax Onclick
-    Replace a container's contents with another HTML file with an onclick event
-    Syntax: <script>pineapple.ajax('ajax.html', '#ajax-onclick-id', '#ajax-content-id')</script>
-  */
-  // ajax: function (content, onclickSelector = '#pa-ajax-toggle', contentSelector = '#pa-ajax-content') {
-  //   $(onclickSelector).on('click', function (event) {
-  //     $.get(content, function (content) {
-  //       $(contentSelector).html(content);
-  //     });
-  //   });
+  /** Ajax Onclick
+   * Replace a container's contents with another HTML file with an onclick event
+   * Syntax: <script>pineapple.ajax('ajax.html', 'ajax-onclick-id', 'ajax-content-id')</script>
+   */
+  ajax: function (content, onclickSelector = 'pa-ajax-toggle', contentSelector = 'pa-ajax-content') {
+    // eslint-disable-next-line no-unused-vars
+    document.getElementById(onclickSelector).addEventListener('click', function (event) {
+      const httpRequest = new XMLHttpRequest();
 
-  //   return pineapple;
-  // },
+      httpRequest.open('GET', content);
+      httpRequest.onreadystatechange = function () {
+        // Only load the Ajax content if the request is done and successful
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById(contentSelector).innerHTML = this.responseText;
+        }
+      };
+      httpRequest.send();
+    });
 
-  /* Page Loader
-    Source: https:/www.w3schools.com/howto/howto_css_loader.asp
-    Syntax: <script>pineapple.pageLoader(1500);</script>
-  */
-  pageLoader: function (interval = pineapple.defaultPageLoaderInterval) {
-    console.log('hello');
+    return pineapple;
+  },
+
+  /** Page Loader
+   * Source: https:/www.w3schools.com/howto/howto_css_loader.asp
+   * Syntax: <script>pineapple.pageLoader(1500);</script>
+   */
+  pageLoader: function (interval = 1500) {
     pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
 
     return pineapple;
@@ -51,10 +47,10 @@ const pineapple = {
     return pineapple;
   },
 
-  /* Countdown Timer
-    Source: https://www.w3schools.com/howto/howto_js_countdown.asp
-    Syntax: <script>pineapple.countdown.init('2018-12-15', 'timer', 'Timer has expired');</script>
-  */
+  /** Countdown Timer
+   * Source: https://www.w3schools.com/howto/howto_js_countdown.asp
+   * Syntax: <script>pineapple.countdown.init('2018-12-15', 'timer', 'Timer has expired');</script>
+   */
   countdown: {
     init: function (timestamp, elementId, message) {
       console.log('hit');
@@ -150,33 +146,37 @@ const pineapple = {
 //     }
 //   });
 
-//   /* Slideanim
-//     Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
-//   */
-//   $(window).scroll(function () {
-//     $('.pa-slideanim').each(function () {
-//       const pos = $(this).offset().top;
-//       const h = window.innerHeight;
-//       const winTop = $(window).scrollTop();
-//       if (pos < winTop + h - 40) {
-//         $(this).addClass('pa-slide');
-//       }
-//     });
-//   });
+/**
+ * All logic that requires a `scroll` event should be placed in the following block
+ */
+// TODO: Look into throttling? https://css-tricks.com/the-difference-between-throttling-and-debouncing/
+window.addEventListener('scroll', function () {
+  const topOfWindow = document.body.scrollTop;
+  const windowHeight = window.innerHeight;
 
-//   /* Nav Fade on Scroll
-//     Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
-//   */
-//   $(window).scroll(function () {
-//     if ($(this).scrollTop() > pineapple.defaultNavFadeValue) {
-//       $('.pa-nav-fade').addClass('opaque');
-//       $('.pa-nav-fade a').addClass('opaque');
-//     } else {
-//       $('.pa-nav-fade').removeClass('opaque');
-//       $('.pa-nav-fade a').removeClass('opaque');
-//     }
-//   });
-// });
+  /** Slideanim
+   * Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+   */
+  document.body.querySelectorAll('.pa-slideanim').forEach(function (element) {
+    const position = element.getBoundingClientRect().top;
+    if (position < topOfWindow + windowHeight - pineapple.slideanimThreshold) {
+      element.classList.add('pa-slide');
+    }
+  });
+
+  /** Nav Fade on Scroll
+   * Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
+   */
+  // TODO: This isn't working...
+  if (topOfWindow > pineapple.navFadeThreshold) {
+    document.getElementsByClassName('.pa-nav-fade').forEach((element) => element.classList.add('opaque'));
+    document.getElementsByClassName('.pa-nav-fade a').forEach((element) => element.classList.add('opaque'));
+  } else {
+    document.getElementsByClassName('.pa-nav-fade').forEach((element) => element.classList.remove('opaque'));
+    document.getElementsByClassName('.pa-nav-fade a').forEach((element) => element.classList.remove('opaque'));
+  }
+});
 
 // Export the module for items such as Webpack
+// TODO: fix this bug for browser
 module.exports = pineapple;
