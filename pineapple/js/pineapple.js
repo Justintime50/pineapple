@@ -12,13 +12,13 @@ const pineapple = {
    * Replace a container's contents with another HTML file with an onclick event
    * Syntax: <script>pineapple.ajax('ajax.html', 'ajax-onclick-id', 'ajax-content-id')</script>
    */
-  ajax: function (content, onclickSelector = 'pa-ajax-toggle', contentSelector = 'pa-ajax-content') {
+  ajax: (content, onclickSelector = 'pa-ajax-toggle', contentSelector = 'pa-ajax-content') => {
     // eslint-disable-next-line no-unused-vars
     document.getElementById(onclickSelector).addEventListener('click', function (event) {
       const httpRequest = new XMLHttpRequest();
 
       httpRequest.open('GET', content);
-      httpRequest.onreadystatechange = function () {
+      httpRequest.onreadystatechange = () => {
         // Only load the Ajax content if the request is done and successful
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById(contentSelector).innerHTML = this.responseText;
@@ -34,13 +34,13 @@ const pineapple = {
    * Source: https:/www.w3schools.com/howto/howto_css_loader.asp
    * Syntax: <script>pineapple.pageLoader(1500);</script>
    */
-  pageLoader: function (interval = 1500) {
+  pageLoader: (interval = 1500) => {
     pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
 
     return pineapple;
   },
 
-  showPage: function () {
+  showPage: () => {
     document.getElementById('pa-loader').style.display = 'none';
     document.getElementById('pa-loader-div').style.display = 'block';
 
@@ -52,7 +52,7 @@ const pineapple = {
    * Syntax: <script>pineapple.countdown.init('2018-12-15', 'timer', 'Timer has expired');</script>
    */
   countdown: {
-    init: function (timestamp, elementId, message) {
+    init: (timestamp, elementId, message) => {
       console.log('hit');
       // Set the date we're counting down to
       pineapple.countdown.date = new Date(timestamp).getTime();
@@ -62,7 +62,7 @@ const pineapple = {
       secondsInMinute = secondsInHour = 60;
       const hoursInDay = 24;
       // Update the countdown every 1 second
-      const x = setInterval(function () {
+      const x = setInterval(() => {
         // Get today's date and time
         const now = new Date().getTime();
 
@@ -149,15 +149,16 @@ const pineapple = {
 /**
  * All logic that requires a `scroll` event should be placed in the following block
  */
-// TODO: Look into throttling? https://css-tricks.com/the-difference-between-throttling-and-debouncing/
-window.addEventListener('scroll', function () {
+// TODO: Look into debouncing these scroll events:
+// https://css-tricks.com/the-difference-between-throttling-and-debouncing/ & https://www.joshwcomeau.com/snippets/javascript/debounce/
+window.addEventListener('scroll', () => {
   const topOfWindow = document.body.scrollTop;
   const windowHeight = window.innerHeight;
 
   /** Slideanim
    * Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
    */
-  document.body.querySelectorAll('.pa-slideanim').forEach(function (element) {
+  document.body.querySelectorAll('.pa-slideanim').forEach((element) => {
     const position = element.getBoundingClientRect().top;
     if (position < topOfWindow + windowHeight - pineapple.slideanimThreshold) {
       element.classList.add('pa-slide');
@@ -167,16 +168,15 @@ window.addEventListener('scroll', function () {
   /** Nav Fade on Scroll
    * Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
    */
-  // TODO: This isn't working...
-  if (topOfWindow > pineapple.navFadeThreshold) {
-    document.getElementsByClassName('.pa-nav-fade').forEach((element) => element.classList.add('opaque'));
-    document.getElementsByClassName('.pa-nav-fade a').forEach((element) => element.classList.add('opaque'));
+  if (window.pageYOffset > pineapple.navFadeThreshold) {
+    document.querySelectorAll('.pa-nav-fade').forEach((element) => element.classList.add('opaque'));
+    document.querySelectorAll('.pa-nav-fade a').forEach((element) => element.classList.add('opaque'));
   } else {
-    document.getElementsByClassName('.pa-nav-fade').forEach((element) => element.classList.remove('opaque'));
-    document.getElementsByClassName('.pa-nav-fade a').forEach((element) => element.classList.remove('opaque'));
+    document.querySelectorAll('.pa-nav-fade').forEach((element) => element.classList.remove('opaque'));
+    document.querySelectorAll('.pa-nav-fade a').forEach((element) => element.classList.remove('opaque'));
   }
 });
 
 // Export the module for items such as Webpack
-// TODO: fix this bug for browser
+// TODO: fix this bug for browser (probably build an ESM module and commonjs separately?)
 module.exports = pineapple;

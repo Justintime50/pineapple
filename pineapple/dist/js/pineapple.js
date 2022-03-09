@@ -6,11 +6,11 @@
 const pineapple = {
     navFadeThreshold: 500,
     slideanimThreshold: 40,
-    ajax: function(content, onclickSelector = "pa-ajax-toggle", contentSelector = "pa-ajax-content") {
+    ajax: (content, onclickSelector = "pa-ajax-toggle", contentSelector = "pa-ajax-content") => {
         document.getElementById(onclickSelector).addEventListener("click", function(event) {
             const httpRequest = new XMLHttpRequest();
             httpRequest.open("GET", content);
-            httpRequest.onreadystatechange = function() {
+            httpRequest.onreadystatechange = () => {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById(contentSelector).innerHTML = this.responseText;
                 }
@@ -19,24 +19,24 @@ const pineapple = {
         });
         return pineapple;
     },
-    pageLoader: function(interval = 1500) {
+    pageLoader: (interval = 1500) => {
         pineapple.pageLoaderInput = setTimeout(pineapple.showPage, interval);
         return pineapple;
     },
-    showPage: function() {
+    showPage: () => {
         document.getElementById("pa-loader").style.display = "none";
         document.getElementById("pa-loader-div").style.display = "block";
         return pineapple;
     },
     countdown: {
-        init: function(timestamp, elementId, message) {
+        init: (timestamp, elementId, message) => {
             console.log("hit");
             pineapple.countdown.date = new Date(timestamp).getTime();
             const oneSecondMilliseconds = 1e3;
             let secondsInMinute, secondsInHour;
             secondsInMinute = secondsInHour = 60;
             const hoursInDay = 24;
-            const x = setInterval(function() {
+            const x = setInterval(() => {
                 const now = new Date().getTime();
                 const timeDifference = pineapple.countdown.date - now;
                 const days = Math.floor(timeDifference / (oneSecondMilliseconds * secondsInMinute * secondsInHour * hoursInDay));
@@ -54,21 +54,21 @@ const pineapple = {
     }
 };
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", () => {
     const topOfWindow = document.body.scrollTop;
     const windowHeight = window.innerHeight;
-    document.body.querySelectorAll(".pa-slideanim").forEach(function(element) {
+    document.body.querySelectorAll(".pa-slideanim").forEach(element => {
         const position = element.getBoundingClientRect().top;
         if (position < topOfWindow + windowHeight - pineapple.slideanimThreshold) {
             element.classList.add("pa-slide");
         }
     });
-    if (topOfWindow > pineapple.navFadeThreshold) {
-        document.getElementsByClassName("pa-nav-fade")[0].classList.add("opaque");
-        document.getElementsByClassName("pa-nav-fade a")[0].classList.add("opaque");
+    if (window.pageYOffset > pineapple.navFadeThreshold) {
+        document.querySelectorAll(".pa-nav-fade").forEach(element => element.classList.add("opaque"));
+        document.querySelectorAll(".pa-nav-fade a").forEach(element => element.classList.add("opaque"));
     } else {
-        document.getElementsByClassName("pa-nav-fade")[0].classList.remove("opaque");
-        document.getElementsByClassName("pa-nav-fade a")[0].classList.remove("opaque");
+        document.querySelectorAll(".pa-nav-fade").forEach(element => element.classList.remove("opaque"));
+        document.querySelectorAll(".pa-nav-fade a").forEach(element => element.classList.remove("opaque"));
     }
 });
 
