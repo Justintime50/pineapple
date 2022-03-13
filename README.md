@@ -69,7 +69,7 @@ The Pineapple CSS has been compiled into three separate bundles:
 - `pineapple-styles` includes everything but the `grid` and `animations` CSS and can be used without the accompanying JS
 - `pineapple-utilities` includes the `grid` and `animations` CSS which accompanies the JS
 
-### Bootstrap, & jQuery
+### Pineapple, Bootstrap, & jQuery
 
 **Bootstrap**
 
