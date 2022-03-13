@@ -1,12 +1,7 @@
-//
 // Components
-//
 
-//
 // Card
 // Source: https://www.w3schools.com/howto/howto_css_cards.asp
-//
-
 .pa-card {
   box-shadow: 0 4px 8px 0 $color-black-opaque-20;
   transition: 0.3s;
@@ -23,10 +18,7 @@
   box-shadow: 0 8px 16px 0 $color-black-opaque-20;
 }
 
-//
 // Icon
-//
-
 .pa-icon {
   border: $color-text solid 1px;
   border-radius: 0.5em;

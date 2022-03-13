@@ -1,1 +1,1 @@
-FROM justintime50/nginx-php:7.4-7
+FROM justintime50/nginx-php:8.1-9

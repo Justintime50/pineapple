@@ -1,12 +1,7 @@
-//
 // Hacks
-//
 
-//
 // Fullscreen YouTube Videos (scales to fit container)
 // Source: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
-//
-
 .pa-video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -25,12 +20,9 @@
   height: 100%;
 }
 
-//
 // Fullscreen Boostrap Carousel
 // Source: https://mdbootstrap.com/full-page-carousel/
-//
-
-// For the carousel to work properly, you must declare the commented code below in your css.
+// For the carousel to work properly, you must declare the commented code below in your css:
 
 /*
 html,
@@ -38,7 +30,6 @@ body {
   height: 100%;
 }
 */
-
 .pa-carousel-full,
 .pa-carousel-item-full,
 .pa-active {
@@ -55,19 +46,19 @@ body {
 
 // The following images are placeholders. You must declare your own images in your project.
 .pa-carousel-item-full:nth-child(1) {
-  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");
+  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(54).jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pa-carousel-item-full:nth-child(2) {
-  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(4).jpg");
+  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(4).jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pa-carousel-item-full:nth-child(3) {
-  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(3).jpg");
+  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(3).jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }

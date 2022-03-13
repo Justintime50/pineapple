@@ -1,18 +1,11 @@
-//
 // Banner
-//
 
-//
 // Responsive Full Image Banner
 // Source: https://www.w3schools.com/howto/howto_css_full_page.asp
-//
 
 .pa-banner {
   height: 100%;
   background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -30,9 +23,11 @@
   flex-direction: column;
   text-align: center;
   padding: 3rem;
+
   // vertical align
   top: 50%;
   transform: translateY(-50%);
+
   // font elements
   position: relative; // keep for font color fix
   z-index: 10;
@@ -53,13 +48,11 @@
   color: $color-white;
 }
 
-//
 // Darken Image Fix
 // Source: http://stackoverflow.com/questions/36389481/how-to-darken-the-background-image-in-css
-//
 
 .pa-banner-darken::before {
-  content: "";
+  content: '';
   z-index: 0;
   display: block;
   position: absolute;

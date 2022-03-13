@@ -8,8 +8,21 @@ body {
   position: relative;
 }
 
-.navbar {
+.pa-nav-fade {
   background-color: transparent;
+  color: #000;
+}
+
+.pa-nav-fade.opaque {
+  background-color: purple;
+}
+
+.pa-nav-fade a {
+  color: #fff;
+}
+
+.pa-nav-fade a.opaque {
+  color: #fff;
 }
 
 .pa-banner {

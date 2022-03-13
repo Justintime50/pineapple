@@ -1,30 +1,12 @@
-//
 // Animations
-//
 
-//
 // Animate Bottom
 // Source: https://www.w3schools.com/howto/howto_css_loader.asp
-//
 
 .pa-animate-bottom {
   position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
   animation-name: animatebottom;
   animation-duration: 1s;
-}
-
-@-webkit-keyframes animatebottom {
-  from {
-    bottom: -100px;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
 }
 
 @keyframes animatebottom {
@@ -39,10 +21,8 @@
   }
 }
 
-//
 // Slideanim
 // Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
-//
 
 .pa-slideanim {
   visibility: hidden;
@@ -53,9 +33,7 @@
 // TODO: Is there a better way to make this class "private"?
 .pa-slide {
   animation-name: pa-slide;
-  -webkit-animation-name: pa-slide;
   animation-duration: 1s;
-  -webkit-animation-duration: 1s;
   visibility: visible;
 }
 
@@ -73,22 +51,8 @@
   }
 }
 
-@-webkit-keyframes pa-slide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70%);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-  }
-}
-
-//
 // Navbar Fade
 // Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
-//
 
 .pa-nav-fade {
   transition: background-color 0.5s ease 0s;
@@ -111,10 +75,8 @@
   color: $color-black;
 }
 
-//
 // Page Loader
 // Source: https://www.w3schools.com/howto/howto_css_loader.asp
-//
 
 #pa-loader {
   position: fixed;
@@ -123,23 +85,22 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 150px;
-  height: 150px; // Loader image height - DO NOT REMOVE
+  height: 150px;
   margin: -75px 0 0 -75px;
   border: 16px solid $color-off-white;
   border-radius: 50%;
   border-top: 16px solid $color-blue;
-  -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #pa-loader-div {

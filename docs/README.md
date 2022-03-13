@@ -4,37 +4,29 @@ CSS and Javascript web development library built on top of Bootstrap.
 
 ## Modules
 
-* [Animations](#animations)
-* [Backgrounds](#backgrounds)
-* [Banner](#banner)
-* [Buttons](#buttons)
-* [Components](#components)
-* [Fonts](#fonts)
-* [Hacks](#hacks)
+- [Animations](#animations)
+- [Backgrounds](#backgrounds)
+- [Banner](#banner)
+- [Buttons](#buttons)
+- [Components](#components)
+- [Fonts](#fonts)
+- [Hacks](#hacks)
 
 ## Animations
 
 ### Ajax
 
-Ajax allows you to replace the contents of a container with the contents of another HTML file without reloading the page. This can be accomplished by specifying the toggle selector, the content selector, and the path to the file containing the new content.
+Ajax allows you to replace the contents of an element with the contents of another HTML file without needing to reload the page. This can be accomplished by using the Javascript `onclick` function on the element you want to trigger the Ajax call. You then pass the path or URL to the content you'd like to swap in and the ID of the element where you want it to end up.
 
 ```html
 <div id="pa-ajax-content">
-    <button class="btn pa-btn-blue" id="pa-ajax-toggle">Press to make an Ajax call</button>
+  <button class="btn" onclick="pineapple.ajax('ajax.html', 'pa-ajax-content')">Press to make an Ajax call</button>
 </div>
-
-<script>
-    pineapple.ajax(
-        'ajax.html'         // the path to the HTML file containing the content
-        '#pa-ajax-toggle',  // the selector (toggle) for the onclick ajax call (default shown)
-        '#pa-ajax-content', // the selector where the content will be replaced (default shown)
-    )
-</script>
 ```
 
 ### Animate Bottom
 
-The `.pa-animate-bottom` class will give any object a sliding in effect from the bottom of the screen _upon page load_. This is a simple way to add some visual effects to your page. Best if used on the `<body>` tag.
+The `.pa-animate-bottom` class will give any object a sliding-in effect from the bottom of the screen _upon page load_. This is a simple way to add some visual effects to your page. Best if used on the `<body>` tag.
 
 ### Countdown Timer
 
@@ -44,43 +36,48 @@ Create a customized countdown timer that updates each second and displays a mess
 <div id="timer"></div>
 
 <script>
-    pineapple.countdown.init(
-        "2018-12-15",       // date to countdown to
-        "timer",            // timer ID
-        "Timer has expired" // message displayed once countdown has expired
-    );
+  pineapple.countdown.init(
+    '2018-12-15', // date to countdown to
+    'timer', // timer ID
+    'Timer has expired' // message displayed once countdown has expired
+  );
 </script>
 ```
 
 ### Fading Navbar
 
-The `.pa-nav-fade` allows the navbar to fade in after scrolling past a certain pixel threshold (eg: full screen banner image). You can define your own value for when it should fade:
+The `.pa-nav-fade` allows the navbar to fade in after scrolling past a certain pixel threshold. By default, if there is a `pa-banner` class on your page, the height of that element will be used. You can define your own value for when it should fade if desired:
 
 ```html
-<script>pineapple.navFadeValue = 1000;</script>
+<script>
+  pineapple.navFadeThreshold = 1000;
+</script>
 ```
 
-* You'll also want to configure colors for your faded and non-faded navbar. An example of classes you'd want to adjust:
+- You'll also want to configure colors for your faded and non-faded navbar. An example of classes you'd want to adjust:
 
 ```css
 .pa-nav-fade {
-    color: #000;
+  /* Use a transparent nav background for full-screen banner images */
+  background-color: transparent;
+  color: #000;
 }
 
 .pa-nav-fade.opaque {
-    background-color: blue;
+  /* Fill in the nav background once we've scrolled past the full-screen banner image */
+  background-color: blue;
 }
 
 .pa-nav-fade a {
-    color: #fff;
+  color: #fff;
 }
 
 .pa-nav-fade .dropdown-menu a {
-    color: #000;
+  color: #000;
 }
 
 .pa-nav-fade a.opaque {
-    color: red;
+  color: #fff;
 }
 ```
 
@@ -90,22 +87,23 @@ The `.pa-loader` and `.pa-loader-div` are used to create a loading spiral image 
 
 ```html
 <body onload="pineapple.pageLoader()">
-    <div id="pa-loader"></div>
-    <div id="pa-loader-div">
-        <!-- page content goes here -->
-    </div>
-    <!-- the number of milliseconds to pause on the page loader, default is 1500 -->
-    <script>pineapple.pageLoader(1500);</script>
+  <div id="pa-loader"></div>
+  <div id="pa-loader-div">
+    <!-- page content goes here -->
+  </div>
+  <script>
+    pineapple.pageLoader(1500); // the number of milliseconds to pause on the page loader, default is 1500
+  </script>
 </body>
 ```
 
 ### Slideanim Effect
 
-The `.pa-slideanim` class will give any object a sliding in effect _once the element comes into the viewport_. This is a simple way to add some visual effects to your page. Best if used on starting on items that appear below the initial viewport of the page (eg: below the top element). This is a simple way to add some visual effects to your page.
+The `.pa-slideanim` class will give any element a sliding-in effect _once the element comes into the viewport_. This is a simple way to add some visual effects to your page. Best if used on elements that appear below the initial viewport of the page (eg: below the top items that load when a user first visits the page). This is a simple way to add some visual effects to your page.
 
 ### Smooth Scroller
 
-Add `data-offset="pixels"` element to your `<body>` tag to explicitly set an offset, the default will be the height of the `.navbar` class. Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page and highlight the nav link if possible. Additionally you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page.
+Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page and highlight the nav link if possible. Additionally you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page. If you'd like to disable this feature for certain elements, you can simpley add the `.pa-noscroll` class.
 
 ## Backgrounds
 
@@ -117,9 +115,9 @@ Wrap a `.pa-slanted-content` `<div>` in a `.pa-slanted-container` `<div>` to cre
 
 ```html
 <div class="pa-slanted-container">
-    <div class="pa-slanted-content">
-        <p>Slanted Section</p>
-    </div>
+  <div class="pa-slanted-content">
+    <p>Slanted Section</p>
+  </div>
 </div>
 ```
 
@@ -163,12 +161,12 @@ The `.pa-btn-banner` creates a transparent outlined button perfect for use on a 
 
 ```html
 <div class="pa-banner pa-banner-darken">
-    <div class="pa-banner-text">
-        <img src="banner.jpg" class="pa-banner-logo" alt="logo">
-        <h1 class="pa-banner-heading">My Heading Here</h1>
-        <p class="pa-banner-sub-heading">My Sub-Heading Here</p>
-        <a href="#section1" class="pa-btn-banner">Button on a Banner</a>
-    </div>
+  <div class="pa-banner-text">
+    <img src="banner.jpg" class="pa-banner-logo" alt="logo" />
+    <h1 class="pa-banner-heading">My Heading Here</h1>
+    <p class="pa-banner-sub-heading">My Sub-Heading Here</p>
+    <a href="#section1" class="pa-btn-banner">Button on a Banner</a>
+  </div>
 </div>
 ```
 
@@ -192,12 +190,13 @@ The `.pa-icon` class applies an icon border, padding, and margins to content ins
 
 Create simple, dynamically scaling text.
 
-The `.pa-font-*` class applies different dynamic font sizes to your element. Replace the `*` with your size. Available sizes: 
-* xs
-* sm
-* md
-* lg
-* xl
+The `.pa-font-*` class applies different dynamic font sizes to your element. Replace the `*` with your size. Available sizes:
+
+- xs
+- sm
+- md
+- lg
+- xl
 
 ## Hacks
 
@@ -212,38 +211,44 @@ You'll need to define the following somewhere in your css for this to work:
 ```css
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 ```
 
 #### Example
 
 ```html
-<div id="bannerCarousel" class="carousel slide pa-carousel-full" data-ride="carousel" data-interval="3000" data-pause="false"> 
-    <div class="carousel-inner pa-carousel-inner-full" role="listbox"> 
-        <div class="carousel-item active pa-carousel-item-full pa-active-full"> 
-            <h1 class="pa-banner-text">IMAGE 1</h1> 
-        </div> 
-        <div class="carousel-item pa-carousel-item-full"> 
-            <h1 class="pa-banner-text">IMAGE 2</h1> 
-        </div> 
-        <div class="carousel-item pa-carousel-item-full"> 
-            <h1 class="pa-banner-text">IMAGE 3</h1> 
-        </div>
+<div
+  id="bannerCarousel"
+  class="carousel slide pa-carousel-full"
+  data-ride="carousel"
+  data-interval="3000"
+  data-pause="false"
+>
+  <div class="carousel-inner pa-carousel-inner-full" role="listbox">
+    <div class="carousel-item active pa-carousel-item-full pa-active-full">
+      <h1 class="pa-banner-text">IMAGE 1</h1>
     </div>
+    <div class="carousel-item pa-carousel-item-full">
+      <h1 class="pa-banner-text">IMAGE 2</h1>
+    </div>
+    <div class="carousel-item pa-carousel-item-full">
+      <h1 class="pa-banner-text">IMAGE 3</h1>
+    </div>
+  </div>
 </div>
 ```
 
 Add your image reference in a custom `css` class as follows. The number in the parentheses represents the slide number in order of appearance. Add as many as you desire:
 
 ```css
-.carousel-item:nth-child(1) { 
-    background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");
+.carousel-item:nth-child(1) {
+  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(54).jpg');
 }
-.carousel-item:nth-child(2) { 
-    background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(55).jpg");
+.carousel-item:nth-child(2) {
+  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(55).jpg');
 }
-.carousel-item:nth-child(3) { 
-    background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(56).jpg");
+.carousel-item:nth-child(3) {
+  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(56).jpg');
 }
 ```
