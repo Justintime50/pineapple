@@ -6,9 +6,6 @@
 .pa-banner {
   height: 100%;
   background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
 }

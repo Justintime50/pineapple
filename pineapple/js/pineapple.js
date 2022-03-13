@@ -115,6 +115,7 @@ domReady(() => {
         this.pathname === location.pathname &&
         (element.classList.contains('pa-scroll') ||
           element.classList.contains('nav-link') ||
+          element.classList.contains('navbar-brand') ||
           element.classList.contains('btn') ||
           element.nodeName == 'BUTTON' ||
           document.getElementById('button')) &&

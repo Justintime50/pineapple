@@ -1,6 +1,6 @@
 # Pineapple Docs
 
-CSS and Javascript web development library built on top of Bootstrap.
+CSS and Javascript web development library that supplements Bootstrap.
 
 ## Modules
 
@@ -103,7 +103,7 @@ The `.pa-slideanim` class will give any element a sliding-in effect _once the el
 
 ### Smooth Scroller
 
-Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page and highlight the nav link if possible. Additionally you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page. If you'd like to disable this feature for certain elements, you can simpley add the `.pa-noscroll` class.
+Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page. Additionally, you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page. If you'd like to disable this feature for certain elements, you can simpley add the `.pa-noscroll` class.
 
 ## Backgrounds
 

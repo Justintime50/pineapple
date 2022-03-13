@@ -5,22 +5,10 @@
  */
 .pa-animate-bottom {
   position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
   animation-name: animatebottom;
   animation-duration: 1s;
 }
 
-@-webkit-keyframes animatebottom {
-  from {
-    bottom: -100px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
 @keyframes animatebottom {
   from {
     bottom: -100px;
@@ -37,9 +25,7 @@
 
 .pa-slide {
   animation-name: pa-slide;
-  -webkit-animation-name: pa-slide;
   animation-duration: 1s;
-  -webkit-animation-duration: 1s;
   visibility: visible;
 }
 
@@ -51,16 +37,6 @@
   100% {
     opacity: 1;
     transform: translateY(0%);
-  }
-}
-@-webkit-keyframes pa-slide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
   }
 }
 .pa-nav-fade {
@@ -96,18 +72,9 @@
   border: 16px solid #f6f6f6;
   border-radius: 50%;
   border-top: 16px solid #007dda;
-  -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);

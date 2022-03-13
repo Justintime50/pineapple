@@ -35,8 +35,6 @@ h4 {
 
 .pa-banner {
   background-image: linear-gradient(141deg, #2cb5e8, #1fc8db, #007dda);
-  background-image: -webkit-linear-gradient(141deg, #2cb5e8, #1fc8db, #007dda);
-  background-image: -o-linear-gradient(141deg, #2cb5e8, #1fc8db, #007dda);
 }
 
 .pa-banner-text {
@@ -76,7 +74,7 @@ code {
   color: #fff;
   display: inline-block;
   font-size: 1.5rem;
-  padding: 3px 0 1px 0;
+  padding: 3px 0 1px;
 }
 
 .nav-item {
