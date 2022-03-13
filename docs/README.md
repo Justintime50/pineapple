@@ -16,25 +16,17 @@ CSS and Javascript web development library built on top of Bootstrap.
 
 ### Ajax
 
-Ajax allows you to replace the contents of a container with the contents of another HTML file without reloading the page. This can be accomplished by specifying the toggle selector, the content selector, and the path to the file containing the new content.
+Ajax allows you to replace the contents of an element with the contents of another HTML file without needing to reload the page. This can be accomplished by using the Javascript `onclick` function on the element you want to trigger the Ajax call. You then pass the path or URL to the content you'd like to swap in and the ID of the element where you want it to end up.
 
 ```html
 <div id="pa-ajax-content">
-  <button class="btn pa-btn-blue" id="pa-ajax-toggle">Press to make an Ajax call</button>
+  <button class="btn" onclick="pineapple.ajax('ajax.html', 'pa-ajax-content')">Press to make an Ajax call</button>
 </div>
-
-<script>
-  pineapple.ajax(
-      'ajax.html'         // the path to the HTML file containing the content
-      'pa-ajax-toggle',   // the selector (toggle) for the onclick ajax call (default shown)
-      'pa-ajax-content',  // the selector where the content will be replaced (default shown)
-  )
-</script>
 ```
 
 ### Animate Bottom
 
-The `.pa-animate-bottom` class will give any object a sliding in effect from the bottom of the screen _upon page load_. This is a simple way to add some visual effects to your page. Best if used on the `<body>` tag.
+The `.pa-animate-bottom` class will give any object a sliding-in effect from the bottom of the screen _upon page load_. This is a simple way to add some visual effects to your page. Best if used on the `<body>` tag.
 
 ### Countdown Timer
 
@@ -54,7 +46,7 @@ Create a customized countdown timer that updates each second and displays a mess
 
 ### Fading Navbar
 
-The `.pa-nav-fade` allows the navbar to fade in after scrolling past a certain pixel threshold (eg: full screen banner image). You can define your own value for when it should fade:
+The `.pa-nav-fade` allows the navbar to fade in after scrolling past a certain pixel threshold. By default, if there is a `pa-banner` class on your page, the height of that element will be used. You can define your own value for when it should fade if desired:
 
 ```html
 <script>
@@ -66,10 +58,13 @@ The `.pa-nav-fade` allows the navbar to fade in after scrolling past a certain p
 
 ```css
 .pa-nav-fade {
+  /* Use a transparent nav background for full-screen banner images */
+  background-color: transparent;
   color: #000;
 }
 
 .pa-nav-fade.opaque {
+  /* Fill in the nav background once we've scrolled past the full-screen banner image */
   background-color: blue;
 }
 
@@ -82,7 +77,7 @@ The `.pa-nav-fade` allows the navbar to fade in after scrolling past a certain p
 }
 
 .pa-nav-fade a.opaque {
-  color: red;
+  color: #fff;
 }
 ```
 
@@ -96,20 +91,19 @@ The `.pa-loader` and `.pa-loader-div` are used to create a loading spiral image 
   <div id="pa-loader-div">
     <!-- page content goes here -->
   </div>
-  <!-- the number of milliseconds to pause on the page loader, default is 1500 -->
   <script>
-    pineapple.pageLoader(1500);
+    pineapple.pageLoader(1500); // the number of milliseconds to pause on the page loader, default is 1500
   </script>
 </body>
 ```
 
 ### Slideanim Effect
 
-The `.pa-slideanim` class will give any object a sliding in effect _once the element comes into the viewport_. This is a simple way to add some visual effects to your page. Best if used on starting on items that appear below the initial viewport of the page (eg: below the top element). This is a simple way to add some visual effects to your page.
+The `.pa-slideanim` class will give any element a sliding-in effect _once the element comes into the viewport_. This is a simple way to add some visual effects to your page. Best if used on elements that appear below the initial viewport of the page (eg: below the top items that load when a user first visits the page). This is a simple way to add some visual effects to your page.
 
 ### Smooth Scroller
 
-Add `data-offset="pixels"` element to your `<body>` tag to explicitly set an offset, the default will be the height of the `.navbar` class. Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page and highlight the nav link if possible. Additionally you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page.
+Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page and highlight the nav link if possible. Additionally you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page. If you'd like to disable this feature for certain elements, you can simpley add the `.pa-noscroll` class.
 
 ## Backgrounds
 

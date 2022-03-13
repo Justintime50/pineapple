@@ -2,7 +2,7 @@
 
 # Pineapple
 
-CSS and Javascript web development library built on top of Bootstrap.
+CSS and Javascript web development library that supplements Bootstrap.
 
 [![Build Status](https://github.com/Justintime50/pineapple/workflows/build/badge.svg)](https://github.com/Justintime50/pineapple/actions)
 [![NPM](https://img.shields.io/npm/v/pineapple-library)](https://www.npmjs.com/package/pineapple-library)
@@ -16,13 +16,13 @@ Pineapple came about as a way to help me quickly build "brochure-style" websites
 
 **Notable Features:**
 
-* Full-screen banners, YouTube videos, and Bootstrap carousels with incredible customization for overlaid text, images, and buttons
-* Beautiful sliding animations (full page and individual components)
-* Page loader animation
-* Countdown timer with custom messaging
-* Fading and appearing navbar
-* Icons, cards, and slanted sections
-* Dynamic screen-sized fonts, buttons, and more
+- Full-screen banners, YouTube videos, and Bootstrap carousels with incredible customization for overlaid text, images, and buttons
+- Beautiful sliding animations (full page and individual components)
+- Page loader animation
+- Countdown timer with custom messaging
+- Fading and appearing navbar
+- Icons, cards, and slanted background sections
+- Dynamic screen-sized fonts, buttons, and more
 
 ## Install
 
@@ -31,7 +31,10 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 ### CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pineapple-library@2.3.0/pineapple/dist/css/pineapple.min.css">
+<link
+  href="https://cdn.jsdelivr.net/npm/pineapple-library@2.3.0/pineapple/dist/css/pineapple.min.css"
+  rel="stylesheet"
+/>
 <script src="https://cdn.jsdelivr.net/npm/pineapple-library@2.3.0/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
@@ -60,12 +63,23 @@ window.pineapple = require('pineapple-library/pineapple/dist/js/pineapple');
 git clone https://github.com/justintime50/pineapple.git
 ```
 
-The Pineapple CSS has been compiled into three separate bundles: 
-* `pineapple` includes everything
-* `pineapple-styles` includes everything but the `grid` and `animations` CSS and can be used without the accompanying JS
-* `pineapple-utilities` includes the `grid` and `animations` CSS which accompanies the JS
+The Pineapple CSS has been compiled into three separate bundles:
 
-**NOTE:** Pineapple Javascript functions require jQuery. With the release of Bootstrap 5 (which does not include or require jQuery), you will either need to remain on Bootstrap 4 or import jQuery separately. Pineapple is not compatible with the `slim` version of jQuery.
+- `pineapple` includes everything
+- `pineapple-styles` includes everything but the `grid` and `animations` CSS and can be used without the accompanying JS
+- `pineapple-utilities` includes the `grid` and `animations` CSS which accompanies the JS
+
+### Bootstrap, & jQuery
+
+**Bootstrap**
+
+- Pineapple v1 is compatible with Bootstrap v3
+- Pineapple v2 is compatible with Bootstrap v4 and v5 (with jQuery)
+- Pineapple v3 is compatible with Bootstrap v4 and v5
+
+**jQuery**
+
+- Pineapple v1 and v2 require jQuery and is not compatible with the `slim` version of jQuery. Pineapple v3 and later does not require jQuery
 
 ## Documentation
 

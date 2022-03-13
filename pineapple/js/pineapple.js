@@ -10,22 +10,12 @@ const pineapple = {
 
   /** Ajax Onclick
    * Replace a container's contents with another HTML file with an onclick event
-   * Syntax: <script>pineapple.ajax('ajax.html', 'ajax-onclick-id', 'ajax-content-id')</script>
+   * Syntax: <button onclick="pineapple.ajax('ajax.html', 'ajax-content-id')">Ajax Example</button>
    */
-  ajax: (content, onclickSelector = 'pa-ajax-toggle', contentSelector = 'pa-ajax-content') => {
-    // eslint-disable-next-line no-unused-vars
-    document.getElementById(onclickSelector).addEventListener('click', function (event) {
-      const httpRequest = new XMLHttpRequest();
-
-      httpRequest.open('GET', content);
-      httpRequest.onreadystatechange = () => {
-        // Only load the Ajax content if the request is done and successful
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById(contentSelector).innerHTML = this.responseText;
-        }
-      };
-      httpRequest.send();
-    });
+  ajax: (content, contentSelector = 'pa-ajax-content') => {
+    fetch(content)
+      .then((response) => response.text())
+      .then((data) => (document.getElementById(contentSelector).innerHTML = data));
 
     return pineapple;
   },
@@ -53,7 +43,6 @@ const pineapple = {
    */
   countdown: {
     init: (timestamp, elementId, message) => {
-      console.log('hit');
       // Set the date we're counting down to
       pineapple.countdown.date = new Date(timestamp).getTime();
 
@@ -101,60 +90,91 @@ const pineapple = {
   },
 };
 
-// $(document).ready(function () {
-//   /* Smooth Scroller
-//     Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
-//   */
-//   pineapple.scrollOffset = $('body').data('offset') - 1 || $('.navbar').height();
-//   // Add smooth scrolling to all links in the body
-//   $('a').on('click', function (event) {
-//     // Make sure this.hash has a value before overriding default behavior
-//     if (
-//       this.hash !== '' &&
-//       this.pathname === location.pathname &&
-//       ($(this).hasClass('pa-scroll') ||
-//         $(this).hasClass('nav-link') ||
-//         $(this).hasClass('btn') ||
-//         $(this).is('button') ||
-//         $(this).find('button').length > 0) &&
-//       !$(this).hasClass('pa-noscroll')
-//     ) {
-//       // Prevent default anchor click behavior (jump to top of screen)
-//       event.preventDefault();
-
-//       // Store hash
-//       const hash = this.hash;
-//       // pineapple.log.info(hash)
-
-//       // Using jQuery's animate() method to add smooth page scroll
-//       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-//       $('html, body').animate(
-//         {
-//           scrollTop: $(hash).offset().top - pineapple.scrollOffset,
-//         },
-//         900,
-//         function () {
-//           // Don't jump to the anchor point after scrolling to the offset
-//           if (history.pushState) {
-//             history.pushState(null, null, hash);
-//           } else {
-//             // Add hash (#) to URL when done scrolling (default click behavior)
-//             window.location.hash = hash;
-//           }
-//         }
-//       );
-//     }
-//   });
+/**
+ * Check if the DOM is ready
+ */
+function domReady(callback) {
+  if (document.readyState != 'loading') callback();
+  else document.addEventListener('DOMContentLoaded', callback);
+}
 
 /**
- * All logic that requires a `scroll` event should be placed in the following block
+ * Only run the following wrapped code once the DOM is ready
  */
-// TODO: Look into debouncing these scroll events:
-// https://css-tricks.com/the-difference-between-throttling-and-debouncing/ & https://www.joshwcomeau.com/snippets/javascript/debounce/
-window.addEventListener('scroll', () => {
-  const topOfWindow = document.body.scrollTop;
-  const windowHeight = window.innerHeight;
+domReady(() => {
+  /* Smooth Scroller
+   * Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
+   */
+  pineapple.scrollOffset = document.querySelector('.navbar').offsetTop || document.body.offsetTop;
+  // Add smooth scrolling to all links in the body
+  document.querySelectorAll('a').forEach((element) => {
+    element.addEventListener('click', function (event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (
+        this.hash !== '' &&
+        this.pathname === location.pathname &&
+        (element.classList.contains('pa-scroll') ||
+          element.classList.contains('nav-link') ||
+          element.classList.contains('btn') ||
+          element.nodeName == 'BUTTON' ||
+          document.getElementById('button')) &&
+        !element.classList.contains('pa-noscroll')
+      ) {
+        // Prevent default anchor click behavior (jump to top of screen)
+        event.preventDefault();
 
+        // Store the URL hash (eg: #footer)
+        const hash = this.hash;
+
+        // Add smooth page scrolling to links
+        const hashHeight = document.getElementById(hash.replace('#', '')).offsetTop;
+        window.scrollTo({
+          top: hashHeight - pineapple.scrollOffset,
+          behavior: 'smooth', // TODO: This is not compatible with Safari and will simply jump to the anchor
+        });
+
+        // Don't jump to the anchor point after scrolling to the offset
+        if (history.pushState) {
+          history.pushState(null, null, hash);
+        } else {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+
+        // Update the navbar colors if necessary after a jump
+        navFade();
+      }
+    });
+  });
+});
+
+/** Nav Fade on Scroll
+ * Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
+ */
+function navFade() {
+  const navFadeValue =
+    pineapple.navFadeThreshold != 500 // Not the default, user overridden
+      ? pineapple.navFadeThreshold
+      : document.getElementsByClassName('pa-banner')[0] // If there is a pineapple banner, use that height
+      ? document.getElementsByClassName('pa-banner')[0].offsetHeight
+      : pineapple.navFadeThreshold; // Fallback to the default
+  if (window.pageYOffset >= navFadeValue) {
+    document.querySelectorAll('.pa-nav-fade').forEach((element) => element.classList.add('opaque'));
+    document.querySelectorAll('.pa-nav-fade a').forEach((element) => element.classList.add('opaque'));
+  } else {
+    document.querySelectorAll('.pa-nav-fade').forEach((element) => element.classList.remove('opaque'));
+    document.querySelectorAll('.pa-nav-fade a').forEach((element) => element.classList.remove('opaque'));
+  }
+}
+
+/**
+ * All logic that requires a `scroll` event should be placed in the following block.
+ * NOTE: Be careful as everything inside this block gets run whenever the page moves even 1px
+ */
+const topOfWindow = document.body.scrollTop;
+const windowHeight = window.innerHeight;
+// TODO: Look into debouncing these scroll events (if necessary due to performance drains)
+window.addEventListener('scroll', () => {
   /** Slideanim
    * Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
    */
@@ -165,18 +185,13 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  /** Nav Fade on Scroll
-   * Source: https://stackoverflow.com/questions/23976498/fading-bootstrap-navbar-on-scrolldown-while-changing-text-color
+  /**
+   * Nav Fade on Scroll (called inside this block, defined elsewhere)
    */
-  if (window.pageYOffset > pineapple.navFadeThreshold) {
-    document.querySelectorAll('.pa-nav-fade').forEach((element) => element.classList.add('opaque'));
-    document.querySelectorAll('.pa-nav-fade a').forEach((element) => element.classList.add('opaque'));
-  } else {
-    document.querySelectorAll('.pa-nav-fade').forEach((element) => element.classList.remove('opaque'));
-    document.querySelectorAll('.pa-nav-fade a').forEach((element) => element.classList.remove('opaque'));
-  }
+  navFade();
 });
 
-// Export the module for items such as Webpack
-// TODO: fix this bug for browser (probably build an ESM module and commonjs separately?)
-module.exports = pineapple;
+// Export the module for use in Node (eg: Webpack)
+if (typeof window === 'undefined') {
+  module.exports = pineapple;
+}

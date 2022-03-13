@@ -6,17 +6,8 @@
 const pineapple = {
     navFadeThreshold: 500,
     slideanimThreshold: 40,
-    ajax: (content, onclickSelector = "pa-ajax-toggle", contentSelector = "pa-ajax-content") => {
-        document.getElementById(onclickSelector).addEventListener("click", function(event) {
-            const httpRequest = new XMLHttpRequest();
-            httpRequest.open("GET", content);
-            httpRequest.onreadystatechange = () => {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById(contentSelector).innerHTML = this.responseText;
-                }
-            };
-            httpRequest.send();
-        });
+    ajax: (content, contentSelector = "pa-ajax-content") => {
+        fetch(content).then(response => response.text()).then(data => document.getElementById(contentSelector).innerHTML = data);
         return pineapple;
     },
     pageLoader: (interval = 1500) => {
@@ -30,7 +21,6 @@ const pineapple = {
     },
     countdown: {
         init: (timestamp, elementId, message) => {
-            console.log("hit");
             pineapple.countdown.date = new Date(timestamp).getTime();
             const oneSecondMilliseconds = 1e3;
             let secondsInMinute, secondsInHour;
@@ -54,22 +44,58 @@ const pineapple = {
     }
 };
 
-window.addEventListener("scroll", () => {
-    const topOfWindow = document.body.scrollTop;
-    const windowHeight = window.innerHeight;
-    document.body.querySelectorAll(".pa-slideanim").forEach(element => {
-        const position = element.getBoundingClientRect().top;
-        if (position < topOfWindow + windowHeight - pineapple.slideanimThreshold) {
-            element.classList.add("pa-slide");
-        }
+function domReady(callback) {
+    if (document.readyState != "loading") callback(); else document.addEventListener("DOMContentLoaded", callback);
+}
+
+domReady(() => {
+    pineapple.scrollOffset = document.querySelector(".navbar").offsetTop || document.body.offsetTop;
+    document.querySelectorAll("a").forEach(element => {
+        element.addEventListener("click", function(event) {
+            if (this.hash !== "" && this.pathname === location.pathname && (element.classList.contains("pa-scroll") || element.classList.contains("nav-link") || element.classList.contains("btn") || element.nodeName == "BUTTON" || document.getElementById("button")) && !element.classList.contains("pa-noscroll")) {
+                event.preventDefault();
+                const hash = this.hash;
+                const hashHeight = document.getElementById(hash.replace("#", "")).offsetTop;
+                window.scrollTo({
+                    top: hashHeight - pineapple.scrollOffset,
+                    behavior: "smooth"
+                });
+                if (history.pushState) {
+                    history.pushState(null, null, hash);
+                } else {
+                    window.location.hash = hash;
+                }
+                navFade();
+            }
+        });
     });
-    if (window.pageYOffset > pineapple.navFadeThreshold) {
+});
+
+function navFade() {
+    const navFadeValue = pineapple.navFadeThreshold != 500 ? pineapple.navFadeThreshold : document.getElementsByClassName("pa-banner")[0] ? document.getElementsByClassName("pa-banner")[0].offsetHeight : pineapple.navFadeThreshold;
+    if (window.pageYOffset >= navFadeValue) {
         document.querySelectorAll(".pa-nav-fade").forEach(element => element.classList.add("opaque"));
         document.querySelectorAll(".pa-nav-fade a").forEach(element => element.classList.add("opaque"));
     } else {
         document.querySelectorAll(".pa-nav-fade").forEach(element => element.classList.remove("opaque"));
         document.querySelectorAll(".pa-nav-fade a").forEach(element => element.classList.remove("opaque"));
     }
+}
+
+const topOfWindow = document.body.scrollTop;
+
+const windowHeight = window.innerHeight;
+
+window.addEventListener("scroll", () => {
+    document.body.querySelectorAll(".pa-slideanim").forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        if (position < topOfWindow + windowHeight - pineapple.slideanimThreshold) {
+            element.classList.add("pa-slide");
+        }
+    });
+    navFade();
 });
 
-module.exports = pineapple;
+if (typeof window === "undefined") {
+    module.exports = pineapple;
+}
