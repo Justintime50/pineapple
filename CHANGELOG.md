@@ -4,7 +4,10 @@
 
 - Completely rewrites the entire Javascript library to use Vanilla JS instead of relying on jQuery. This change now makes Pineapple compatible with Bootstrap 5 without pulling jQuery back in as a dependency to your projects
 - Ajax calls no longer require standalone JS calls but are instead now inline `onclick` calls to the elements that trigger them. See the updated documentation for details on how to use the update Ajax syntax
-- Fixed an error printed to console in the browser due to using the `export` keyword without checking if the library was being used in Node or the browser
+- Fixes an error printed to console in the browser due to using the `export` keyword without checking if the library was being used in Node or the browser
+- Fixes a few CSS issues related to buttons making them more compatible with Bootstrap's buttons
+- Modernized the Waterfall template
+- Moves the flexbox CSS from `.pa-banner-text` to `.pa-banner` to encapsulate everything in the banner container and not just text
 - Swaps the deprecated `node-sass` for the `sass` dev dependency, recompiles the entire library
 - Compatible with Bootrap ^4 || ^5
 

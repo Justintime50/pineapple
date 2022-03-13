@@ -52,7 +52,8 @@ domReady(() => {
     pineapple.scrollOffset = document.querySelector(".navbar").offsetTop || document.body.offsetTop;
     document.querySelectorAll("a").forEach(element => {
         element.addEventListener("click", function(event) {
-            if (this.hash !== "" && this.pathname === location.pathname && (element.classList.contains("pa-scroll") || element.classList.contains("nav-link") || element.classList.contains("navbar-brand") || element.classList.contains("btn") || element.nodeName == "BUTTON" || document.getElementById("button")) && !element.classList.contains("pa-noscroll")) {
+            console.error(element.attributes);
+            if (this.hash !== "" && this.pathname === location.pathname && (element.classList.contains("pa-scroll") || element.classList.contains("nav-link") || element.classList.contains("navbar-brand") || element.classList.contains("btn")) && !element.classList.contains("pa-noscroll")) {
                 event.preventDefault();
                 const hash = this.hash;
                 const hashHeight = document.getElementById(hash.replace("#", "")).offsetTop;

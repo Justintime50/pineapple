@@ -7,13 +7,6 @@
   color: $color-text;
 }
 
-@media screen and (max-width: 768px) {
-  .pa-btn {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-}
-
 .pa-btn-banner {
   color: $color-white;
   border-color: $color-white;
@@ -36,4 +29,13 @@
   background-color: $color-blue;
   color: $color-white;
   border-color: $color-blue;
+}
+
+@media only screen and (max-width: 768px) {
+  .pa-btn,
+  .pa-btn-banner,
+  .pa-btn-blue {
+    width: 100%;
+    margin-bottom: 35px;
+  }
 }

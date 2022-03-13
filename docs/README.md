@@ -101,9 +101,9 @@ The `.pa-loader` and `.pa-loader-div` are used to create a loading spiral image 
 
 The `.pa-slideanim` class will give any element a sliding-in effect _once the element comes into the viewport_. This is a simple way to add some visual effects to your page. Best if used on elements that appear below the initial viewport of the page (eg: below the top items that load when a user first visits the page). This is a simple way to add some visual effects to your page.
 
-### Smooth Scroller
+### Smooth Scrolling
 
-Whenever a nav link (with the class "nav-link") or a button is selected on the same page as its anchor, the page will smoothly scroll to that portion of the page. Additionally, you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page. If you'd like to disable this feature for certain elements, you can simpley add the `.pa-noscroll` class.
+Whenever a nav link (with a class of "nav-link" or "navbar-brand"), link, or link with the role of a button is selected on the same page as its anchor, the page will scroll smoothly to that portion of the page. Additionally, you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page. If you'd like to disable this feature for certain elements, you can simpley add the `.pa-noscroll` class.
 
 ## Backgrounds
 

@@ -106,19 +106,18 @@ domReady(() => {
    * Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
    */
   pineapple.scrollOffset = document.querySelector('.navbar').offsetTop || document.body.offsetTop;
-  // Add smooth scrolling to all links in the body
+  // Add smooth scrolling to all links in the body (buttons must be a tags with the role of a button)
   document.querySelectorAll('a').forEach((element) => {
     element.addEventListener('click', function (event) {
       // Make sure this.hash has a value before overriding default behavior
+      // TODO: A hash of `#` such as the default "home" behavior will not smooth scroll
       if (
         this.hash !== '' &&
         this.pathname === location.pathname &&
         (element.classList.contains('pa-scroll') ||
           element.classList.contains('nav-link') ||
           element.classList.contains('navbar-brand') ||
-          element.classList.contains('btn') ||
-          element.nodeName == 'BUTTON' ||
-          document.getElementById('button')) &&
+          element.classList.contains('btn')) &&
         !element.classList.contains('pa-noscroll')
       ) {
         // Prevent default anchor click behavior (jump to top of screen)
@@ -131,7 +130,7 @@ domReady(() => {
         const hashHeight = document.getElementById(hash.replace('#', '')).offsetTop;
         window.scrollTo({
           top: hashHeight - pineapple.scrollOffset,
-          behavior: 'smooth', // TODO: This is not compatible with Safari and will simply jump to the anchor
+          behavior: 'smooth', // This behavior is not compatible with Safari and requires the smooth-scroll-pollyfill: https://github.com/iamdustan/smoothscroll
         });
 
         // Don't jump to the anchor point after scrolling to the offset
