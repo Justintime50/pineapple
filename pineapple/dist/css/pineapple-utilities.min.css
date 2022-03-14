@@ -1,5 +1,5 @@
 /*!
- * Pineapple Utilities v2.3.0 (https://github.com/justintime50/pineapple)
+ * Pineapple Utilities v3.0.0 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */.pa-animate-bottom{position:relative;animation-name:animatebottom;animation-duration:1s}@keyframes animatebottom{from{bottom:-100px;opacity:0}to{bottom:0;opacity:1}}.pa-slideanim{visibility:hidden}.pa-slide{animation-name:pa-slide;animation-duration:1s;visibility:visible}@keyframes pa-slide{0%{opacity:0;transform:translateY(70%)}100%{opacity:1;transform:translateY(0%)}}.pa-nav-fade{transition:background-color .5s ease 0s}.pa-nav-fade.opaque{transition:background-color .5s ease 0s;opacity:.9}.pa-nav-fade a{color:#fff}.pa-nav-fade .dropdown-menu a{color:#000}.pa-nav-fade a.opaque{color:#000}#pa-loader{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);z-index:1;width:150px;height:150px;margin:-75px 0 0 -75px;border:16px solid #f6f6f6;border-radius:50%;border-top:16px solid #007dda;animation:spin 1.5s linear infinite}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}#pa-loader-div{height:100%;display:none;text-align:center}/*# sourceMappingURL=pineapple-utilities.min.css.map */
