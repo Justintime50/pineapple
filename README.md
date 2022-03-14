@@ -32,10 +32,10 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/pineapple-library@2.3.0/pineapple/dist/css/pineapple.min.css"
+  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.0.0/pineapple/dist/css/pineapple.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/pineapple-library@2.3.0/pineapple/dist/js/pineapple.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.0.0/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
 ### NPM
