@@ -105,6 +105,14 @@ The `.pa-slideanim` class will give any element a sliding-in effect _once the el
 
 Whenever a nav link (with a class of "nav-link" or "navbar-brand"), link, or link with the role of a button is selected on the same page as its anchor, the page will scroll smoothly to that portion of the page. Additionally, you can add the `.pa-scroll` class to any item with an anchor to have it scroll to that spot on the page. If you'd like to disable this feature for certain elements, you can simpley add the `.pa-noscroll` class.
 
+Alternatively, you can disable Smooth Scrolling globally (Pineapple comes by default with Smooth Scolling enabled):
+
+```html
+<script>
+  pineapple.disableSmoothScrolling = true;
+</script>
+```
+
 ## Backgrounds
 
 Create stylized backgrounds.

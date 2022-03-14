@@ -5,6 +5,7 @@
  */
 
 const pineapple = {
+  disableSmoothScrolling: false,
   navFadeThreshold: 500, // Number of pixels the navbar must be scrolled before fading
   slideanimThreshold: 40, // Number of pixels a `slideanim` element must scroll before it slides into view
 
@@ -15,7 +16,8 @@ const pineapple = {
   ajax: (content, contentSelector = 'pa-ajax-content') => {
     fetch(content)
       .then((response) => response.text())
-      .then((data) => (document.getElementById(contentSelector).innerHTML = data));
+      .then((data) => (document.getElementById(contentSelector).innerHTML = data))
+      .catch((error) => console.error(error));
 
     return pineapple;
   },
@@ -102,50 +104,52 @@ function domReady(callback) {
  * Only run the following wrapped code once the DOM is ready
  */
 domReady(() => {
-  /* Smooth Scroller
+  /* Smooth Scrolling
    * Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
    */
-  pineapple.scrollOffset = document.querySelector('.navbar').offsetTop || document.body.offsetTop;
-  // Add smooth scrolling to all links in the body (buttons must be a tags with the role of a button)
-  document.querySelectorAll('a').forEach((element) => {
-    element.addEventListener('click', function (event) {
-      // Make sure this.hash has a value before overriding default behavior
-      // TODO: A hash of `#` such as the default "home" behavior will not smooth scroll
-      if (
-        this.hash !== '' &&
-        this.pathname === location.pathname &&
-        (element.classList.contains('pa-scroll') ||
-          element.classList.contains('nav-link') ||
-          element.classList.contains('navbar-brand') ||
-          element.classList.contains('btn')) &&
-        !element.classList.contains('pa-noscroll')
-      ) {
-        // Prevent default anchor click behavior (jump to top of screen)
-        event.preventDefault();
+  if (!pineapple.disableSmoothScrolling) {
+    pineapple.scrollOffset = document.querySelector('.navbar').offsetTop || document.body.offsetTop;
+    // Add smooth scrolling to all links in the body (buttons must be a tags with the role of a button)
+    document.querySelectorAll('a').forEach((element) => {
+      element.addEventListener('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        // TODO: A hash of `#` such as the default "home" behavior will not smooth scroll
+        if (
+          this.hash !== '' &&
+          this.pathname === location.pathname &&
+          (element.classList.contains('pa-scroll') ||
+            element.classList.contains('nav-link') ||
+            element.classList.contains('navbar-brand') ||
+            element.classList.contains('btn')) &&
+          !element.classList.contains('pa-noscroll')
+        ) {
+          // Prevent default anchor click behavior (jump to top of screen)
+          event.preventDefault();
 
-        // Store the URL hash (eg: #footer)
-        const hash = this.hash;
+          // Store the URL hash (eg: #footer)
+          const hash = this.hash;
 
-        // Add smooth page scrolling to links
-        const hashHeight = document.getElementById(hash.replace('#', '')).offsetTop;
-        window.scrollTo({
-          top: hashHeight - pineapple.scrollOffset,
-          behavior: 'smooth', // This behavior is not compatible with Safari and requires the smooth-scroll-pollyfill: https://github.com/iamdustan/smoothscroll
-        });
+          // Add smooth page scrolling to links
+          const hashHeight = document.getElementById(hash.replace('#', '')).offsetTop;
+          window.scrollTo({
+            top: hashHeight - pineapple.scrollOffset,
+            behavior: 'smooth', // This behavior is not compatible with Safari and requires the smooth-scroll-pollyfill: https://github.com/iamdustan/smoothscroll
+          });
 
-        // Don't jump to the anchor point after scrolling to the offset
-        if (history.pushState) {
-          history.pushState(null, null, hash);
-        } else {
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
+          // Don't jump to the anchor point after scrolling to the offset
+          if (history.pushState) {
+            history.pushState(null, null, hash);
+          } else {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          }
+
+          // Update the navbar colors if necessary after a jump
+          navFade();
         }
-
-        // Update the navbar colors if necessary after a jump
-        navFade();
-      }
+      });
     });
-  });
+  }
 });
 
 /** Nav Fade on Scroll

@@ -22,8 +22,8 @@
                 <a class="navbar-brand" href="#home">
                     <h1 class="navbar-heading">Pineapple Playground</h1>
                 </a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -39,10 +39,10 @@
         
         <div class="pa-banner pa-banner-darken">
             <div class="pa-banner-text">
-                <h3>This playground is meant to test the Pineapple library and is not intended to be completely
-                    functional.</h3>
+                <h3>This playground is meant to test the Pineapple library and may not be fully functional.</h3>
                 <img src="templates/coming-soon/assets/pics/banner.jpg" class="pa-banner-logo" alt="Banner Icon">
-                <a href="#examples" class="btn btn-lg pa-btn-banner" role="button">Examples</a>
+                <br />
+                <a href="#examples" class="btn btn-lg pa-btn-banner" role="button">Link to Examples</a>
             </div>
         </div>
 
@@ -188,6 +188,9 @@
 
         // Sets the timeout until the page loads
         pineapple.pageLoader(1500)
+
+        // Disable smooth scrolling globally
+        // pineapple.disableSmoothScrolling = true
     </script>
 </body>
 
