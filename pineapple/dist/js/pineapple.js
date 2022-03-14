@@ -4,10 +4,11 @@
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
 const pineapple = {
+    disableSmoothScrolling: false,
     navFadeThreshold: 500,
     slideanimThreshold: 40,
     ajax: (content, contentSelector = "pa-ajax-content") => {
-        fetch(content).then(response => response.text()).then(data => document.getElementById(contentSelector).innerHTML = data);
+        fetch(content).then(response => response.text()).then(data => document.getElementById(contentSelector).innerHTML = data).catch(error => console.error(error));
         return pineapple;
     },
     pageLoader: (interval = 1500) => {
@@ -49,26 +50,28 @@ function domReady(callback) {
 }
 
 domReady(() => {
-    pineapple.scrollOffset = document.querySelector(".navbar").offsetTop || document.body.offsetTop;
-    document.querySelectorAll("a").forEach(element => {
-        element.addEventListener("click", function(event) {
-            if (this.hash !== "" && this.pathname === location.pathname && (element.classList.contains("pa-scroll") || element.classList.contains("nav-link") || element.classList.contains("navbar-brand") || element.classList.contains("btn") || element.nodeName == "BUTTON" || document.getElementById("button")) && !element.classList.contains("pa-noscroll")) {
-                event.preventDefault();
-                const hash = this.hash;
-                const hashHeight = document.getElementById(hash.replace("#", "")).offsetTop;
-                window.scrollTo({
-                    top: hashHeight - pineapple.scrollOffset,
-                    behavior: "smooth"
-                });
-                if (history.pushState) {
-                    history.pushState(null, null, hash);
-                } else {
-                    window.location.hash = hash;
+    if (!pineapple.disableSmoothScrolling) {
+        pineapple.scrollOffset = document.querySelector(".navbar").offsetTop || document.body.offsetTop;
+        document.querySelectorAll("a").forEach(element => {
+            element.addEventListener("click", function(event) {
+                if (this.hash !== "" && this.pathname === location.pathname && (element.classList.contains("pa-scroll") || element.classList.contains("nav-link") || element.classList.contains("navbar-brand") || element.classList.contains("btn")) && !element.classList.contains("pa-noscroll")) {
+                    event.preventDefault();
+                    const hash = this.hash;
+                    const hashHeight = document.getElementById(hash.replace("#", "")).offsetTop;
+                    window.scrollTo({
+                        top: hashHeight - pineapple.scrollOffset,
+                        behavior: "smooth"
+                    });
+                    if (history.pushState) {
+                        history.pushState(null, null, hash);
+                    } else {
+                        window.location.hash = hash;
+                    }
+                    navFade();
                 }
-                navFade();
-            }
+            });
         });
-    });
+    }
 });
 
 function navFade() {

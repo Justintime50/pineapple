@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="assets/css/playground.css">
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" onload="pineapple.pageLoader()">
+<body id="home" data-spy="scroll" onload="pineapple.pageLoader()">
 
     <div id="pa-loader"></div>
     <div id="pa-loader-div">
 
         <nav class="navbar navbar-expand-md fixed-top pa-nav-fade">
             <div class="container">
-                <a class="navbar-brand" href="#myPage">
+                <a class="navbar-brand" href="#home">
                     <h1 class="navbar-heading">Pineapple Playground</h1>
                 </a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -37,13 +37,12 @@
             </div>
         </nav>
         
-
         <div class="pa-banner pa-banner-darken">
             <div class="pa-banner-text">
-                <h3>This playground is meant to test the Pineapple library and is not intended to be completely
-                    functional.</h3>
+                <h3>This playground is meant to test the Pineapple library and may not be fully functional.</h3>
                 <img src="templates/coming-soon/assets/pics/banner.jpg" class="pa-banner-logo" alt="Banner Icon">
-                <a href="#examples"><button class="btn pa-btn-banner">Examples</button></a>
+                <br />
+                <a href="#examples" class="btn btn-lg pa-btn-banner" role="button">Link to Examples</a>
             </div>
         </div>
 
@@ -164,7 +163,7 @@
         </div>
 
         <footer class="container-fluid text-center" id="footer">
-            <a href="#myPage" title="To Top" class="pa-scroll">
+            <a href="#home" title="To Top" class="pa-scroll">
                 <span class="fa fa-chevron-up fa-lg"></span>
             </a>
             <p>Built on <a href="https://getbootstrap.com">Bootstrap</a> with <a
@@ -189,6 +188,9 @@
 
         // Sets the timeout until the page loads
         pineapple.pageLoader(1500)
+
+        // Disable smooth scrolling globally
+        // pineapple.disableSmoothScrolling = true
     </script>
 </body>
 

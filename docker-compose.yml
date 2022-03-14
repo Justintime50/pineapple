@@ -2,7 +2,6 @@ services:
   pineapple-playground:
     build: .
     restart: always
-    container_name: pineapple-playground
     networks:
       - traefik
     labels:

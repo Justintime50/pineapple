@@ -3,10 +3,6 @@
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
-body {
-  position: relative;
-}
-
 .pa-nav-fade {
   background-color: transparent;
   color: #000;
@@ -26,10 +22,6 @@ body {
 
 .pa-banner {
   background-image: url("../../templates/coming-soon/assets/pics/banner.jpg");
-}
-
-.pa-btn-banner {
-  width: 50%;
 }
 
 .normal-carousel {
