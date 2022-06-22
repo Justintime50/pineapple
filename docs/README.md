@@ -11,6 +11,7 @@ CSS and Javascript web development library that supplements Bootstrap.
 - [Components](#components)
 - [Fonts](#fonts)
 - [Hacks](#hacks)
+- [Structure](#structure)
 
 ## Animations
 
@@ -260,3 +261,26 @@ Add your image reference in a custom `css` class as follows. The number in the p
   background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(56).jpg');
 }
 ```
+
+## Structure
+
+The following CSS classes are available to quickly structure your website:
+
+```scss
+// display mode: none
+.display-none
+
+// display mode: block
+.inline-block
+
+// 0 padding on all sides
+.padding-0
+
+// 0 margins on all sides
+.margin-0
+
+// flex container (no centering)
+.flex-container
+
+// flex container (centering vertically and horizontally)
+.flex-center-container
