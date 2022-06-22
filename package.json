@@ -1,7 +1,7 @@
 {
   "name": "pineapple-library",
   "description": "CSS and Javascript web development library that supplements Bootstrap.",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "devDependencies": {
     "eslint": "^8.11",
     "postcss-scss": "^4.0.3",

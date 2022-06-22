@@ -1,0 +1,30 @@
+// Structure
+
+// Display styles
+.display-none {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// Spacing styles
+.padding-0 {
+  padding: 0;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+// Flexbox styles
+.flex-container {
+  display: flex;
+}
+
+.flex-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
 /*!
- * Pineapple v3.0.0 (https://github.com/justintime50/pineapple)
+ * Pineapple v3.1.0 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -237,19 +237,15 @@
   .pa-font-xs {
     font-size: 14px;
   }
-
   .pa-font-sm {
     font-size: 20px;
   }
-
   .pa-font-md {
     font-size: 28px;
   }
-
   .pa-font-lg {
     font-size: 42px;
   }
-
   .pa-font-xl {
     font-size: 56px;
   }
@@ -258,19 +254,15 @@
   .pa-font-xs {
     font-size: 1.6vw;
   }
-
   .pa-font-sm {
     font-size: 2.3vw;
   }
-
   .pa-font-md {
     font-size: 3.2vw;
   }
-
   .pa-font-lg {
     font-size: 5.2vw;
   }
-
   .pa-font-xl {
     font-size: 6vw;
   }
@@ -279,19 +271,15 @@
   .pa-font-xs {
     font-size: 14px;
   }
-
   .pa-font-sm {
     font-size: 18px;
   }
-
   .pa-font-md {
     font-size: 26px;
   }
-
   .pa-font-lg {
     font-size: 40px;
   }
-
   .pa-font-xl {
     font-size: 58px;
   }
@@ -350,6 +338,32 @@ body {
   background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(3).jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.display-none {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=pineapple.css.map */

@@ -32,10 +32,10 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.0.0/pineapple/dist/css/pineapple.min.css"
+  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.0/pineapple/dist/css/pineapple.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.0.0/pineapple/dist/js/pineapple.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.0/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
 ### NPM
@@ -44,7 +44,7 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 npm install pineapple-library
 ```
 
-**Webpack**
+#### Webpack
 
 **NOTE:** Requires Pineapple v2.2+
 
@@ -71,13 +71,13 @@ The Pineapple CSS has been compiled into three separate bundles:
 
 ### Pineapple, Bootstrap, & jQuery
 
-**Bootstrap**
+#### Bootstrap
 
 - Pineapple v1 is compatible with Bootstrap v3
 - Pineapple v2 is compatible with Bootstrap v4 and v5 (with jQuery)
 - Pineapple v3 is compatible with Bootstrap v4 and v5
 
-**jQuery**
+#### jQuery
 
 - Pineapple v1 and v2 require jQuery and is not compatible with the `slim` version of jQuery. Pineapple v3 and later does not require jQuery
 

@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v3.1.0 (2022-06-21)
+
+- Adds new styles to `structure` your pages faster:
+  - `display-none`
+  - `inline-block`
+  - `padding-0`
+  - `margin-0`
+  - `flex-container`
+  - `flex-center-container`
+
 ## v3.0.0 (2022-03-13)
 
 - Completely rewrites the entire Javascript library to use Vanilla JS instead of relying on jQuery. This change makes Pineapple compatible with Bootstrap 5 without pulling jQuery back in as a dependency to your projects
