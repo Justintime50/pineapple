@@ -32,10 +32,10 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.0/pineapple/dist/css/pineapple.min.css"
+  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.1/pineapple/dist/css/pineapple.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.0/pineapple/dist/js/pineapple.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.1/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
 ### NPM
@@ -86,6 +86,8 @@ The Pineapple CSS has been compiled into three separate bundles:
 See the accompanying [Documentation](/docs/README.md) for more information.
 
 ## Development
+
+Visit `pineappleplayground.localhost` locally to test any changes.
 
 ```bash
 # Lint CSS

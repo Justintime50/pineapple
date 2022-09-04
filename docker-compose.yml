@@ -1,3 +1,4 @@
+version: "3.8"
 services:
   pineapple-playground:
     build: .
@@ -6,9 +7,7 @@ services:
       - traefik
     labels:
       - traefik.enable=true
-      - traefik.docker.network=traefik
-      - traefik.port=80
-      - traefik.frontend.rule=Host:pineapple-playground.localhost
+      - "traefik.http.routers.pineappleplayground.rule=Host(`pineappleplayground.localhost`)"
     volumes:
       - ./playground/src:/var/www/html/public
       - ./pineapple/dist:/var/www/html/public/pineapple
@@ -16,5 +15,4 @@ services:
 
 networks:
   traefik:
-    external:
-      name: traefik
+    name: traefik

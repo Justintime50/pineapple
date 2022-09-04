@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.1.1 (2022-09-03)
+
+- Fixes an error thrown in the console when there is no `.navbar` class when attempting to setup smooth scrolling (closes #18)
+
 ## v3.1.0 (2022-06-21)
 
 - Adds new styles to `structure` your pages faster:

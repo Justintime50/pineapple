@@ -1,5 +1,5 @@
 /*
- * Pineapple v3.1.0 (https://github.com/justintime50/pineapple)
+ * Pineapple v3.1.1 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -108,7 +108,9 @@ domReady(() => {
    * Source: https://www.w3schools.com/bootstrap/bootstrap_theme_company.asp
    */
   if (!pineapple.disableSmoothScrolling) {
-    pineapple.scrollOffset = document.querySelector('.navbar').offsetTop || document.body.offsetTop;
+    pineapple.scrollOffset = pineapple.scrollOffset = document.querySelector('.navbar')
+      ? document.querySelector('.navbar').offsetTop
+      : document.body.offsetTop;
     // Add smooth scrolling to all links in the body (buttons must be a tags with the role of a button)
     document.querySelectorAll('a').forEach((element) => {
       element.addEventListener('click', function (event) {

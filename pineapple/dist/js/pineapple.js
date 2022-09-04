@@ -1,5 +1,5 @@
 /*
- * Pineapple v3.1.0 (https://github.com/justintime50/pineapple)
+ * Pineapple v3.1.1 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -51,7 +51,7 @@ function domReady(callback) {
 
 domReady(() => {
     if (!pineapple.disableSmoothScrolling) {
-        pineapple.scrollOffset = document.querySelector(".navbar").offsetTop || document.body.offsetTop;
+        pineapple.scrollOffset = pineapple.scrollOffset = document.querySelector(".navbar") ? document.querySelector(".navbar").offsetTop : document.body.offsetTop;
         document.querySelectorAll("a").forEach(element => {
             element.addEventListener("click", function(event) {
                 if (this.hash !== "" && this.pathname === location.pathname && (element.classList.contains("pa-scroll") || element.classList.contains("nav-link") || element.classList.contains("navbar-brand") || element.classList.contains("btn")) && !element.classList.contains("pa-noscroll")) {
