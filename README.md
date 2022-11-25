@@ -32,16 +32,22 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.1/pineapple/dist/css/pineapple.min.css"
+  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.2.0/pineapple/dist/css/pineapple.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.1.1/pineapple/dist/js/pineapple.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.2.0/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
 ### NPM
 
 ```bash
 npm install pineapple-library
+```
+
+### Composer
+
+```bash
+composer require justintime50/pineapple
 ```
 
 #### Webpack
