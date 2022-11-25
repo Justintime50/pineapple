@@ -1,0 +1,15 @@
+{
+  "name": "justintime50/pineapple",
+  "description": "CSS and Javascript web development library that supplements Bootstrap.",
+  "version": "3.2.0",
+  "license": "MIT",
+  "type": "library",
+  "homepage": "https://github.com/Justintime50/pineapple",
+  "authors": [
+    {
+      "name": "Justintime50",
+      "email": "39606064+Justintime50@users.noreply.github.com"
+    }
+  ],
+  "require": {}
+}

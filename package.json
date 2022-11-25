@@ -1,9 +1,10 @@
 {
   "name": "pineapple-library",
   "description": "CSS and Javascript web development library that supplements Bootstrap.",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "devDependencies": {
     "eslint": "^8.11",
+    "justintime50-styles": "^0.2.0",
     "postcss-scss": "^4.0.3",
     "postcss": "^8.4.8",
     "sass": "^1.49",
@@ -13,9 +14,10 @@
     "uglify-js": "^3.15"
   },
   "scripts": {
-    "lint-css": "npx stylelint \"**/*.scss\"",
-    "lint-css-fix": "npx stylelint \"**/*.scss\" --fix",
-    "lint-js": "eslint pineapple/js/pineapple.js",
+    "lint-css": "npx stylelint \"**/*.scss\" --config node_modules/justintime50-styles/src/css/.stylelintrc.json --custom-syntax postcss-scss",
+    "lint-css-fix": "npx stylelint \"**/*.scss\" --config node_modules/justintime50-styles/src/css/.stylelintrc.json --custom-syntax postcss-scss --fix",
+    "lint-js": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser",
+    "lint-js-fix": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser --fix",
     "compile": "./compile.sh"
   },
   "directories": {

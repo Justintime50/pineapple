@@ -102,7 +102,7 @@ npm run compile
 
 ## Releasing
 
-1. Bump version in `package.json`
+1. Bump version in `package.json` and `composer.json`
 1. Bump version in `CHANGELOG.md`
 1. Bump version in `scss` and `js` header comments
 1. Bump version in install instruction links in `README.md`

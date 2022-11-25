@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v3.2.0 (2022-11-24)
+
+- Release library on Packagist (for use with Composer)
+- Uses new Justintime50 styles package
+
 ## v3.1.1 (2022-09-03)
 
 - Fixes an error thrown in the console when there is no `.navbar` class when attempting to setup smooth scrolling (closes #18)
