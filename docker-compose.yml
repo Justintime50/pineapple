@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 services:
   pineapple-playground:
     build: .
@@ -7,7 +7,7 @@ services:
       - traefik
     labels:
       - traefik.enable=true
-      - "traefik.http.routers.pineappleplayground.rule=Host(`pineappleplayground.localhost`)"
+      - 'traefik.http.routers.pineappleplayground.rule=Host(`pineappleplayground.localhost`)'
     volumes:
       - ./playground/src:/var/www/html/public
       - ./pineapple/dist:/var/www/html/public/pineapple

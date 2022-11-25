@@ -284,3 +284,4 @@ The following CSS classes are available to quickly structure your website:
 
 // flex container (centering vertically and horizontally)
 .flex-center-container
+```

@@ -11,13 +11,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '18'
       - name: Install dependencies
         run: npm install
       - name: Run CSS lint
         run: npm run lint-css
       - name: Run JS lint
         run: npm run lint-js
+      - name: Run formatting
+        run: npm run format-check
   compile:
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '18'
       - name: Install dependencies
         run: npm install
       - name: Compile assets

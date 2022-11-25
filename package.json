@@ -5,6 +5,7 @@
   "devDependencies": {
     "eslint": "^8.11",
     "justintime50-styles": "^0.2.0",
+    "prettier": "^2.8.0",
     "postcss-scss": "^4.0.3",
     "postcss": "^8.4.8",
     "sass": "^1.49",
@@ -14,8 +15,10 @@
     "uglify-js": "^3.15"
   },
   "scripts": {
-    "lint-css": "npx stylelint \"**/*.scss\" --config node_modules/justintime50-styles/src/css/.stylelintrc.json --custom-syntax postcss-scss",
-    "lint-css-fix": "npx stylelint \"**/*.scss\" --config node_modules/justintime50-styles/src/css/.stylelintrc.json --custom-syntax postcss-scss --fix",
+    "format": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --write .",
+    "format-check": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --check .",
+    "lint-css": "npx stylelint \"**/*.scss\" --custom-syntax postcss-scss",
+    "lint-css-fix": "npx stylelint \"**/*.scss\" --custom-syntax postcss-scss --fix",
     "lint-js": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser",
     "lint-js-fix": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser --fix",
     "compile": "./compile.sh"
