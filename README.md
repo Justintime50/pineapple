@@ -61,7 +61,7 @@ Once installed via NPM, include one of the following in your Webpack or Vite con
 window.pineapple = require('pineapple-library/pineapple/dist/js/pineapple');
 
 // Import
-import pineapple from "pineapple-library/pineapple/dist/js/pineapple";
+import pineapple from 'pineapple-library/pineapple/dist/js/pineapple';
 window.pinapple = pinealle;
 ```
 
@@ -70,7 +70,7 @@ window.pinapple = pinealle;
 To import the project's SCSS, use the following line in your project:
 
 ```scss
-@import "pineapple-library/pineapple/scss/pineapple";
+@import 'pineapple-library/pineapple/scss/pineapple';
 ```
 
 ### Manual Download
