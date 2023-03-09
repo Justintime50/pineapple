@@ -50,14 +50,27 @@ npm install pineapple-library
 composer require justintime50/pineapple
 ```
 
-#### Webpack
+### Webpack & Vite
 
 **NOTE:** Requires Pineapple v2.2+
 
-Once installed via NPM, include something similar to the following in your webpack environment and compile your project:
+Once installed via NPM, include one of the following in your Webpack or Vite configs and compile your project:
 
 ```javascript
+// Require
 window.pineapple = require('pineapple-library/pineapple/dist/js/pineapple');
+
+// Import
+import pineapple from "pineapple-library/pineapple/dist/js/pineapple";
+window.pinapple = pinealle;
+```
+
+### SCSS
+
+To import the project's SCSS, use the following line in your project:
+
+```scss
+@import "pineapple-library/pineapple/scss/pineapple";
 ```
 
 ### Manual Download
