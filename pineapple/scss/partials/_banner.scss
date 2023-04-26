@@ -13,7 +13,7 @@
   background-attachment: fixed;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (width <= 1024px) {
   .pa-banner {
     background-attachment: initial; // Used to avoid iPhone banner scaling glitch
   }
@@ -68,13 +68,13 @@
   margin-right: auto;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (width <= 1024px) {
   .pa-banner-logo {
     width: 30vw;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .pa-banner-logo {
     width: 25vh;
   }

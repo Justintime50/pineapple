@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.2.1 (2023-04-26)
+
+- Recompiles project using newer SCSS styles and linting rules, no impact is expected
+
 ## v3.2.0 (2022-11-24)
 
 - Release library on Packagist (for use with Composer)

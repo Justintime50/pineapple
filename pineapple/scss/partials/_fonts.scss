@@ -1,5 +1,5 @@
 // Fonts
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .pa-font-xs {
     font-size: 14px;
   }
@@ -21,7 +21,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (width >= 769px) {
   .pa-font-xs {
     font-size: 1.6vw;
   }
@@ -43,7 +43,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (width >= 992px) {
   .pa-font-xs {
     font-size: 14px;
   }

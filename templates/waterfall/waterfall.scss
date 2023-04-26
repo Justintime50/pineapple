@@ -123,7 +123,7 @@ code {
   width: 36px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .col-sm-4 {
     text-align: center;
     margin: 25px 0;
@@ -135,7 +135,7 @@ code {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (width <= 480px) {
   .logo {
     font-size: 150px;
   }

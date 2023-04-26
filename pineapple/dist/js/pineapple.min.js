@@ -1,5 +1,5 @@
 /*
- * Pineapple v3.2.0 (https://github.com/justintime50/pineapple)
+ * Pineapple v3.2.1 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */

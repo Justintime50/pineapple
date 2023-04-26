@@ -31,7 +31,7 @@
   border-color: $color-blue;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .pa-btn,
   .pa-btn-banner,
   .pa-btn-blue {

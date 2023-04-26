@@ -1,5 +1,5 @@
 /*!
- * Pineapple v3.2.0 (https://github.com/justintime50/pineapple)
+ * Pineapple v3.2.1 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -112,7 +112,7 @@
   background-attachment: fixed;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (width <= 1024px) {
   .pa-banner {
     background-attachment: initial;
   }
@@ -158,12 +158,12 @@
   margin-right: auto;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (width <= 1024px) {
   .pa-banner-logo {
     width: 30vw;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .pa-banner-logo {
     width: 25vh;
   }
@@ -200,7 +200,7 @@
   border-color: #007dda;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .pa-btn,
   .pa-btn-banner,
   .pa-btn-blue {
@@ -233,7 +233,7 @@
   display: inline-block;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .pa-font-xs {
     font-size: 14px;
   }
@@ -250,7 +250,7 @@
     font-size: 56px;
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (width >= 769px) {
   .pa-font-xs {
     font-size: 1.6vw;
   }
@@ -267,7 +267,7 @@
     font-size: 6vw;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (width >= 992px) {
   .pa-font-xs {
     font-size: 14px;
   }

@@ -32,10 +32,10 @@ Pineapple has been compiled into CSS from SCSS and JS. You will find either the 
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.2.0/pineapple/dist/css/pineapple.min.css"
+  href="https://cdn.jsdelivr.net/npm/pineapple-library@3.2.1/pineapple/dist/css/pineapple.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.2.0/pineapple/dist/js/pineapple.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pineapple-library@3.2.1/pineapple/dist/js/pineapple.min.js"></script>
 ```
 
 ### NPM
@@ -126,4 +126,4 @@ npm run compile
 1. Bump version in `scss` and `js` header comments
 1. Bump version in install instruction links in `README.md`
 1. Compile assets with `npm run compile`
-1. Cut a new Git tag which will automatically release to NPM
+1. Cut a new Git tag which will automatically release to NPM and Packagist
