@@ -1,6 +1,3 @@
 {
-  "extends": "stylelint-config-standard-scss",
-  "rules": {
-    "string-quotes": null
-  }
+  "extends": "stylelint-config-standard-scss"
 }
