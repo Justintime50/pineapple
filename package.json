@@ -1,7 +1,7 @@
 {
   "name": "pineapple-library",
   "description": "CSS and Javascript web development library that supplements Bootstrap.",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "devDependencies": {
     "eslint": "^8.40",
     "justintime50-styles": "^0.4.0",

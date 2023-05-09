@@ -1,5 +1,5 @@
 /*!
- * Pineapple v3.2.2 (https://github.com/justintime50/pineapple)
+ * Pineapple v3.2.3 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -322,17 +322,7 @@ body {
   height: 100%;
 }
 
-.pa-carousel-item-full:nth-child(1) {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pa-carousel-item-full:nth-child(2) {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pa-carousel-item-full:nth-child(3) {
+.pa-carousel-item-full {
   background-repeat: no-repeat;
   background-size: cover;
 }

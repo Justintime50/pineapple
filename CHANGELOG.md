@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.2.3 (2023-05-08)
+
+- Generalizes the `pa-carousel-item-full` child classes by removing the repeated code under every `:nth-child()` class and instead use a single `pa-carousel-item-full` class definition
+
 ## v3.2.2 (2023-05-08)
 
 - Moves fallback images of `pa-carousel-item-full` to the playground where they were meant to be instead of being included in the actual library, users will need to continue to provide their own images for carousels
