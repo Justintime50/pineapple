@@ -92,8 +92,8 @@ The Pineapple CSS has been compiled into three separate bundles:
 
 #### Bootstrap
 
-- Pineapple v1 is compatible with Bootstrap v3
-- Pineapple v2 is compatible with Bootstrap v4 and v5 (with jQuery)
+- Pineapple v1 is compatible with Bootstrap v3 (requires jQuery)
+- Pineapple v2 is compatible with Bootstrap v4 and v5 (requires jQuery)
 - Pineapple v3 is compatible with Bootstrap v4 and v5
 
 #### jQuery
