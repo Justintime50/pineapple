@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v3.2.2 (2023-05-08)
+
+- Moves fallback images of `pa-carousel-item-full` to the playground where they were meant to be instead of being included in the actual library, users will need to continue to provide their own images for carousels
+
 ## v3.2.1 (2023-04-26)
 
 - Recompiles project using newer SCSS styles and linting rules, no impact is expected

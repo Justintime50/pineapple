@@ -44,21 +44,18 @@ body {
   height: 100%;
 }
 
-// The following images are placeholders. You must declare your own images in your project.
+// The following classes are placeholders. You must declare the images in your own project.
 .pa-carousel-item-full:nth-child(1) {
-  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(54).jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pa-carousel-item-full:nth-child(2) {
-  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(4).jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pa-carousel-item-full:nth-child(3) {
-  background-image: url('https://mdbootstrap.com/images/regular/nature/img%20(3).jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }

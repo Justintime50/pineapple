@@ -1,18 +1,18 @@
 {
   "name": "pineapple-library",
   "description": "CSS and Javascript web development library that supplements Bootstrap.",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "devDependencies": {
-    "eslint": "^8.11",
-    "justintime50-styles": "^0.2.0",
-    "prettier": "^2.8.0",
-    "postcss-scss": "^4.0.3",
-    "postcss": "^8.4.8",
-    "sass": "^1.49",
-    "stylelint-config-standard-scss": "^9.0.0",
+    "eslint": "^8.40",
+    "justintime50-styles": "^0.4.0",
+    "prettier": "^2.8",
+    "postcss-scss": "^4.0",
+    "postcss": "^8.4",
+    "sass": "^1.62",
+    "stylelint-config-standard-scss": "^9.0",
     "stylelint-config-standard": "^33.0",
     "stylelint": "^15.6",
-    "uglify-js": "^3.15"
+    "uglify-js": "^3.17"
   },
   "scripts": {
     "format": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --write .",

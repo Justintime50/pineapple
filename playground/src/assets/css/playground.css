@@ -21,7 +21,7 @@
 }
 
 .pa-banner {
-  background-image: url('../../templates/coming-soon/assets/pics/banner.jpg');
+  background-image: url("../../templates/coming-soon/assets/pics/banner.jpg");
 }
 
 .normal-carousel {
@@ -32,6 +32,18 @@
 .pa-slanted-container {
   background-color: green;
   color: #fff;
+}
+
+.pa-carousel-item-full:nth-child(1) {
+  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");
+}
+
+.pa-carousel-item-full:nth-child(2) {
+  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(4).jpg");
+}
+
+.pa-carousel-item-full:nth-child(3) {
+  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(3).jpg");
 }
 
 /*# sourceMappingURL=playground.css.map */

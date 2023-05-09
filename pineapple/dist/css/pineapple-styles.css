@@ -1,5 +1,5 @@
 /*!
- * Pineapple Styles v3.2.1 (https://github.com/justintime50/pineapple)
+ * Pineapple Styles v3.2.2 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -237,19 +237,16 @@ body {
 }
 
 .pa-carousel-item-full:nth-child(1) {
-  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(54).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pa-carousel-item-full:nth-child(2) {
-  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(4).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pa-carousel-item-full:nth-child(3) {
-  background-image: url("https://mdbootstrap.com/images/regular/nature/img%20(3).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
