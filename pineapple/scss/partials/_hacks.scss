@@ -36,17 +36,14 @@ body {
   height: 100%;
 }
 
+// Images for the full carousel items must be declared in your own project.
+// You can do so by specifying `:nth-child(1)` and so on attached to this class in your CSS
 .pa-carousel-item-full {
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pa-carousel-inner-full {
   height: 100%;
-}
-
-// Images for the full carousel items must be declared in your own project.
-// You can do so by specifying `:nth-child(1)` and so on attached to this class in your CSS
-.pa-carousel-item-full {
-  background-repeat: no-repeat;
-  background-size: cover;
 }

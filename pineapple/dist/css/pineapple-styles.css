@@ -230,15 +230,12 @@ body {
 
 .pa-carousel-item-full {
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pa-carousel-inner-full {
   height: 100%;
-}
-
-.pa-carousel-item-full {
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .display-none {
