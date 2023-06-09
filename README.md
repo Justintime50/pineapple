@@ -62,7 +62,7 @@ window.pineapple = require('pineapple-library/pineapple/dist/js/pineapple');
 
 // Import
 import pineapple from 'pineapple-library/pineapple/dist/js/pineapple';
-window.pinapple = pinealle;
+window.pineapple = pineapple;
 ```
 
 ### SCSS
