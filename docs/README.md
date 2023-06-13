@@ -4,6 +4,7 @@ CSS and Javascript web development library that supplements Bootstrap.
 
 ## Modules
 
+- [General Notes](#general-notes)
 - [Animations](#animations)
 - [Backgrounds](#backgrounds)
 - [Banner](#banner)
@@ -12,6 +13,17 @@ CSS and Javascript web development library that supplements Bootstrap.
 - [Fonts](#fonts)
 - [Hacks](#hacks)
 - [Structure](#structure)
+
+## General Notes
+
+For various fullscreen functionality of the Pineapple Library (Banner, Fullscren YouTube videos, etc), you will need to define the following somewhere in your css before it will take effect:
+
+```css
+html,
+body {
+  height: 100%;
+}
+```
 
 ## Animations
 
@@ -212,17 +224,6 @@ The `.pa-font-*` class applies different dynamic font sizes to your element. Rep
 ### Fullscreen YouTube Videos
 
 If you need a YouTube video to scale to the size of it's container, wrap its `<iframe>` with the `.pa-video-container` class.
-
-### Fullscreen Bootstrap Carousel
-
-You'll need to define the following somewhere in your css for this to work:
-
-```css
-html,
-body {
-  height: 100%;
-}
-```
 
 #### Example
 

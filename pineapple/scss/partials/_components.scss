@@ -8,7 +8,7 @@
   padding: 1em;
   margin: 1em;
   display: block;
-  text-align: center;
+  text-align: center; // TODO: Deprecate the centering on a card and remove in the next major release
   max-width: 100%;
   background-color: $color-white;
   border-radius: 0.35em;
