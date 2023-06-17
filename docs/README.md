@@ -186,7 +186,7 @@ The `.pa-btn-banner` creates a transparent outlined button perfect for use on a 
     <img src="banner.jpg" class="pa-banner-logo" alt="logo" />
     <h1 class="pa-banner-heading">My Heading Here</h1>
     <p class="pa-banner-sub-heading">My Sub-Heading Here</p>
-    <a href="#section1" class="pa-btn-banner">Button on a Banner</a>
+    <a href="#section1" class="btn pa-btn-banner">Button on a Banner</a>
   </div>
 </div>
 ```
