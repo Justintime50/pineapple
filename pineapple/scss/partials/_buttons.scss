@@ -2,38 +2,25 @@
 .pa-btn {
   margin: 20px;
   padding: 10px 30px;
-  background-color: $color-off-white;
-  border: solid 1px $color-text;
-  color: $color-text;
-}
-
-.pa-btn-banner {
-  color: $color-white;
-  border-color: $color-white;
-  background-color: transparent;
-}
-
-.pa-btn-banner:hover {
-  background-color: $color-blue;
-  color: $color-white;
-  border-color: $color-blue;
+  background-color: $pa-color-off-white;
+  border: solid 1px $pa-color-text;
+  color: $pa-color-text;
 }
 
 .pa-btn-blue {
-  color: $color-blue;
-  border-color: $color-blue;
+  color: $pa-color-blue;
+  border-color: $pa-color-blue;
   background-color: transparent;
 }
 
 .pa-btn-blue:hover {
-  background-color: $color-blue;
-  color: $color-white;
-  border-color: $color-blue;
+  background-color: $pa-color-blue;
+  color: $pa-color-white;
+  border-color: $pa-color-blue;
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .pa-btn,
-  .pa-btn-banner,
   .pa-btn-blue {
     width: 100%;
     margin-bottom: 35px;

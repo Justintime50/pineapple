@@ -3,24 +3,24 @@
 // Card
 // Source: https://www.w3schools.com/howto/howto_css_cards.asp
 .pa-card {
-  box-shadow: 0 4px 8px 0 $color-black-opaque-20;
+  box-shadow: 0 4px 8px 0 $pa-color-black-opaque-20;
   transition: 0.3s;
   padding: 1em;
   margin: 1em;
   display: block;
   text-align: center; // TODO: Deprecate the centering on a card and remove in the next major release
   max-width: 100%;
-  background-color: $color-white;
+  background-color: $pa-color-white;
   border-radius: 0.35em;
 }
 
 .pa-card:hover {
-  box-shadow: 0 8px 16px 0 $color-black-opaque-20;
+  box-shadow: 0 8px 16px 0 $pa-color-black-opaque-20;
 }
 
 // Icon
 .pa-icon {
-  border: $color-text solid 1px;
+  border: $pa-color-text solid 1px;
   border-radius: 0.5em;
   padding: 25px;
   margin: 10px;

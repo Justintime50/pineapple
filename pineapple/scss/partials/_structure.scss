@@ -1,29 +1,29 @@
 // Structure
 
 // Display styles
-.display-none {
+.pa-display-none {
   display: none;
 }
 
-.inline-block {
+.pa-inline-block {
   display: inline-block;
 }
 
 // Spacing styles
-.padding-0 {
+.pa-padding-0 {
   padding: 0;
 }
 
-.margin-0 {
+.pa-margin-0 {
   margin: 0;
 }
 
 // Flexbox styles
-.flex-container {
+.pa-flex-container {
   display: flex;
 }
 
-.flex-center-container {
+.pa-flex-center-container {
   display: flex;
   justify-content: center;
   align-items: center;

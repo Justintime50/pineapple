@@ -1,5 +1,5 @@
 /*
- * Pineapple v3.2.3 (https://github.com/justintime50/pineapple)
+ * Pineapple v4.0.0 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -162,9 +162,9 @@ function navFade() {
     pineapple.navFadeThreshold != 500 // Not the default, user overridden
       ? pineapple.navFadeThreshold
       : document.getElementsByClassName('pa-banner')[0] // If there is a pineapple banner, use that height
-      ? document.getElementsByClassName('pa-banner')[0].offsetHeight
-      : pineapple.navFadeThreshold; // Fallback to the default
-  if (window.pageYOffset >= navFadeValue) {
+        ? document.getElementsByClassName('pa-banner')[0].offsetHeight
+        : pineapple.navFadeThreshold; // Fallback to the default
+  if (window.scrollY >= navFadeValue) {
     document.querySelectorAll('.pa-nav-fade').forEach((element) => element.classList.add('opaque'));
     document.querySelectorAll('.pa-nav-fade a').forEach((element) => element.classList.add('opaque'));
   } else {

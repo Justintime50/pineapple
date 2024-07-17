@@ -1,5 +1,5 @@
 /*!
- * Pineapple v3.2.3 (https://github.com/justintime50/pineapple)
+ * Pineapple v4.0.0 (https://github.com/justintime50/pineapple)
  * CSS and Javascript web development library
  * Licensed under MIT (https://github.com/justintime50/pineapple/blob/main/LICENSE)
  */
@@ -21,6 +21,10 @@
 }
 .pa-slideanim {
   visibility: hidden;
+}
+
+.pa-scroll {
+  text-decoration: none;
 }
 
 .pa-slide {
@@ -167,25 +171,29 @@
   .pa-banner-logo {
     width: 25vh;
   }
+  .pa-banner-btn {
+    width: 100%;
+    margin-bottom: 35px;
+  }
 }
+.pa-banner-btn {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+
+.pa-banner-btn:hover {
+  color: #fff;
+  border-color: #007dda;
+  background-color: #007dda;
+}
+
 .pa-btn {
   margin: 20px;
   padding: 10px 30px;
   background-color: #f6f6f6;
   border: solid 1px #818181;
   color: #818181;
-}
-
-.pa-btn-banner {
-  color: #fff;
-  border-color: #fff;
-  background-color: transparent;
-}
-
-.pa-btn-banner:hover {
-  background-color: #007dda;
-  color: #fff;
-  border-color: #007dda;
 }
 
 .pa-btn-blue {
@@ -202,7 +210,6 @@
 
 @media only screen and (width <= 768px) {
   .pa-btn,
-  .pa-btn-banner,
   .pa-btn-blue {
     width: 100%;
     margin-bottom: 35px;
@@ -324,27 +331,27 @@ body {
   height: 100%;
 }
 
-.display-none {
+.pa-display-none {
   display: none;
 }
 
-.inline-block {
+.pa-inline-block {
   display: inline-block;
 }
 
-.padding-0 {
+.pa-padding-0 {
   padding: 0;
 }
 
-.margin-0 {
+.pa-margin-0 {
   margin: 0;
 }
 
-.flex-container {
+.pa-flex-container {
   display: flex;
 }
 
-.flex-center-container {
+.pa-flex-center-container {
   display: flex;
   justify-content: center;
   align-items: center;

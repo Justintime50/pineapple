@@ -13,7 +13,7 @@
   background-attachment: fixed;
 }
 
-@media only screen and (width <= 1024px) {
+@media only screen and (width <=1024px) {
   .pa-banner {
     background-attachment: initial; // Used to avoid iPhone banner scaling glitch
   }
@@ -30,21 +30,21 @@
   // font elements
   position: relative; // Used for font color fix when using `.pa-banner-darken`
   z-index: 10;
-  color: $color-white;
+  color: $pa-color-white;
 }
 
 .pa-banner-heading {
   font-size: 8vmin;
   position: relative; // Used for font color fix overlaid on banner
   z-index: 10;
-  color: $color-white;
+  color: $pa-color-white;
 }
 
 .pa-banner-sub-heading {
   font-size: 3vmin;
   position: relative; // Used for font color fix
   z-index: 10;
-  color: $color-white;
+  color: $pa-color-white;
 }
 
 // Darken Image Fix
@@ -57,7 +57,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: $color-black-opaque-35;
+  background: $pa-color-black-opaque-35;
 }
 
 .pa-banner-logo {
@@ -68,14 +68,31 @@
   margin-right: auto;
 }
 
-@media only screen and (width <= 1024px) {
+@media only screen and (width <=1024px) {
   .pa-banner-logo {
     width: 30vw;
   }
 }
 
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
   .pa-banner-logo {
     width: 25vh;
   }
+
+  .pa-banner-btn {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+.pa-banner-btn {
+  color: $pa-color-white;
+  border-color: $pa-color-white;
+  background-color: transparent;
+}
+
+.pa-banner-btn:hover {
+  color: $pa-color-white;
+  border-color: $pa-color-blue;
+  background-color: $pa-color-blue;
 }

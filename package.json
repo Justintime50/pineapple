@@ -1,27 +1,15 @@
 {
   "name": "pineapple-library",
   "description": "CSS and Javascript web development library that supplements Bootstrap.",
-  "version": "3.2.3",
-  "devDependencies": {
-    "eslint": "^8.40",
-    "justintime50-styles": "^0.4.0",
-    "prettier": "^2.8",
-    "postcss-scss": "^4.0",
-    "postcss": "^8.4",
-    "sass": "^1.62",
-    "stylelint-config-standard-scss": "^9.0",
-    "stylelint-config-standard": "^33.0",
-    "stylelint": "^15.10",
-    "uglify-js": "^3.17"
-  },
+  "version": "4.0.0",
   "scripts": {
+    "compile": "./compile.sh",
     "format": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --write .",
     "format-check": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --check .",
     "lint-css": "npx stylelint \"**/*.scss\" --custom-syntax postcss-scss",
     "lint-css-fix": "npx stylelint \"**/*.scss\" --custom-syntax postcss-scss --fix",
     "lint-js": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser",
-    "lint-js-fix": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser --fix",
-    "compile": "./compile.sh"
+    "lint-js-fix": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser --fix"
   },
   "directories": {
     "doc": "docs"
@@ -45,5 +33,17 @@
   "bugs": {
     "url": "https://github.com/justintime50/pineapple/issues"
   },
-  "homepage": "https://github.com/justintime50/pineapple#readme"
+  "homepage": "https://github.com/justintime50/pineapple#readme",
+  "devDependencies": {
+    "eslint": "^8.57",
+    "justintime50-styles": "^0.6.0",
+    "prettier": "^3.3",
+    "postcss-scss": "^4.0",
+    "postcss": "^8.4",
+    "sass": "^1.77",
+    "stylelint-config-standard-scss": "^13.0",
+    "stylelint-config-standard": "^36.0",
+    "stylelint": "^16.7",
+    "uglify-js": "^3.19"
+  }
 }

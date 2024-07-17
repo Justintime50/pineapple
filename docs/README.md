@@ -176,7 +176,7 @@ The `.pa-banner-logo` scales and centers a logo image over the banner based on s
 
 ### Banner Button
 
-The `.pa-btn-banner` creates a transparent outlined button perfect for use on a banner image (great pairing with `.pa-banner-darken`).
+The `.pa-banner-btn` creates a transparent outlined button perfect for use on a banner image (great pairing with `.pa-banner-darken`).
 
 ### Example
 
@@ -195,7 +195,7 @@ The `.pa-btn-banner` creates a transparent outlined button perfect for use on a 
 
 Create stylized buttons.
 
-The `.pa-btn` (white), `.pa-btn-blue`, and `.pa-btn-banner` (transparent) classes can be used to create simple buttons. Style to your needs.
+The `.pa-btn` (white) and `.pa-btn-blue` classes can be used to create simple buttons. Style to your needs.
 
 ## Components
 
@@ -269,20 +269,20 @@ The following CSS classes are available to quickly structure your website:
 
 ```scss
 // display mode: none
-.display-none
+.pa-display-none
 
 // display mode: block
-.inline-block
+.pa-inline-block
 
 // 0 padding on all sides
-.padding-0
+.pa-padding-0
 
 // 0 margins on all sides
-.margin-0
+.pa-margin-0
 
 // flex container (no centering)
-.flex-container
+.pa-flex-container
 
 // flex container (centering vertically and horizontally)
-.flex-center-container
+.pa-flex-center-container
 ```

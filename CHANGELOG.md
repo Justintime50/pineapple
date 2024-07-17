@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## v4.0.0 (2024-07-17)
+
+- Renames `.pa-btn-banner` to `.pa-banner-btn` and moves it from `_buttons.scss` to `_banner.scss` to better match convention (closes #23)
+- Prepends all `_structure.scss` styles with missing `pa-` so we don't accidentally override project styles with the same names (closes #22). These include:
+  - `display-none`
+  - `inline-block`
+  - `padding-0`
+  - `margin-0`
+  - `flex-container`
+  - `flex-center-container`
+- All variables in `_variables.scss` are now prepended with `pa-` to signify they originate from this library in case they get mixed with other imports
+  - `$color-red` was removed as it wasn't used internally and can be easily recreated where needed
+- Replaces the deprecated `window.pageYOffset` call to `window.scrollY` for the `navFade` function
+- Bumps dependencies (closes #25)
+
 ## v3.2.3 (2023-05-08)
 
 - Generalizes the `pa-carousel-item-full` child classes by removing the repeated code under every `:nth-child()` class and instead use a single `pa-carousel-item-full` class definition

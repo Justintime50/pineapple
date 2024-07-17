@@ -28,6 +28,12 @@
   visibility: hidden;
 }
 
+// Smooth Scrolling
+
+.pa-scroll {
+  text-decoration: none;
+}
+
 // .pa-slide is used internally for .pa-slideanim and is not intended
 // to be used externally via this library
 // TODO: Is there a better way to make this class "private"?
@@ -65,15 +71,15 @@
 }
 
 .pa-nav-fade a {
-  color: $color-white;
+  color: $pa-color-white;
 }
 
 .pa-nav-fade .dropdown-menu a {
-  color: $color-black;
+  color: $pa-color-black;
 }
 
 .pa-nav-fade a.opaque {
-  color: $color-black;
+  color: $pa-color-black;
 }
 
 // Page Loader
@@ -88,9 +94,9 @@
   width: 150px;
   height: 150px;
   margin: -75px 0 0 -75px;
-  border: 16px solid $color-off-white;
+  border: 16px solid $pa-color-off-white;
   border-radius: 50%;
-  border-top: 16px solid $color-blue;
+  border-top: 16px solid $pa-color-blue;
   animation: spin 1.5s linear infinite;
 }
 
