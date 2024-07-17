@@ -12,7 +12,7 @@
   - `flex-center-container`
 - All variables in `_variables.scss` are now prepended with `pa-` to signify they originate from this library in case they get mixed with other imports
   - `$color-red` was removed as it wasn't used internally and can be easily recreated where needed
-- Replaces the deprecated `window.pageYOffset` call to `window.scrollY` for the `navFade` function
+- Replaces references of the deprecated `window.pageYOffset` and `window.pageXOffset` calls to `window.scrollY` and `window.scrollX` respectively
 - Bumps dependencies (closes #25)
 
 ## v3.2.3 (2023-05-08)

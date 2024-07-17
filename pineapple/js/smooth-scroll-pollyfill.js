@@ -26,21 +26,21 @@
               ? h.call(
                   o,
                   t.body,
-                  void 0 !== arguments[0].left ? ~~arguments[0].left : o.scrollX || o.pageXOffset,
-                  void 0 !== arguments[0].top ? ~~arguments[0].top : o.scrollY || o.pageYOffset
+                  void 0 !== arguments[0].left ? ~~arguments[0].left : o.scrollX || o.scrollX,
+                  void 0 !== arguments[0].top ? ~~arguments[0].top : o.scrollY || o.scrollY
                 )
               : i.scroll.call(
                   o,
                   void 0 !== arguments[0].left
                     ? arguments[0].left
                     : 'object' != typeof arguments[0]
-                    ? arguments[0]
-                    : o.scrollX || o.pageXOffset,
+                      ? arguments[0]
+                      : o.scrollX || o.scrollX,
                   void 0 !== arguments[0].top
                     ? arguments[0].top
                     : void 0 !== arguments[1]
-                    ? arguments[1]
-                    : o.scrollY || o.pageYOffset
+                      ? arguments[1]
+                      : o.scrollY || o.scrollY
                 ));
         }),
         (o.scrollBy = function () {
@@ -54,8 +54,8 @@
               : h.call(
                   o,
                   t.body,
-                  ~~arguments[0].left + (o.scrollX || o.pageXOffset),
-                  ~~arguments[0].top + (o.scrollY || o.pageYOffset)
+                  ~~arguments[0].left + (o.scrollX || o.scrollX),
+                  ~~arguments[0].top + (o.scrollY || o.scrollY)
                 ));
         }),
         (e.prototype.scroll = e.prototype.scrollTo =
@@ -73,13 +73,13 @@
                   void 0 !== arguments[0].left
                     ? ~~arguments[0].left
                     : 'object' != typeof arguments[0]
-                    ? ~~arguments[0]
-                    : this.scrollLeft,
+                      ? ~~arguments[0]
+                      : this.scrollLeft,
                   void 0 !== arguments[0].top
                     ? ~~arguments[0].top
                     : void 0 !== arguments[1]
-                    ? ~~arguments[1]
-                    : this.scrollTop
+                      ? ~~arguments[1]
+                      : this.scrollTop
                 );
               }
           }),
@@ -165,7 +165,7 @@
         a,
         h = s();
       l === t.body
-        ? ((c = o), (f = o.scrollX || o.pageXOffset), (p = o.scrollY || o.pageYOffset), (a = i.scroll))
+        ? ((c = o), (f = o.scrollX || o.scrollX), (p = o.scrollY || o.scrollY), (a = i.scroll))
         : ((c = l), (f = l.scrollLeft), (p = l.scrollTop), (a = n)),
         d({ scrollable: c, method: a, startTime: h, startX: f, startY: p, x: e, y: r });
     }

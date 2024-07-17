@@ -116,9 +116,9 @@ if (typeof window === "undefined") {
             }, s = o.performance && o.performance.now ? o.performance.now.bind(o.performance) : Date.now, c = (l = o.navigator.userAgent, 
             new RegExp([ "MSIE ", "Trident/", "Edge/" ].join("|")).test(l) ? 1 : 0);
             o.scroll = o.scrollTo = function() {
-                void 0 !== arguments[0] && (!0 !== f(arguments[0]) ? h.call(o, t.body, void 0 !== arguments[0].left ? ~~arguments[0].left : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? ~~arguments[0].top : o.scrollY || o.pageYOffset) : i.scroll.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : o.scrollX || o.pageXOffset, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : o.scrollY || o.pageYOffset));
+                void 0 !== arguments[0] && (!0 !== f(arguments[0]) ? h.call(o, t.body, void 0 !== arguments[0].left ? ~~arguments[0].left : o.scrollX || o.scrollX, void 0 !== arguments[0].top ? ~~arguments[0].top : o.scrollY || o.scrollY) : i.scroll.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : o.scrollX || o.scrollX, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : o.scrollY || o.scrollY));
             }, o.scrollBy = function() {
-                void 0 !== arguments[0] && (f(arguments[0]) ? i.scrollBy.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : 0, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : 0) : h.call(o, t.body, ~~arguments[0].left + (o.scrollX || o.pageXOffset), ~~arguments[0].top + (o.scrollY || o.pageYOffset)));
+                void 0 !== arguments[0] && (f(arguments[0]) ? i.scrollBy.call(o, void 0 !== arguments[0].left ? arguments[0].left : "object" != typeof arguments[0] ? arguments[0] : 0, void 0 !== arguments[0].top ? arguments[0].top : void 0 !== arguments[1] ? arguments[1] : 0) : h.call(o, t.body, ~~arguments[0].left + (o.scrollX || o.scrollX), ~~arguments[0].top + (o.scrollY || o.scrollY)));
             }, e.prototype.scroll = e.prototype.scrollTo = function() {
                 if (void 0 !== arguments[0]) if (!0 !== f(arguments[0])) {
                     var o = arguments[0].left, t = arguments[0].top;
@@ -177,7 +177,7 @@ if (typeof window === "undefined") {
         }
         function h(l, e, r) {
             var c, f, p, a, h = s();
-            l === t.body ? (c = o, f = o.scrollX || o.pageXOffset, p = o.scrollY || o.pageYOffset, 
+            l === t.body ? (c = o, f = o.scrollX || o.scrollX, p = o.scrollY || o.scrollY, 
             a = i.scroll) : (c = l, f = l.scrollLeft, p = l.scrollTop, a = n), d({
                 scrollable: c,
                 method: a,
