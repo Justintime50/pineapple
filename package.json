@@ -8,8 +8,8 @@
     "format-check": "prettier --config node_modules/justintime50-styles/src/javascript/.prettierrc.yaml --check .",
     "lint-css": "npx stylelint \"**/*.scss\" --custom-syntax postcss-scss",
     "lint-css-fix": "npx stylelint \"**/*.scss\" --custom-syntax postcss-scss --fix",
-    "lint-js": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser",
-    "lint-js-fix": "eslint pineapple/js/pineapple.js --config node_modules/justintime50-styles/src/javascript/.eslintrc.yaml --env node,browser --fix"
+    "lint-js": "eslint pineapple/js/pineapple.js -c node_modules/justintime50-styles/src/javascript/eslint.config.js",
+    "lint-js-fix": "eslint pineapple/js/pineapple.js -c node_modules/justintime50-styles/src/javascript/eslint.config.js --fix"
   },
   "directories": {
     "doc": "docs"
@@ -35,11 +35,11 @@
   },
   "homepage": "https://github.com/justintime50/pineapple#readme",
   "devDependencies": {
-    "eslint": "^8.57",
-    "justintime50-styles": "^0.6.0",
-    "prettier": "^3.3",
+    "eslint": "^9.0",
+    "justintime50-styles": "^0.7.0",
     "postcss-scss": "^4.0",
     "postcss": "^8.4",
+    "prettier": "^3.3",
     "sass": "^1.77",
     "stylelint-config-standard-scss": "^13.0",
     "stylelint-config-standard": "^36.0",
