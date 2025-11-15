@@ -19,7 +19,7 @@
         },
         s = o.performance && o.performance.now ? o.performance.now.bind(o.performance) : Date.now,
         c = ((l = o.navigator.userAgent), new RegExp(['MSIE ', 'Trident/', 'Edge/'].join('|')).test(l) ? 1 : 0);
-      (o.scroll = o.scrollTo =
+      ((o.scroll = o.scrollTo =
         function () {
           void 0 !== arguments[0] &&
             (!0 !== f(arguments[0])
@@ -119,10 +119,10 @@
                   o.scrollBy({ left: e.left, top: e.top, behavior: 'smooth' }))
               : o.scrollBy({ left: r.left, top: r.top, behavior: 'smooth' });
           } else i.scrollIntoView.call(this, void 0 === arguments[0] || arguments[0]);
-        });
+        }));
     }
     function n(o, t) {
-      (this.scrollLeft = o), (this.scrollTop = t);
+      ((this.scrollLeft = o), (this.scrollTop = t));
     }
     function f(o) {
       if (
@@ -151,12 +151,12 @@
         i,
         c,
         n = (s() - t.startTime) / r;
-      (c = n = n > 1 ? 1 : n),
+      ((c = n = n > 1 ? 1 : n),
         (l = 0.5 * (1 - Math.cos(Math.PI * c))),
         (e = t.startX + (t.x - t.startX) * l),
         (i = t.startY + (t.y - t.startY) * l),
         t.method.call(t.scrollable, e, i),
-        (e === t.x && i === t.y) || o.requestAnimationFrame(d.bind(o, t));
+        (e === t.x && i === t.y) || o.requestAnimationFrame(d.bind(o, t)));
     }
     function h(l, e, r) {
       var c,
@@ -164,10 +164,10 @@
         p,
         a,
         h = s();
-      l === t.body
+      (l === t.body
         ? ((c = o), (f = o.scrollX || o.scrollX), (p = o.scrollY || o.scrollY), (a = i.scroll))
         : ((c = l), (f = l.scrollLeft), (p = l.scrollTop), (a = n)),
-        d({ scrollable: c, method: a, startTime: h, startX: f, startY: p, x: e, y: r });
+        d({ scrollable: c, method: a, startTime: h, startX: f, startY: p, x: e, y: r }));
     }
   }
   'object' == typeof exports && 'undefined' != typeof module ? (module.exports = { polyfill: o }) : o();
