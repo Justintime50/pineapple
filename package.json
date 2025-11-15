@@ -36,7 +36,7 @@
   "homepage": "https://github.com/justintime50/pineapple#readme",
   "devDependencies": {
     "eslint": "^9.0",
-    "justintime50-styles": "^0.7.0",
+    "justintime50-styles": "^0.10.0",
     "postcss-scss": "^4.0",
     "postcss": "^8.4",
     "prettier": "^3.3",
