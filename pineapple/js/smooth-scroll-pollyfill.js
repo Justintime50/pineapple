@@ -105,7 +105,6 @@
                 for (
                   ;
                   o !== t.body && !1 === ((e = p((l = o), 'Y') && a(l, 'Y')), (r = p(l, 'X') && a(l, 'X')), e || r);
-
                 )
                   o = o.parentNode || o.host;
                 var l, e, r;
