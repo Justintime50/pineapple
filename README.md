@@ -12,6 +12,8 @@ CSS and Javascript web development library that supplements Bootstrap.
 
 </div>
 
+> Naming is hard. I can hear you snicker through your screen. No, it's just a random fruit name I chose. Yes, it's unfortunate.
+
 Pineapple came about as a way to help me quickly build "brochure-style" websites some years ago. I found I was copying and pasting a lot of custom CSS around my projects to extend Bootstrap's library and decided to build my own. Over the years as Bootstrap evolved, certain Pineapple functions were removed in favor of the better battle-tested Bootstrap equivalent. Pineapple still serves as a nice addition to any Bootstrap project.
 
 **Notable Features:**

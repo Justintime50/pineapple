@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Next Release
+
+- Bumps dependencies
+
 ## v4.0.0 (2024-07-17)
 
 - Renames `.pa-btn-banner` to `.pa-banner-btn` and moves it from `_buttons.scss` to `_banner.scss` to better match convention (closes #23)
