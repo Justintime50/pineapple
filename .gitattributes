@@ -1,0 +1,15 @@
+.gitattributes     export-ignore
+.github            export-ignore
+.gitignore         export-ignore
+.prettier*         export-ignore
+.stylelintrc*      export-ignore
+*.cache            export-ignore
+bin/               export-ignore
+compile.sh         export-ignore
+docker-compose.yml export-ignore
+Dockerfile         export-ignore
+docs/              export-ignore
+phpstan.neon       export-ignore
+phpunit.xml        export-ignore
+playground/        export-ignore
+tests/             export-ignore

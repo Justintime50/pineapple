@@ -2,6 +2,7 @@
 
 ## Next Release
 
+- Ignores various dev-specific files in final pineapple dist archive
 - Bumps dependencies
 
 ## v4.0.0 (2024-07-17)
